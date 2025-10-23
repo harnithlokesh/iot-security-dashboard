@@ -1,0 +1,11 @@
+.scanner-page { padding: 20px; color: #fff; }
+.scanner-columns { display:flex; gap:20px; align-items:flex-start; }
+.devices-col, .alerts-col { flex:1; background: rgba(255,255,255,0.03); border-radius:12px; padding:12px; }
+.device-card, .alert-card { display:flex; justify-content:space-between; align-items:center; padding:12px; border-bottom:1px solid rgba(255,255,255,0.04); }
+.device-card:last-child, .alert-card:last-child { border-bottom: none; }
+.muted { color: #ccc; font-size: 12px; }
+.status.trusted { color:#2ecc71; }
+.status.rogue { color:#e74c3c; }
+.status.quarantined { color:#f1c40f; color:#000; }
+.actions button, .alert-card button { background:#e74c3c; color:#fff; border:none; padding:6px 10px; border-radius:6px; cursor:pointer; }
+.actions button[disabled] { opacity:0.6; cursor: default; }

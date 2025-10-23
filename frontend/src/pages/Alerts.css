@@ -1,0 +1,20 @@
+.alerts-page table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.alerts-page th, .alerts-page td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+}
+
+.alerts-page th {
+  background: rgba(255,255,255,0.05);
+}
+
+.alerts-page tr:hover {
+  background: rgba(255,255,255,0.1);
+}

@@ -1,0 +1,199 @@
+/* ===== Global Styles ===== */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* ===== Vanta Background Container ===== */
+.vanta-bg {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.vanta-bg canvas {
+  filter: hue-rotate(300deg) saturate(3) brightness(1.1); /* pink/purple lines */
+}
+
+/* ===== Page Container (content above Vanta) ===== */
+.page-container {
+  position: relative;
+  z-index: 1; /* ensures content is above Vanta */
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* ===== Typography ===== */
+h1, h2 {
+  margin-bottom: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(30, 30, 30, 0.8);
+  padding: 10px 20px;
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.navbar ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Dashboard Stat Cards ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.stat-card h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.stat-card.trustedDevices { background-color: rgba(46, 204, 113, 0.15); }
+.stat-card.rogueDevices { background-color: rgba(231, 76, 60, 0.15); }
+.stat-card.quarantinedDevices { background-color: rgba(241, 196, 15, 0.15); color: #000; }
+.stat-card.alertsLast24h { background-color: rgba(52, 152, 219, 0.15); }
+
+/* ===== Device Cards ===== */
+.device-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 12px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.device-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.device-info h2 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.device-info p {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 2px;
+}
+
+.device-actions {
+  text-align: right;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status.trusted { background-color: #2ecc71; }
+.status.rogue { background-color: #e74c3c; }
+.status.quarantined { background-color: #f1c40f; color: #000; }
+
+.quarantine-btn {
+  margin-top: 6px;
+  background-color: #e74c3c;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.quarantine-btn:hover {
+  background-color: #c0392b;
+}
+
+/* ===== Alerts Table ===== */
+.alerts-page table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.alerts-page th, .alerts-page td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+}
+
+.alerts-page th {
+  background: rgba(255,255,255,0.05);
+}
+
+.alerts-page tr:hover {
+  background: rgba(255,255,255,0.1);
+}

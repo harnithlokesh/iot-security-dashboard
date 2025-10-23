@@ -1,0 +1,4 @@
+scapy
+requests
+python-dotenv
+netaddr

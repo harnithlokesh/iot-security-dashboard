@@ -1,0 +1,59 @@
+.device-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 12px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.device-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.device-info h2 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.device-info p {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 2px;
+}
+
+.device-actions {
+  text-align: right;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status.trusted { background-color: #2ecc71; }
+.status.rogue { background-color: #e74c3c; }
+.status.quarantined { background-color: #f1c40f; color: #000; }
+
+.quarantine-btn {
+  margin-top: 6px;
+  background-color: #e74c3c;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.quarantine-btn:hover {
+  background-color: #c0392b;
+}

@@ -1,0 +1,40 @@
+.dashboard-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.stat-card h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.stat-card.trustedDevices { background-color: rgba(46, 204, 113, 0.15); }
+.stat-card.rogueDevices { background-color: rgba(231, 76, 60, 0.15); }
+.stat-card.quarantinedDevices { background-color: rgba(241, 196, 15, 0.15); color: #000; }
+.stat-card.alertsLast24h { background-color: rgba(52, 152, 219, 0.15); }

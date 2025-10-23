@@ -1,0 +1,58 @@
+2025-10-15 16:05:30,270 INFO Local whitelist entries: 0
+2025-10-15 16:05:30,270 INFO Scanner starting...
+2025-10-15 16:05:30,270 INFO Starting scanner. Interface=\\Device\\NPF_{7ECDF875-5DB3-4A7A-90CC-55B0EB0BBA85} QuarantineEnabled=False
+2025-10-15 16:05:30,327 ERROR Scanner fatal error: Interface '\\Device\\NPF_{7ECDF875-5DB3-4A7A-90CC-55B0EB0BBA85}' not found !
+2025-10-23 22:42:19,393 INFO Local whitelist entries: 0
+2025-10-23 22:42:19,393 INFO Scanner starting...
+2025-10-23 22:42:19,393 INFO Starting scanner. Interface=YOUR_INTERFACE_NAME QuarantineEnabled=False
+2025-10-23 22:42:19,428 ERROR Scanner fatal error: Interface 'YOUR_INTERFACE_NAME' not found !
+2025-10-23 22:47:35,491 INFO Local whitelist entries: 0
+2025-10-23 22:47:35,491 INFO Scanner starting...
+2025-10-23 22:47:35,492 INFO Starting scanner. Interface=\\Device\\NPF_{7ECDF875-5DB3-4A7A-90CC-55B0EB0BBA85} QuarantineEnabled=False
+2025-10-23 22:47:35,530 ERROR Scanner fatal error: Interface '\\Device\\NPF_{7ECDF875-5DB3-4A7A-90CC-55B0EB0BBA85}' not found !
+2025-10-23 22:48:44,020 INFO Local whitelist entries: 0
+2025-10-23 22:48:44,021 INFO Scanner starting...
+2025-10-23 22:48:44,021 INFO Starting scanner. Interface=\\Device\\NPF_{61D0B5C5-0FA8-4D1C-896F-4E85718B989A} QuarantineEnabled=False
+2025-10-23 22:48:44,054 ERROR Scanner fatal error: Interface '\\Device\\NPF_{61D0B5C5-0FA8-4D1C-896F-4E85718B989A}' not found !
+2025-10-23 22:52:41,663 INFO Local whitelist entries: 0
+2025-10-23 22:52:41,663 INFO Scanner starting...
+2025-10-23 22:52:41,664 INFO Starting scanner. Interface=\\Device\\NPF_{61D0B5C5-0FA8-4D1C-896F-4E85718B989A} QuarantineEnabled=False
+2025-10-23 22:52:41,697 ERROR Scanner fatal error: Interface '\\Device\\NPF_{61D0B5C5-0FA8-4D1C-896F-4E85718B989A}' not found !
+2025-10-23 22:58:40,380 INFO Local whitelist entries: 0
+2025-10-23 22:58:40,381 INFO Scanner starting...
+2025-10-23 22:58:40,381 INFO Starting scanner. Interface=\Device\NPF_{155B36DF-20EF-457B-92A0-F9FB1946903B} QuarantineEnabled=False
+2025-10-23 22:58:46,918 INFO Reported device: 00:50:56:c0:00:01 0.0.0.0 (rogue)
+2025-10-23 22:58:46,928 WARNING Alert API returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /api/alerts</pre>
+</body>
+</html>
+
+2025-10-23 22:58:53,420 INFO Reported device: 00:50:56:f3:b6:25 192.168.182.254 (rogue)
+2025-10-23 22:58:53,445 WARNING Alert API returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /api/alerts</pre>
+</body>
+</html>
+
+2025-10-23 23:05:30,819 INFO Local whitelist entries: 0
+2025-10-23 23:05:30,820 INFO Scanner starting...
+2025-10-23 23:05:30,820 INFO Starting scanner. Interface=\Device\NPF_{155B36DF-20EF-457B-92A0-F9FB1946903B} QuarantineEnabled=False
+2025-10-23 23:05:33,470 INFO Scanner stopping via Ctrl+C...
+2025-10-23 23:18:27,584 INFO Local whitelist entries: 0
+2025-10-23 23:18:27,584 INFO Scanner starting...
+2025-10-23 23:18:27,585 INFO Starting scanner. Interface=\Device\NPF_{155B36DF-20EF-457B-92A0-F9FB1946903B} QuarantineEnabled=False
+2025-10-23 23:24:13,921 WARNING Failed to report device 00:50:56:c0:00:01: 500 {"error":"E11000 duplicate key error collection: iot_dashboard.devices index: mac_1 dup key: { mac: \"00:50:56:c0:00:01\" }"}
+2025-10-23 23:24:13,931 INFO Alert created: unauthorized for 00:50:56:c0:00:01
+2025-10-23 23:24:13,962 WARNING Failed to report device 00:50:56:f3:b6:25: 500 {"error":"E11000 duplicate key error collection: iot_dashboard.devices index: mac_1 dup key: { mac: \"00:50:56:f3:b6:25\" }"}
+2025-10-23 23:24:13,971 INFO Alert created: unauthorized for 00:50:56:f3:b6:25
