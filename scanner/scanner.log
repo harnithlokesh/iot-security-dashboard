@@ -56,3 +56,21 @@
 2025-10-23 23:24:13,931 INFO Alert created: unauthorized for 00:50:56:c0:00:01
 2025-10-23 23:24:13,962 WARNING Failed to report device 00:50:56:f3:b6:25: 500 {"error":"E11000 duplicate key error collection: iot_dashboard.devices index: mac_1 dup key: { mac: \"00:50:56:f3:b6:25\" }"}
 2025-10-23 23:24:13,971 INFO Alert created: unauthorized for 00:50:56:f3:b6:25
+2025-10-25 07:18:23,936 INFO Local whitelist loaded (0 entries)
+2025-10-25 07:18:23,937 INFO Sniffer thread started (iface=\\Device\\NPF_{155B36DF-20EF-457B-92A0-F9FB1946903B})
+2025-10-25 07:18:23,937 INFO Auto-start scanner: True scanner started
+2025-10-25 07:18:23,937 INFO Launching scanner service API on port 9000
+2025-10-25 07:18:23,972 ERROR sniff exception: Interface '\\Device\\NPF_{155B36DF-20EF-457B-92A0-F9FB1946903B}' not found !
+2025-10-25 07:18:23,973 INFO Sniffer thread exiting
+2025-10-25 07:18:25,202 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.29.58:9000
+2025-10-25 07:18:25,203 INFO [33mPress CTRL+C to quit[0m
+2025-10-25 07:21:51,560 INFO 192.168.29.58 - - [25/Oct/2025 07:21:51] "[33mGET / HTTP/1.1[0m" 404 -
+2025-10-25 07:21:52,711 INFO 192.168.29.58 - - [25/Oct/2025 07:21:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-25 07:30:36,741 INFO Received shutdown signal, stopping scanner
+2025-10-25 07:45:15,363 INFO Scanner starting...
+2025-10-25 07:45:15,363 INFO Whitelist loaded: 0 entries
+2025-10-25 07:45:15,363 INFO Starting sniffer on \\Device\\NPF_{6E38B8AA-E554-4B42-B331-688D699BFDBF}
+2025-10-25 07:45:15,363 INFO Scanner started. Press Ctrl+C to stop.
