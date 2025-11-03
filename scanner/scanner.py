@@ -13,6 +13,7 @@ import threading
 from dotenv import load_dotenv
 from scapy.all import sniff, ARP, BOOTP, DHCP, Ether, UDP
 import requests
+import json
 
 # Load config
 load_dotenv()
@@ -53,6 +54,17 @@ def load_local_whitelist(path):
 local_whitelist = load_local_whitelist(WHITELIST_FILE)
 logging.info(f"Local whitelist entries: {len(local_whitelist)}")
 
+def send_results_to_backend(results):
+    try:
+        response = requests.post(
+            "http://localhost:5000/api/scanner/results",
+            json={"devices": results},
+            timeout=5
+        )
+        print("✅ Sent results to backend:", response.status_code)
+    except Exception as e:
+        print("❌ Error sending results:", e)
+
 def should_process(mac):
     now = time.time()
     last = last_seen_times.get(mac, 0)
@@ -68,8 +80,11 @@ def report_device(mac, ip=None, name=None):
         "ip": ip or "",
         "status": "trusted" if mac.lower() in local_whitelist else "rogue"
     }
+    print(f"📡 Sending device to backend: {payload}")  # <-- add this
+
     try:
         r = requests.post(f"{BACKEND_URL}/devices", json=payload, timeout=5)
+        print("✅ Response:", r.status_code, r.text)  # <-- add this too
         if r.status_code in (200,201):
             logging.info(f"Reported device: {mac} {ip} ({payload['status']})")
             return r.json()
@@ -79,6 +94,7 @@ def report_device(mac, ip=None, name=None):
     except Exception as e:
         logging.error(f"Error reporting device {mac}: {e}")
         return None
+
 
 def create_alert(device_id=None, mac=None, alert_type="unauthorized", description=""):
     payload = {"type": alert_type, "description": description}

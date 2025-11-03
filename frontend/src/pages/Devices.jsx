@@ -15,10 +15,6 @@ function Devices() {
     }
   };
 
-  useEffect(() => {
-    fetchDevices();
-  }, []);
-
   // Quarantine a device
   const quarantineDevice = async (id) => {
     try {
@@ -39,9 +35,16 @@ function Devices() {
     }
   };
 
+  useEffect(() => {
+    fetchDevices();
+    const interval = setInterval(fetchDevices, 5000); // Poll every 5 sec
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="devices-page">
       <h1>Devices</h1>
+
       {devices.length === 0 ? (
         <p>No devices found</p>
       ) : (
@@ -58,18 +61,18 @@ function Devices() {
                 </span>
               </p>
             </div>
+
             <div className="device-actions">
-              {device.status !== "quarantined" && (
+              {device.status !== "quarantined" ? (
                 <button
                   className="quarantine-btn"
                   onClick={() => quarantineDevice(device._id)}
                 >
                   Quarantine
                 </button>
-              )}
-              {device.status === "quarantined" && (
+              ) : (
                 <button
-                  className="quarantine-btn"
+                  className="release-btn"
                   onClick={() => releaseDevice(device._id)}
                 >
                   Release

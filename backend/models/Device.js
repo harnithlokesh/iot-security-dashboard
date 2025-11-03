@@ -1,13 +1,18 @@
+
+
+
+// backend/models/Device.js
 const mongoose = require('mongoose');
 
-const deviceSchema = new mongoose.Schema({
-  name: { type: String, required: true },
+const DeviceSchema = new mongoose.Schema({
+  name: { type: String, default: 'Unknown' },
   mac: { type: String, required: true, unique: true },
-  ip: { type: String },
-  status: { type: String, enum: ['trusted', 'rogue', 'quarantined'], default: 'rogue' },
+  ip: { type: String, default: '' },
+  status: { type: String, enum: ['trusted','rogue','quarantined'], default: 'rogue' },
+  firstSeen: { type: Date, default: Date.now },
   lastSeen: { type: Date, default: Date.now },
-  pendingQuarantine: { type: Boolean, default: false }
-});
+  vendor: { type: String, default: '' },
+  meta: { type: Object, default: {} }
+}, { timestamps: true });
 
-
-module.exports = mongoose.model('Device', deviceSchema);
+module.exports = mongoose.model('Device', DeviceSchema);

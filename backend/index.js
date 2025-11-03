@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+
 require('dotenv').config();
 
 
@@ -10,6 +11,8 @@ const deviceRoutes = require('./routes/deviceRoutes');
 const alertRoutes = require('./routes/alertRoutes');
 const whitelistRoutes = require('./routes/whitelistRoutes');
 const quarantineRoutes = require('./routes/quarantineRoutes');
+const scannerRoutes = require('./routes/scannerRoutes');
+
 
 const app = express(); // <-- app must be defined BEFORE using app.use()
 const PORT = process.env.PORT || 5000;
@@ -23,6 +26,8 @@ app.use('/api/devices', deviceRoutes);
 app.use('/api/alerts', alertRoutes);
 app.use('/api/whitelist', whitelistRoutes);
 app.use('/api/quarantine', quarantineRoutes);
+app.use('/api/scanner', scannerRoutes);
+
 
 // Test route
 app.get('/', (req, res) => {
@@ -42,3 +47,5 @@ app.listen(PORT, () => {
 });
 app.use("/api/alerts", require("./routes/alertRoutes"));
 app.use("/api/whitelist", require("./routes/whitelistRoutes"));
+
+
