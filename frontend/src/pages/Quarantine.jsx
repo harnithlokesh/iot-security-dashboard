@@ -1,21 +1,60 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import { API_URL } from "../config";
 
 function Quarantine() {
+  const [devices, setDevices] = useState([]);
+
+  const fetchQuarantinedDevices = async () => {
+    try {
+      const res = await fetch(`${API_URL}/devices`);
+      const data = await res.json();
+      const quarantined = data.filter((d) => d.status === "quarantined");
+      setDevices(quarantined);
+    } catch (err) {
+      console.error("Error fetching quarantined devices:", err);
+    }
+  };
+
+  const releaseDevice = async (id) => {
+    try {
+      await fetch(`${API_URL}/devices/release/${id}`, { method: "PUT" });
+      fetchQuarantinedDevices();
+    } catch (err) {
+      console.error("Error releasing device:", err);
+    }
+  };
+
+  useEffect(() => {
+    fetchQuarantinedDevices();
+    const interval = setInterval(fetchQuarantinedDevices, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="page-container">
+    <div className="devices-page">
       <h1>Quarantined Devices</h1>
-      <p>Devices that were detected as unauthorized and quarantined will appear here.</p>
-      {/* Example device cards */}
-      <div className="device-card">
-        <div className="device-info">
-          <h2>Device 1</h2>
-          <p>MAC: 00:11:22:33:44:55</p>
-          <p>Status: Quarantined</p>
-        </div>
-        <div className="device-actions">
-          <button className="quarantine-btn">Release</button>
-        </div>
-      </div>
+      {devices.length === 0 ? (
+        <p>No quarantined devices</p>
+      ) : (
+        devices.map((device) => (
+          <div className="device-card quarantined" key={device._id}>
+            <div className="device-info">
+              <h2>{device.name}</h2>
+              <p>MAC: {device.mac}</p>
+              <p>IP: {device.ip}</p>
+              <p>Status: {device.status}</p>
+            </div>
+            <div className="device-actions">
+              <button
+                className="release-btn"
+                onClick={() => releaseDevice(device._id)}
+              >
+                Release
+              </button>
+            </div>
+          </div>
+        ))
+      )}
     </div>
   );
 }

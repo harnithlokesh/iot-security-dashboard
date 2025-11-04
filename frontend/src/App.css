@@ -5,11 +5,12 @@ html, body, #root {
   height: 100%;
   width: 100%;
   font-family: Arial, sans-serif;
-  overflow: hidden;
+  overflow-y: auto; /* <-- allow vertical scroll */
   background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
   color: #fff;
   box-sizing: border-box;
 }
+
 
 /* ===== Vanta Background Container ===== */
 .vanta-bg {
@@ -196,4 +197,20 @@ a {
 
 .alerts-page tr:hover {
   background: rgba(255,255,255,0.1);
+}
+
+.devices-page {
+  height: 100vh;             /* take full screen height */
+  overflow-y: auto;          /* enable vertical scroll */
+  padding: 20px;             /* breathing room */
+  background-color: #0f172a; /* optional dark theme */
+  color: white;
+}
+
+.device-card {
+  background: #1e293b;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }

@@ -27,6 +27,8 @@ from dotenv import load_dotenv
 from scapy.all import sniff, ARP, BOOTP, DHCP, UDP, get_if_list, get_if_addr
 import requests
 from flask import Flask, request, jsonify, abort
+#from quarantine import quarantine_device, release_device  # we'll make this next
+
 
 # ---- Load config ----
 load_dotenv()
@@ -60,6 +62,7 @@ scanner_thread = None
 stop_sniff_flag = threading.Event()
 scanner_lock = threading.Lock()
 sniff_iface = SCAN_INTERFACE or None
+quarantined_devices = set()
 
 # ---- Helper: auth decorator ----
 def require_token(f):
@@ -401,6 +404,19 @@ def api_quarantine():
         return jsonify({"error": "mac required"}), 400
     ok, msg = attempt_quarantine(mac)
     return jsonify({"ok": ok, "message": msg})
+
+@app.route("/unquarantine", methods=["POST"])
+@require_token
+def api_unquarantine():
+    data = request.get_json(silent=True) or {}
+    mac = (data.get("mac") or "").strip().lower()
+    if not mac:
+        return jsonify({"error": "mac required"}), 400
+    with scanner_lock:
+        if mac in devices:
+            devices[mac]["status"] = "trusted"
+    return jsonify({"ok": True, "message": f"{mac} released"})
+
 
 # ---- Graceful shutdown handling ----
 def shutdown_signal_handler(signum, frame):

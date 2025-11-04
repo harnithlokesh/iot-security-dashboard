@@ -35,38 +35,57 @@ exports.addDevice = async (req, res) => {
 };
 
 // PUT quarantine a device
+const axios = require("axios");
+
 exports.quarantineDevice = async (req, res) => {
   try {
     const device = await Device.findByIdAndUpdate(
       req.params.id,
-      { status: 'quarantined' },
+      { status: "quarantined" },
       { new: true }
     );
+
+    // Notify scanner
+    try {
+      await axios.post("http://127.0.0.1:9000/quarantine", {
+  mac: device.mac,
+  ip: device.ip,
+}, {
+  headers: { Authorization: "Bearer supersecret_scanner_token" } // must match .env token
+});
+
+    } catch (err) {
+      console.error("Failed to notify scanner:", err.message);
+    }
+
     res.json(device);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to quarantine device' });
+    res.status(500).json({ error: "Failed to quarantine device" });
   }
 };
+
 
 // PUT release a device
 exports.releaseDevice = async (req, res) => {
   try {
     const device = await Device.findByIdAndUpdate(
       req.params.id,
-      { status: 'trusted' },
+      { status: "trusted" },
       { new: true }
     );
+
+    try {
+      await axios.post("http://localhost:9000/whitelist", 
+        { mac: device.mac },
+        { headers: { Authorization: "Bearer supersecret_scanner_token" } }
+      );
+    } catch (err) {
+      console.error("Failed to notify scanner (release):", err.message);
+    }
+
     res.json(device);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to release device' });
+    res.status(500).json({ error: "Failed to release device" });
   }
 };
-// GET /api/alerts
-const getAlerts = async (req, res) => {
-  try {
-    const alerts = await Alert.find().sort({ timestamp: -1 }); // newest first
-    res.json(alerts);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-};
+
