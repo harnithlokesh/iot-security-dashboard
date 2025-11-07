@@ -18,3 +18,20 @@
 .alerts-page tr:hover {
   background: rgba(255,255,255,0.1);
 }
+
+.alerts-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.alerts-table th,
+.alerts-table td {
+  border: 1px solid #333;
+  padding: 8px 10px;
+  color: #f0f0f0;
+}
+.alerts-table th {
+  background: #0a1931;
+}
+.alerts-table tr:nth-child(even) {
+  background-color: #111827;
+}

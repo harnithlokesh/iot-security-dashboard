@@ -1,53 +1,36 @@
 import React, { useEffect, useState } from "react";
 import "./Alerts.css";
-import { API_URL } from "../config"; // optional for future backend
+import { API_URL } from "../config";
 
 function Alerts() {
-  // For now, using mock alerts
-  const [alerts, setAlerts] = useState([
-    {
-      time: "2025-10-15 10:45",
-      device: "Unknown IoT Device",
-      mac: "FF:EE:DD:CC:BB:02",
-      type: "Rogue device detected",
-    },
-    {
-      time: "2025-10-15 09:15",
-      device: "Smart Plug",
-      mac: "AA:BB:CC:11:22:33",
-      type: "Device quarantined",
-    },
-    {
-      time: "2025-10-14 22:30",
-      device: "Router",
-      mac: "11:22:33:44:55:66",
-      type: "ARP spoofing detected",
-    },
-  ]);
+  const [alerts, setAlerts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Example of future backend integration
-  /*
+  const fetchAlerts = async () => {
+    try {
+      const res = await fetch(`${API_URL}/alerts`);
+      const data = await res.json();
+      // Reverse order so newest on top
+      setAlerts(data.reverse());
+      setLoading(false);
+    } catch (err) {
+      console.error("Error fetching alerts:", err);
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
-    const fetchAlerts = async () => {
-      try {
-        const res = await fetch(`${API_URL}/alerts`);
-        const data = await res.json();
-        setAlerts(data);
-      } catch (err) {
-        console.error("Error fetching alerts:", err);
-      }
-    };
-
     fetchAlerts();
-    const interval = setInterval(fetchAlerts, 5000); // refresh every 5s
+    const interval = setInterval(fetchAlerts, 5000); // refresh every 5 seconds
     return () => clearInterval(interval);
   }, []);
-  */
+
+  if (loading) return <p>Loading alerts...</p>;
 
   return (
     <div className="alerts-page">
       <h1>Alerts & Logs</h1>
-      {alerts && alerts.length > 0 ? (
+      {alerts.length > 0 ? (
         <table className="alerts-table">
           <thead>
             <tr>
@@ -55,15 +38,17 @@ function Alerts() {
               <th>Device</th>
               <th>MAC Address</th>
               <th>Event</th>
+              <th>Description</th>
             </tr>
           </thead>
           <tbody>
-            {alerts.map((alert, index) => (
-              <tr key={index}>
-                <td>{alert.time}</td>
-                <td>{alert.device}</td>
-                <td>{alert.mac}</td>
+            {alerts.map((alert) => (
+              <tr key={alert._id}>
+                <td>{new Date(alert.timestamp).toLocaleString()}</td>
+                <td>{alert.device?.name || "Unknown Device"}</td>
+                <td>{alert.device?.mac || "N/A"}</td>
                 <td>{alert.type}</td>
+                <td>{alert.description || "—"}</td>
               </tr>
             ))}
           </tbody>

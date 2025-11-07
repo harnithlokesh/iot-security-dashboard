@@ -24,9 +24,11 @@ import signal
 import json
 from functools import wraps
 from dotenv import load_dotenv
-from scapy.all import sniff, ARP, BOOTP, DHCP, UDP, get_if_list, get_if_addr
+from scapy.all import sniff, ARP, BOOTP, DHCP, UDP, get_if_list, get_if_addr, send
 import requests
 from flask import Flask, request, jsonify, abort
+import paramiko
+
 #from quarantine import quarantine_device, release_device  # we'll make this next
 
 
@@ -156,6 +158,118 @@ def request_quarantine_on_backend(device_id=None, mac=None):
     except Exception as e:
         logging.error("Error requesting quarantine on backend: %s", e)
     return None
+
+
+# ---------- Router control (SSH) + ARP fallback ----------
+ROUTER_TYPE = os.getenv("ROUTER_TYPE", "ssh")  # "ssh" or "arp"
+ROUTER_IP = os.getenv("ROUTER_IP", None)
+ROUTER_USER = os.getenv("ROUTER_USER", None)
+ROUTER_PASS = os.getenv("ROUTER_PASS", None)
+
+def ssh_run_command(host, user, password, cmd, timeout=10):
+    client = paramiko.SSHClient()
+    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    try:
+        client.connect(hostname=host, username=user, password=password, timeout=timeout)
+        stdin, stdout, stderr = client.exec_command(cmd)
+        out = stdout.read().decode()
+        err = stderr.read().decode()
+        client.close()
+        return out, err
+    except Exception as e:
+        logging.error("SSH command failed: %s", e)
+        raise
+
+def block_mac_via_ssh(router_ip, router_user, router_pass, mac):
+    """Insert iptables rule on router to drop traffic from MAC."""
+    try:
+        comment = f"quarantine-{mac.replace(':','-')}"
+        # check -C returns non-zero if rule missing; we handle that case
+        check_cmd = f"iptables -C FORWARD -m mac --mac-source {mac} -j DROP || echo notfound"
+        out, err = ssh_run_command(router_ip, router_user, router_pass, check_cmd)
+        if "notfound" in out or out.strip() == "":
+            cmd = f"iptables -I FORWARD -m mac --mac-source {mac} -j DROP -m comment --comment \"{comment}\""
+            ssh_run_command(router_ip, router_user, router_pass, cmd)
+            logging.info("Blocked %s on router %s", mac, router_ip)
+            return True
+        logging.info("Block rule already exists for %s", mac)
+        return False
+    except Exception as e:
+        logging.error("block_mac_via_ssh error: %s", e)
+        return False
+
+def unblock_mac_via_ssh(router_ip, router_user, router_pass, mac):
+    try:
+        # try delete once (iptables -D will remove one instance)
+        delete_cmd = f"iptables -D FORWARD -m mac --mac-source {mac} -j DROP || echo notfound"
+        out, err = ssh_run_command(router_ip, router_user, router_pass, delete_cmd)
+        if "notfound" in out:
+            logging.info("No router rule found for %s", mac)
+            return False
+        logging.info("Removed router rule for %s", mac)
+        return True
+    except Exception as e:
+        logging.error("unblock_mac_via_ssh error: %s", e)
+        return False
+
+# ---------- ARP-block fallback (lab only, requires admin + npcap/root) ----------
+_blocker_threads = {}  # mac -> threading.Event()
+
+def _arp_blackhole_thread(mac, ip, iface):
+    stop_evt = _blocker_threads.get(mac)
+    gateway_ip = get_default_gateway()  # your scanner local IP; or set to router IP if you know gateway
+    pkt = ARP(op=2, psrc=gateway_ip, pdst=ip, hwdst=mac)
+    logging.info("ARP-block thread started for %s -> %s", mac, ip)
+    while not stop_evt.is_set():
+        try:
+            send(pkt, iface=iface, verbose=0)
+        except Exception as e:
+            logging.exception("Error sending ARP block packet: %s", e)
+        time.sleep(1)
+    logging.info("ARP-block thread stopping for %s", mac)
+
+def start_arp_block(mac, ip, iface):
+    mac = mac.lower()
+    if mac in _blocker_threads:
+        return False
+    stop_evt = threading.Event()
+    _blocker_threads[mac] = stop_evt
+    t = threading.Thread(target=_arp_blackhole_thread, args=(mac, ip, iface), daemon=True)
+    t.start()
+    return True
+
+def stop_arp_block(mac):
+    mac = mac.lower()
+    evt = _blocker_threads.get(mac)
+    if not evt:
+        return False
+    evt.set()
+    _blocker_threads.pop(mac, None)
+    return True
+
+# ---------- Convenience wrapper: tries router SSH then optionally ARP fallback ----------
+def block_on_router_or_fallback(mac, ip=None):
+    mac = mac.lower()
+    if ROUTER_TYPE == "ssh" and ROUTER_IP and ROUTER_USER and ROUTER_PASS:
+        ok = block_mac_via_ssh(ROUTER_IP, ROUTER_USER, ROUTER_PASS, mac)
+        if ok:
+            return True, "blocked on router (ssh)"
+        # fall-through to ARP if ssh fails and ROUTER_TYPE allows fallback
+    if ROUTER_TYPE == "arp" or True:  # enable ARP fallback as last resort (change if you want optional only)
+        # start ARP block thread (requires admin privileges)
+        started = start_arp_block(mac, ip or "", sniff_iface)
+        return started, f"arp_block_started={started}"
+    return False, "no method available"
+
+def unblock_on_router_or_fallback(mac):
+    mac = mac.lower()
+    if ROUTER_TYPE == "ssh" and ROUTER_IP and ROUTER_USER and ROUTER_PASS:
+        ok = unblock_mac_via_ssh(ROUTER_IP, ROUTER_USER, ROUTER_PASS, mac)
+        if ok:
+            return True, "unblocked on router (ssh)"
+    stopped = stop_arp_block(mac)
+    return stopped, f"arp_stopped={stopped}"
+
 
 # ---- Packet handling (reused from your scanner) ----
 def handle_arp(pkt):
@@ -400,23 +514,33 @@ def api_whitelist_delete(mac):
 def api_quarantine():
     data = request.get_json(silent=True) or {}
     mac = (data.get("mac") or "").strip().lower()
+    ip = (data.get("ip") or "").strip()
     if not mac:
         return jsonify({"error": "mac required"}), 400
-    ok, msg = attempt_quarantine(mac)
+    ok, msg = attempt_quarantine(mac)  # marks local devices[mac]["status"]="quarantined" + backend alert
+    # enforce router blocking (SSH) or ARP fallback
+    if ok:
+        blocked_ok, blocked_msg = block_on_router_or_fallback(mac, ip)
+        logging.info("Router block result for %s: %s %s", mac, blocked_ok, blocked_msg)
+        # also create an alert on backend to say enforcement happened
+        create_alert_on_backend(mac=mac, alert_type="quarantine", description=f"Enforcement: {blocked_msg}")
     return jsonify({"ok": ok, "message": msg})
 
-@app.route("/unquarantine", methods=["POST"])
+@app.route("/release", methods=["POST"])
 @require_token
-def api_unquarantine():
+def api_release():
     data = request.get_json(silent=True) or {}
     mac = (data.get("mac") or "").strip().lower()
     if not mac:
         return jsonify({"error": "mac required"}), 400
+    unblocked, umsg = unblock_on_router_or_fallback(mac)
     with scanner_lock:
         if mac in devices:
             devices[mac]["status"] = "trusted"
-    return jsonify({"ok": True, "message": f"{mac} released"})
-
+            devices[mac].pop("quarantined_at", None)
+    create_alert_on_backend(mac=mac, alert_type="release", description=f"Release enforcement: {umsg}")
+    logging.info("Released %s (enforcement: %s)", mac, umsg)
+    return jsonify({"ok": True, "message": "device released", "enforcement": umsg})
 
 # ---- Graceful shutdown handling ----
 def shutdown_signal_handler(signum, frame):
@@ -448,3 +572,55 @@ if __name__ == "__main__":
     logging.info("Launching scanner service API on port %s", SERVICE_PORT)
     # Flask only for local control; ensure firewall/ACLs protect this port
     app.run(host="0.0.0.0", port=SERVICE_PORT)
+
+
+# ---- That packet shi ----
+print("My local IP:", get_default_gateway())
+
+def get_default_gateway(): # quick UDP trick to discover outbound IP and infer gateway interface IP 
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) 
+    try: 
+        s.connect(("8.8.8.8", 80)) 
+        ip = s.getsockname()[0] 
+    finally: 
+        s.close() 
+    return ip # your scanner's local IP; router IP may be e.g. 
+ip.rpartition('.')[0] + '.1'
+
+def ssh_run_command(host, user, password, cmd, timeout=10):
+    try:
+        client = paramiko.SSHClient()
+        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        client.connect(hostname=host, username=user, password=password, timeout=timeout)
+        stdin, stdout, stderr = client.exec_command(cmd)
+        out = stdout.read().decode()
+        err = stderr.read().decode()
+        client.close()
+        return out, err
+    except Exception as e:
+        logging.error("SSH command failed: %s", e)
+        raise
+
+def block_mac_via_ssh(router_ip, router_user, router_pass, mac):
+    mac_safe = mac.replace(":", "-")
+    comment = f"quarantine-{mac_safe}"
+    # Check if rule exists; if not, insert
+    check_cmd = f"iptables -C FORWARD -m mac --mac-source {mac} -j DROP || echo notfound"
+    out, err = ssh_run_command(router_ip, router_user, router_pass, check_cmd)
+    if "notfound" in out or out.strip() == "":
+        cmd = f"iptables -I FORWARD -m mac --mac-source {mac} -j DROP -m comment --comment \"{comment}\""
+        ssh_run_command(router_ip, router_user, router_pass, cmd)
+        logging.info("Blocked %s on router %s", mac, router_ip)
+        return True
+    logging.info("Rule already exists for %s", mac)
+    return False
+
+def unblock_mac_via_ssh(router_ip, router_user, router_pass, mac):
+    # Attempt to remove matching rule(s)
+    # Loop to delete all instances
+    delete_cmd = f"iptables -D FORWARD -m mac --mac-source {mac} -j DROP || echo notfound"
+    out, err = ssh_run_command(router_ip, router_user, router_pass, delete_cmd)
+    if "notfound" in out:
+        logging.info("No rule found to remove for %s", mac)
+    else:
+        logging.info("Removed iptables rule for %s", mac)

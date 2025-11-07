@@ -47,19 +47,26 @@ exports.quarantineDevice = async (req, res) => {
 
     // Notify scanner
     try {
-      await axios.post("http://127.0.0.1:9000/quarantine", {
+      await axios.post(`${process.env.SCANNER_API_URL}/quarantine`, {
   mac: device.mac,
   ip: device.ip,
 }, {
-  headers: { Authorization: "Bearer supersecret_scanner_token" } // must match .env token
+  headers: { Authorization: "Bearer " + process.env.SCANNER_API_TOKEN } // must match .env token
 });
+console.log(`Scanner notified to quarantine ${device.mac}`);
 
     } catch (err) {
       console.error("Failed to notify scanner:", err.message);
     }
 
+    // create an alert locally (backend)
+    const Alert = require("../models/Alert");
+    await Alert.create({ device: device._id, type: "quarantine", description: `Quarantine requested for ${device.mac}` });
+
+
     res.json(device);
   } catch (err) {
+    console.error(err);
     res.status(500).json({ error: "Failed to quarantine device" });
   }
 };
@@ -75,13 +82,17 @@ exports.releaseDevice = async (req, res) => {
     );
 
     try {
-      await axios.post("http://localhost:9000/whitelist", 
+      await axios.post(`${process.env.SCANNER_API_URL}/whitelist`, 
         { mac: device.mac },
-        { headers: { Authorization: "Bearer supersecret_scanner_token" } }
+        { headers: { Authorization: "Bearer " + process.env.SCANNER_API_TOKEN } }
       );
+      console.log(`Scanner notified to release ${device.mac}`);
     } catch (err) {
       console.error("Failed to notify scanner (release):", err.message);
     }
+
+    const Alert = require("../models/Alert");
+    await Alert.create({ device: device._id, type: "release", description: `Device released ${device.mac}` });
 
     res.json(device);
   } catch (err) {
