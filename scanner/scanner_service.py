@@ -1,18 +1,11 @@
 #!/usr/bin/env python3
 """
-scanner_service.py
+scanner_service.py  —  Demo-ready version
 
-A scanner service that:
-- runs a passive ARP/DHCP scanner in background
-- exposes a Flask HTTP API to control and query the scanner
-- reports discovered devices to the main backend (BACKEND_URL)
-- supports local whitelist and quarantine requests
-
-Run:
-    (venv) python scanner_service.py
-
-Make sure you installed requirements:
-    pip install scapy flask requests python-dotenv netaddr
+- Runs passive ARP/DHCP scanner
+- Reports devices + alerts to backend
+- Provides local REST API for control
+- Quarantines devices using Windows Firewall (PowerShell)
 """
 
 import os
@@ -22,56 +15,52 @@ import sys
 import threading
 import signal
 import json
+import socket
+import subprocess
 from functools import wraps
 from dotenv import load_dotenv
-from scapy.all import sniff, ARP, BOOTP, DHCP, UDP, get_if_list, get_if_addr, send
+from scapy.all import sniff, ARP, BOOTP, DHCP, UDP, send
 import requests
 from flask import Flask, request, jsonify, abort
-import paramiko
+import io
 
-#from quarantine import quarantine_device, release_device  # we'll make this next
-
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 # ---- Load config ----
 load_dotenv()
 BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:5000/api")
-SCAN_INTERFACE = os.getenv("SCAN_INTERFACE", "")  # raw NPF name or empty for auto
+SCAN_INTERFACE = os.getenv("SCAN_INTERFACE", "").strip() or None 
 WHITELIST_FILE = os.getenv("WHITELIST_FILE", "whitelist.txt")
 LOG_FILE = os.getenv("LOG_FILE", "scanner_service.log")
-QUARANTINE_ENABLED = os.getenv("QUARANTINE_ENABLED", "false").lower() in ("1", "true", "yes")
 DEBOUNCE_SECONDS = int(os.getenv("DEBOUNCE_SECONDS", "3"))
 SERVICE_PORT = int(os.getenv("SCANNER_SERVICE_PORT", "9000"))
-API_AUTH_TOKEN = os.getenv("SCANNER_API_TOKEN", "changeme")  # simple token auth for local API
+API_AUTH_TOKEN = os.getenv("SCANNER_API_TOKEN", "supersecret_scanner_token")
 
 # ---- Logging ----
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(message)s",
-    handlers=[
-        logging.FileHandler(LOG_FILE),
-        logging.StreamHandler(sys.stdout)
-    ]
+    handlers=[logging.FileHandler(LOG_FILE), logging.StreamHandler(sys.stdout)],
 )
 
 # ---- Flask app ----
 app = Flask(__name__)
 
 # ---- Global state ----
-devices = {}         # mac -> { mac, ip, first_seen, last_seen, status }
-last_seen_times = {} # mac -> timestamp (debounce)
+devices = {}
+last_seen_times = {}
 local_whitelist = set()
 scanner_thread = None
 stop_sniff_flag = threading.Event()
 scanner_lock = threading.Lock()
 sniff_iface = SCAN_INTERFACE or None
-quarantined_devices = set()
 
-# ---- Helper: auth decorator ----
+# ---- Auth decorator ----
 def require_token(f):
     @wraps(f)
     def wrapped(*args, **kwargs):
         token = None
-        # Accept token in header or as ?token= query param
         if "Authorization" in request.headers:
             auth = request.headers.get("Authorization", "")
             if auth.startswith("Bearer "):
@@ -83,7 +72,16 @@ def require_token(f):
         return f(*args, **kwargs)
     return wrapped
 
-# ---- Utility functions ----
+# ---- Helper utilities ----
+def get_default_gateway():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    try:
+        s.connect(("8.8.8.8", 80))
+        ip = s.getsockname()[0]
+    finally:
+        s.close()
+    return ip
+
 def load_local_whitelist(path=WHITELIST_FILE):
     s = set()
     if os.path.isfile(path):
@@ -112,11 +110,11 @@ def report_device_to_backend(mac, ip=None, name=None):
         "name": name or "Unknown",
         "mac": mac,
         "ip": ip or "",
-        "status": "trusted" if mac.lower() in local_whitelist else "rogue"
+        "status": "trusted" if mac.lower() in local_whitelist else "rogue",
     }
     try:
         r = requests.post(f"{BACKEND_URL}/devices", json=payload, timeout=5)
-        if r.status_code in (200,201):
+        if r.status_code in (200, 201):
             logging.info("Reported device to backend: %s %s", mac, ip)
             return r.json()
         else:
@@ -133,176 +131,39 @@ def create_alert_on_backend(device_id=None, mac=None, alert_type="unauthorized",
         payload["mac"] = mac
     try:
         r = requests.post(f"{BACKEND_URL}/alerts", json=payload, timeout=5)
-        if r.status_code in (200,201):
+        if r.status_code in (200, 201):
             logging.info("Created alert on backend for %s", mac or device_id)
             return r.json()
-        else:
-            logging.warning("Alert API returned %s: %s", r.status_code, r.text)
     except Exception as e:
         logging.error("Error creating alert on backend: %s", e)
     return None
 
-def request_quarantine_on_backend(device_id=None, mac=None):
-    payload = {}
-    if device_id:
-        payload["deviceId"] = device_id
-    elif mac:
-        payload["mac"] = mac
-    try:
-        r = requests.post(f"{BACKEND_URL}/quarantine/request", json=payload, timeout=5)
-        if r.status_code in (200,201):
-            logging.info("Requested quarantine on backend for %s", mac or device_id)
-            return r.json()
-        else:
-            logging.warning("Quarantine request returned %s: %s", r.status_code, r.text)
-    except Exception as e:
-        logging.error("Error requesting quarantine on backend: %s", e)
-    return None
-
-
-# ---------- Router control (SSH) + ARP fallback ----------
-ROUTER_TYPE = os.getenv("ROUTER_TYPE", "ssh")  # "ssh" or "arp"
-ROUTER_IP = os.getenv("ROUTER_IP", None)
-ROUTER_USER = os.getenv("ROUTER_USER", None)
-ROUTER_PASS = os.getenv("ROUTER_PASS", None)
-
-def ssh_run_command(host, user, password, cmd, timeout=10):
-    client = paramiko.SSHClient()
-    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    try:
-        client.connect(hostname=host, username=user, password=password, timeout=timeout)
-        stdin, stdout, stderr = client.exec_command(cmd)
-        out = stdout.read().decode()
-        err = stderr.read().decode()
-        client.close()
-        return out, err
-    except Exception as e:
-        logging.error("SSH command failed: %s", e)
-        raise
-
-def block_mac_via_ssh(router_ip, router_user, router_pass, mac):
-    """Insert iptables rule on router to drop traffic from MAC."""
-    try:
-        comment = f"quarantine-{mac.replace(':','-')}"
-        # check -C returns non-zero if rule missing; we handle that case
-        check_cmd = f"iptables -C FORWARD -m mac --mac-source {mac} -j DROP || echo notfound"
-        out, err = ssh_run_command(router_ip, router_user, router_pass, check_cmd)
-        if "notfound" in out or out.strip() == "":
-            cmd = f"iptables -I FORWARD -m mac --mac-source {mac} -j DROP -m comment --comment \"{comment}\""
-            ssh_run_command(router_ip, router_user, router_pass, cmd)
-            logging.info("Blocked %s on router %s", mac, router_ip)
-            return True
-        logging.info("Block rule already exists for %s", mac)
-        return False
-    except Exception as e:
-        logging.error("block_mac_via_ssh error: %s", e)
-        return False
-
-def unblock_mac_via_ssh(router_ip, router_user, router_pass, mac):
-    try:
-        # try delete once (iptables -D will remove one instance)
-        delete_cmd = f"iptables -D FORWARD -m mac --mac-source {mac} -j DROP || echo notfound"
-        out, err = ssh_run_command(router_ip, router_user, router_pass, delete_cmd)
-        if "notfound" in out:
-            logging.info("No router rule found for %s", mac)
-            return False
-        logging.info("Removed router rule for %s", mac)
-        return True
-    except Exception as e:
-        logging.error("unblock_mac_via_ssh error: %s", e)
-        return False
-
-# ---------- ARP-block fallback (lab only, requires admin + npcap/root) ----------
-_blocker_threads = {}  # mac -> threading.Event()
-
-def _arp_blackhole_thread(mac, ip, iface):
-    stop_evt = _blocker_threads.get(mac)
-    gateway_ip = get_default_gateway()  # your scanner local IP; or set to router IP if you know gateway
-    pkt = ARP(op=2, psrc=gateway_ip, pdst=ip, hwdst=mac)
-    logging.info("ARP-block thread started for %s -> %s", mac, ip)
-    while not stop_evt.is_set():
-        try:
-            send(pkt, iface=iface, verbose=0)
-        except Exception as e:
-            logging.exception("Error sending ARP block packet: %s", e)
-        time.sleep(1)
-    logging.info("ARP-block thread stopping for %s", mac)
-
-def start_arp_block(mac, ip, iface):
-    mac = mac.lower()
-    if mac in _blocker_threads:
-        return False
-    stop_evt = threading.Event()
-    _blocker_threads[mac] = stop_evt
-    t = threading.Thread(target=_arp_blackhole_thread, args=(mac, ip, iface), daemon=True)
-    t.start()
-    return True
-
-def stop_arp_block(mac):
-    mac = mac.lower()
-    evt = _blocker_threads.get(mac)
-    if not evt:
-        return False
-    evt.set()
-    _blocker_threads.pop(mac, None)
-    return True
-
-# ---------- Convenience wrapper: tries router SSH then optionally ARP fallback ----------
-def block_on_router_or_fallback(mac, ip=None):
-    mac = mac.lower()
-    if ROUTER_TYPE == "ssh" and ROUTER_IP and ROUTER_USER and ROUTER_PASS:
-        ok = block_mac_via_ssh(ROUTER_IP, ROUTER_USER, ROUTER_PASS, mac)
-        if ok:
-            return True, "blocked on router (ssh)"
-        # fall-through to ARP if ssh fails and ROUTER_TYPE allows fallback
-    if ROUTER_TYPE == "arp" or True:  # enable ARP fallback as last resort (change if you want optional only)
-        # start ARP block thread (requires admin privileges)
-        started = start_arp_block(mac, ip or "", sniff_iface)
-        return started, f"arp_block_started={started}"
-    return False, "no method available"
-
-def unblock_on_router_or_fallback(mac):
-    mac = mac.lower()
-    if ROUTER_TYPE == "ssh" and ROUTER_IP and ROUTER_USER and ROUTER_PASS:
-        ok = unblock_mac_via_ssh(ROUTER_IP, ROUTER_USER, ROUTER_PASS, mac)
-        if ok:
-            return True, "unblocked on router (ssh)"
-    stopped = stop_arp_block(mac)
-    return stopped, f"arp_stopped={stopped}"
-
-
-# ---- Packet handling (reused from your scanner) ----
+# ---- Packet handlers ----
 def handle_arp(pkt):
     try:
-        if ARP in pkt and pkt[ARP].op in (1,2):
-            mac = pkt[ARP].hwsrc
+        if ARP in pkt and pkt[ARP].op in (1, 2):
+            mac = pkt[ARP].hwsrc.lower()
             ip = pkt[ARP].psrc
-            if not mac:
-                return
-            mac = mac.lower()
             if not should_process(mac):
                 return
             now = time.time()
             with scanner_lock:
-                if mac in devices:
-                    devices[mac]["ip"] = ip or devices[mac].get("ip")
-                    devices[mac]["last_seen"] = now
-                else:
-                    devices[mac] = {
-                        "mac": mac,
-                        "ip": ip,
-                        "first_seen": now,
-                        "last_seen": now,
-                        "status": "trusted" if mac in local_whitelist else "rogue"
-                    }
-                    # report to backend and create alert if not whitelisted
-                    backend_obj = report_device_to_backend(mac, ip)
-                    if mac not in local_whitelist:
-                        device_id = backend_obj.get("_id") if backend_obj and isinstance(backend_obj, dict) else None
-                        create_alert_on_backend(device_id=device_id, mac=mac, alert_type="unauthorized",
-                                               description=f"Unauthorized device detected (ARP): {mac} {ip}")
-                        # optional: notify backend for quarantine workflow
-                        request_quarantine_on_backend(device_id=device_id, mac=mac)
+                devices[mac] = {
+                    "mac": mac,
+                    "ip": ip,
+                    "first_seen": devices.get(mac, {}).get("first_seen", now),
+                    "last_seen": now,
+                    "status": "trusted" if mac in local_whitelist else "rogue",
+                }
+            backend_obj = report_device_to_backend(mac, ip)
+            if mac not in local_whitelist:
+                device_id = backend_obj.get("_id") if backend_obj else None
+                create_alert_on_backend(
+                    device_id=device_id,
+                    mac=mac,
+                    alert_type="unauthorized",
+                    description=f"Unauthorized device detected: {mac} ({ip})",
+                )
     except Exception as e:
         logging.error("handle_arp error: %s", e)
 
@@ -310,34 +171,28 @@ def handle_dhcp(pkt):
     try:
         if BOOTP in pkt:
             chaddr = pkt[BOOTP].chaddr
-            yiaddr = pkt[BOOTP].yiaddr
-            if isinstance(chaddr, (bytes, bytearray)):
-                mac = ':'.join(f"{b:02x}" for b in chaddr[:6])
-            else:
-                mac = str(chaddr)
-            mac = mac.lower()
-            ip = yiaddr
+            mac = ":".join(f"{b:02x}" for b in chaddr[:6]).lower()
+            ip = pkt[BOOTP].yiaddr
             if not should_process(mac):
                 return
             now = time.time()
             with scanner_lock:
-                if mac in devices:
-                    devices[mac]["ip"] = ip or devices[mac].get("ip")
-                    devices[mac]["last_seen"] = now
-                else:
-                    devices[mac] = {
-                        "mac": mac,
-                        "ip": ip,
-                        "first_seen": now,
-                        "last_seen": now,
-                        "status": "trusted" if mac in local_whitelist else "rogue"
-                    }
-                    backend_obj = report_device_to_backend(mac, ip)
-                    if mac not in local_whitelist:
-                        device_id = backend_obj.get("_id") if backend_obj and isinstance(backend_obj, dict) else None
-                        create_alert_on_backend(device_id=device_id, mac=mac, alert_type="unauthorized",
-                                               description=f"Unauthorized device detected (DHCP): {mac} {ip}")
-                        request_quarantine_on_backend(device_id=device_id, mac=mac)
+                devices[mac] = {
+                    "mac": mac,
+                    "ip": ip,
+                    "first_seen": devices.get(mac, {}).get("first_seen", now),
+                    "last_seen": now,
+                    "status": "trusted" if mac in local_whitelist else "rogue",
+                }
+            backend_obj = report_device_to_backend(mac, ip)
+            if mac not in local_whitelist:
+                device_id = backend_obj.get("_id") if backend_obj else None
+                create_alert_on_backend(
+                    device_id=device_id,
+                    mac=mac,
+                    alert_type="unauthorized",
+                    description=f"Unauthorized device detected: {mac} ({ip})",
+                )
     except Exception as e:
         logging.error("handle_dhcp error: %s", e)
 
@@ -345,12 +200,12 @@ def pkt_handler(pkt):
     try:
         if ARP in pkt:
             handle_arp(pkt)
-        elif DHCP in pkt or (pkt.haslayer(UDP) and (pkt[UDP].sport in (67,68) or pkt[UDP].dport in (67,68))):
+        elif DHCP in pkt or (pkt.haslayer(UDP) and (pkt[UDP].sport in (67, 68))):
             handle_dhcp(pkt)
     except Exception as e:
         logging.error("pkt_handler error: %s", e)
 
-# ---- Sniffing thread ----
+# ---- Sniffer ----
 def sniff_loop(iface=None):
     logging.info("Sniffer thread started (iface=%s)", iface or "auto")
     stop_sniff_flag.clear()
@@ -366,7 +221,7 @@ def sniff_loop(iface=None):
 def start_scanner(iface=None):
     global scanner_thread, sniff_iface
     if scanner_thread and scanner_thread.is_alive():
-        return False, "scanner already running"
+        return False, "already running"
     sniff_iface = iface or sniff_iface
     scanner_thread = threading.Thread(target=sniff_loop, args=(sniff_iface,), daemon=True)
     scanner_thread.start()
@@ -379,248 +234,181 @@ def stop_scanner():
     scanner_thread.join(timeout=5)
     return True, "scanner stopped"
 
-# ---- Active ARP sweep (optional) ----
-def active_arp_sweep(iface=None, ip_range=None, timeout=2):
-    """Perform a one-shot ARP ping sweep across ip_range.
-    ip_range example: "192.168.1.0/24" (requires scapy srp)
-    Not used by default, but available via /scan_once.
-    """
-    from scapy.all import ARP, Ether, srp
-    iface = iface or sniff_iface
-    if not ip_range:
-        return {"error": "ip_range required"}
-    try:
-        logging.info("Running active ARP sweep on %s %s", iface, ip_range)
-        pkt = Ether(dst="ff:ff:ff:ff:ff:ff")/ARP(pdst=ip_range)
-        ans, _ = srp(pkt, timeout=timeout, iface=iface, verbose=0)
-        found = []
-        for _, r in ans:
-            mac = r[Ether].src.lower()
-            ip = r[ARP].psrc
-            found.append({"mac": mac, "ip": ip})
-            # update devices map (no duplicate reporting)
-            with scanner_lock:
-                now = time.time()
-                if mac in devices:
-                    devices[mac]["ip"] = ip or devices[mac].get("ip")
-                    devices[mac]["last_seen"] = now
-                else:
-                    devices[mac] = {"mac": mac, "ip": ip, "first_seen": now, "last_seen": now,
-                                    "status": "trusted" if mac in local_whitelist else "rogue"}
-                    report_device_to_backend(mac, ip)
-        return {"ok": True, "found": found}
-    except Exception as e:
-        logging.error("active_arp_sweep error: %s", e)
-        return {"error": str(e)}
-
-# ---- Quarantine action (simulated / optional) ----
-def attempt_quarantine(mac):
-    """
-    Simulated quarantine:
-      - mark local device entry as 'quarantined'
-      - create an alert on backend
-    If you want active blocking (deauth), you'd need monitor mode + packet injection and caution.
-    """
-    mac = mac.lower()
-    with scanner_lock:
-        if mac not in devices:
-            return False, "unknown mac"
-        devices[mac]["status"] = "quarantined"
-        devices[mac]["quarantined_at"] = time.time()
-    # record to backend
-    backend_device = report_device_to_backend(mac, devices[mac].get("ip"))
-    create_alert_on_backend(device_id=(backend_device.get("_id") if backend_device else None),
-                           mac=mac, alert_type="quarantine",
-                           description=f"Quarantine applied by scanner service for {mac}")
-    return True, "quarantine applied (simulated)"
-
-# ---- Flask routes ----
+# ---- Flask Routes ----
 @app.route("/status", methods=["GET"])
 @require_token
-def status():
+def api_status():
     return jsonify({
         "running": bool(scanner_thread and scanner_thread.is_alive()),
         "interface": sniff_iface,
         "device_count": len(devices),
-        "whitelist_count": len(local_whitelist)
+        "whitelist_count": len(local_whitelist),
     })
-
-@app.route("/start", methods=["POST"])
-@require_token
-def api_start():
-    data = request.get_json(silent=True) or {}
-    iface = data.get("iface") or request.args.get("iface")
-    ok, msg = start_scanner(iface)
-    return jsonify({"ok": ok, "message": msg})
-
-@app.route("/stop", methods=["POST"])
-@require_token
-def api_stop():
-    ok, msg = stop_scanner()
-    return jsonify({"ok": ok, "message": msg})
 
 @app.route("/devices", methods=["GET"])
 @require_token
 def api_devices():
     with scanner_lock:
-        # return devices sorted by last_seen desc
-        out = sorted(devices.values(), key=lambda x: x.get("last_seen", 0), reverse=True)
-        return jsonify(out)
-
-@app.route("/scan_once", methods=["POST"])
-@require_token
-def api_scan_once():
-    data = request.get_json(silent=True) or {}
-    ip_range = data.get("ip_range")
-    iface = data.get("iface") or sniff_iface
-    if not ip_range:
-        return jsonify({"error": "ip_range required"}), 400
-    res = active_arp_sweep(iface=iface, ip_range=ip_range)
-    return jsonify(res)
+        return jsonify(sorted(devices.values(), key=lambda x: x["last_seen"], reverse=True))
 
 @app.route("/whitelist", methods=["GET", "POST"])
 @require_token
 def api_whitelist():
     if request.method == "GET":
         return jsonify(sorted(list(local_whitelist)))
-    if request.method == "POST":
-        data = request.get_json(silent=True) or {}
-        mac = (data.get("mac") or "").strip().lower()
-        if not mac:
-            return jsonify({"error": "mac required"}), 400
-        local_whitelist.add(mac)
-        save_local_whitelist()
-        # If device exists, update status
-        with scanner_lock:
-            if mac in devices:
-                devices[mac]["status"] = "trusted"
-        return jsonify({"ok": True, "mac": mac})
+    data = request.get_json(silent=True) or {}
+    mac = (data.get("mac") or "").strip().lower()
+    if not mac:
+        return jsonify({"error": "mac required"}), 400
+    local_whitelist.add(mac)
+    save_local_whitelist()
+    with scanner_lock:
+        if mac in devices:
+            devices[mac]["status"] = "trusted"
+    return jsonify({"ok": True, "mac": mac})
 
-@app.route("/whitelist/<path:mac>", methods=["DELETE"])
-@require_token
-def api_whitelist_delete(mac):
-    mac = mac.strip().lower()
-    if mac in local_whitelist:
-        local_whitelist.remove(mac)
-        save_local_whitelist()
-        with scanner_lock:
-            if mac in devices:
-                devices[mac]["status"] = "rogue"
-        return jsonify({"ok": True, "mac": mac})
-    return jsonify({"error": "not found"}), 404
-
+# ---- Windows Firewall Quarantine ----
 @app.route("/quarantine", methods=["POST"])
 @require_token
 def api_quarantine():
     data = request.get_json(silent=True) or {}
     mac = (data.get("mac") or "").strip().lower()
     ip = (data.get("ip") or "").strip()
-    if not mac:
-        return jsonify({"error": "mac required"}), 400
-    ok, msg = attempt_quarantine(mac)  # marks local devices[mac]["status"]="quarantined" + backend alert
-    # enforce router blocking (SSH) or ARP fallback
-    if ok:
-        blocked_ok, blocked_msg = block_on_router_or_fallback(mac, ip)
-        logging.info("Router block result for %s: %s %s", mac, blocked_ok, blocked_msg)
-        # also create an alert on backend to say enforcement happened
-        create_alert_on_backend(mac=mac, alert_type="quarantine", description=f"Enforcement: {blocked_msg}")
-    return jsonify({"ok": ok, "message": msg})
+    if not ip:
+        return jsonify({"error": "ip required"}), 400
+
+    try:
+        cmd = [
+            "powershell",
+            "-Command",
+            f'New-NetFirewallRule -DisplayName "Quarantine-{ip}" '
+            f'-Direction Outbound -RemoteAddress {ip} -Action Block'
+        ]
+        subprocess.run(cmd, check=True)
+        logging.info(f"✅ Quarantined {mac or ip} using Windows Firewall")
+
+        with scanner_lock:
+            if mac in devices:
+                devices[mac]["status"] = "quarantined"
+        create_alert_on_backend(mac=mac, alert_type="quarantine", description=f"Firewall blocked {ip}")
+
+        return jsonify({"ok": True, "message": f"Device {ip} quarantined"}), 200
+
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Failed to quarantine {ip}: {e}")
+        return jsonify({"error": "Firewall rule failed"}), 500
+    
 
 @app.route("/release", methods=["POST"])
 @require_token
 def api_release():
     data = request.get_json(silent=True) or {}
-    mac = (data.get("mac") or "").strip().lower()
-    if not mac:
-        return jsonify({"error": "mac required"}), 400
-    unblocked, umsg = unblock_on_router_or_fallback(mac)
-    with scanner_lock:
-        if mac in devices:
-            devices[mac]["status"] = "trusted"
-            devices[mac].pop("quarantined_at", None)
-    create_alert_on_backend(mac=mac, alert_type="release", description=f"Release enforcement: {umsg}")
-    logging.info("Released %s (enforcement: %s)", mac, umsg)
-    return jsonify({"ok": True, "message": "device released", "enforcement": umsg})
+    ip = (data.get("ip") or "").strip()
+    if not ip:
+        return jsonify({"error": "ip required"}), 400
 
-# ---- Graceful shutdown handling ----
+    try:
+        # 🔥 Force remove all firewall rules that reference this IP (even multiple entries)
+        cmd = [
+            "powershell",
+            "-Command",
+            (
+                f'$rules = Get-NetFirewallRule | Where-Object {{$_.DisplayName -like "*Quarantine-{ip}*"}}; '
+                f'if ($rules) {{ $rules | Remove-NetFirewallRule -ErrorAction SilentlyContinue; '
+                f'Write-Host "Removed quarantine rules for {ip}" }} '
+                f'else {{ Write-Host "No quarantine rules found for {ip}" }}'
+            )
+        ]
+
+        subprocess.run(cmd, check=True, shell=True)
+
+        # 🧹 Flush ARP cache for the IP
+        subprocess.run(["arp", "-d", ip], shell=True)
+
+        logging.info(f"✅ Released {ip} from quarantine (rules removed & ARP flushed)")
+
+        # Update internal state
+        with scanner_lock:
+            for mac, dev in devices.items():
+                if dev.get("ip") == ip:
+                    dev["status"] = "trusted"
+                    break
+
+        create_alert_on_backend(mac=None, alert_type="release", description=f"Firewall unblocked {ip}")
+        return jsonify({"ok": True, "message": f"Device {ip} released"}), 200
+
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Failed to release {ip}: {e}")
+        return jsonify({"error": "Unblock failed"}), 500
+
+
+# ---- Startup ----
 def shutdown_signal_handler(signum, frame):
     logging.info("Received shutdown signal, stopping scanner")
     stop_sniff_flag.set()
     time.sleep(0.5)
-    try:
-        func = request.environ.get('werkzeug.server.shutdown')
-        if func:
-            func()
-    except Exception:
-        pass
     sys.exit(0)
 
 signal.signal(signal.SIGINT, shutdown_signal_handler)
 signal.signal(signal.SIGTERM, shutdown_signal_handler)
 
-# ---- Init whitelist & optionally auto-start scanner ----
 local_whitelist = load_local_whitelist()
 logging.info("Local whitelist loaded (%d entries)", len(local_whitelist))
 
+
+# ---- Frontend-triggered endpoints (proxy to local quarantine/release) ----
+@app.route("/devices/quarantine/<device_id>", methods=["PUT"])
+def quarantine_device(device_id):
+    device = next((d for d in devices.values() if str(d.get("_id")) == str(device_id)), None)
+    if not device:
+        return jsonify({"error": "Device not found"}), 404
+
+    ip = device.get("ip")
+    mac = device.get("mac")
+    if not ip:
+        return jsonify({"error": "Device IP missing"}), 400
+
+    try:
+        res = requests.post(
+            "http://127.0.0.1:9000/quarantine",
+            headers={"Authorization": f"Bearer {API_AUTH_TOKEN}"},
+            json={"ip": ip, "mac": mac},
+            timeout=5
+        )
+        logging.info(f"Forwarded quarantine request for {ip}")
+        return jsonify(res.json()), res.status_code
+    except Exception as e:
+        logging.error(f"Failed to forward quarantine request: {e}")
+        return jsonify({"error": "Internal proxy error"}), 500
+
+
+@app.route("/devices/release/<device_id>", methods=["PUT"])
+def release_device(device_id):
+    device = next((d for d in devices.values() if str(d.get("_id")) == str(device_id)), None)
+    if not device:
+        return jsonify({"error": "Device not found"}), 404
+
+    ip = device.get("ip")
+    if not ip:
+        return jsonify({"error": "Device IP missing"}), 400
+
+    try:
+        res = requests.post(
+            "http://127.0.0.1:9000/release",
+            headers={"Authorization": f"Bearer {API_AUTH_TOKEN}"},
+            json={"ip": ip},
+            timeout=5
+        )
+        logging.info(f"Forwarded release request for {ip}")
+        return jsonify(res.json()), res.status_code
+    except Exception as e:
+        logging.error(f"Failed to forward release request: {e}")
+        return jsonify({"error": "Internal proxy error"}), 500
+
 if __name__ == "__main__":
-    # Auto-start if configured
-    auto_start = os.getenv("SCANNER_AUTO_START", "true").lower() in ("1", "true", "yes")
+    auto_start = True
     if auto_start:
         ok, msg = start_scanner(SCAN_INTERFACE or None)
         logging.info("Auto-start scanner: %s %s", ok, msg)
-    # Run Flask
     logging.info("Launching scanner service API on port %s", SERVICE_PORT)
-    # Flask only for local control; ensure firewall/ACLs protect this port
     app.run(host="0.0.0.0", port=SERVICE_PORT)
-
-
-# ---- That packet shi ----
-print("My local IP:", get_default_gateway())
-
-def get_default_gateway(): # quick UDP trick to discover outbound IP and infer gateway interface IP 
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) 
-    try: 
-        s.connect(("8.8.8.8", 80)) 
-        ip = s.getsockname()[0] 
-    finally: 
-        s.close() 
-    return ip # your scanner's local IP; router IP may be e.g. 
-ip.rpartition('.')[0] + '.1'
-
-def ssh_run_command(host, user, password, cmd, timeout=10):
-    try:
-        client = paramiko.SSHClient()
-        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        client.connect(hostname=host, username=user, password=password, timeout=timeout)
-        stdin, stdout, stderr = client.exec_command(cmd)
-        out = stdout.read().decode()
-        err = stderr.read().decode()
-        client.close()
-        return out, err
-    except Exception as e:
-        logging.error("SSH command failed: %s", e)
-        raise
-
-def block_mac_via_ssh(router_ip, router_user, router_pass, mac):
-    mac_safe = mac.replace(":", "-")
-    comment = f"quarantine-{mac_safe}"
-    # Check if rule exists; if not, insert
-    check_cmd = f"iptables -C FORWARD -m mac --mac-source {mac} -j DROP || echo notfound"
-    out, err = ssh_run_command(router_ip, router_user, router_pass, check_cmd)
-    if "notfound" in out or out.strip() == "":
-        cmd = f"iptables -I FORWARD -m mac --mac-source {mac} -j DROP -m comment --comment \"{comment}\""
-        ssh_run_command(router_ip, router_user, router_pass, cmd)
-        logging.info("Blocked %s on router %s", mac, router_ip)
-        return True
-    logging.info("Rule already exists for %s", mac)
-    return False
-
-def unblock_mac_via_ssh(router_ip, router_user, router_pass, mac):
-    # Attempt to remove matching rule(s)
-    # Loop to delete all instances
-    delete_cmd = f"iptables -D FORWARD -m mac --mac-source {mac} -j DROP || echo notfound"
-    out, err = ssh_run_command(router_ip, router_user, router_pass, delete_cmd)
-    if "notfound" in out:
-        logging.info("No rule found to remove for %s", mac)
-    else:
-        logging.info("Removed iptables rule for %s", mac)

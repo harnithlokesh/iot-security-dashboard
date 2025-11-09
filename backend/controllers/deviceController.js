@@ -81,21 +81,33 @@ exports.releaseDevice = async (req, res) => {
       { new: true }
     );
 
-    try {
-      await axios.post(`${process.env.SCANNER_API_URL}/whitelist`, 
-        { mac: device.mac },
-        { headers: { Authorization: "Bearer " + process.env.SCANNER_API_TOKEN } }
-      );
-      console.log(`Scanner notified to release ${device.mac}`);
-    } catch (err) {
-      console.error("Failed to notify scanner (release):", err.message);
+    if (!device) {
+      return res.status(404).json({ error: "Device not found" });
     }
 
+    // 🔥 Call the scanner’s real release API
+    try {
+      await axios.post(
+        `${process.env.SCANNER_API_URL}/release`,
+        { ip: device.ip },
+        { headers: { Authorization: "Bearer " + process.env.SCANNER_API_TOKEN } }
+      );
+      console.log(`✅ Scanner notified to release ${device.ip}`);
+    } catch (err) {
+      console.error("❌ Failed to notify scanner (release):", err.message);
+    }
+
+    // Create alert in your backend DB
     const Alert = require("../models/Alert");
-    await Alert.create({ device: device._id, type: "release", description: `Device released ${device.mac}` });
+    await Alert.create({
+      device: device._id,
+      type: "release",
+      description: `Device released ${device.mac}`,
+    });
 
     res.json(device);
   } catch (err) {
+    console.error("❌ Release error:", err.message);
     res.status(500).json({ error: "Failed to release device" });
   }
 };

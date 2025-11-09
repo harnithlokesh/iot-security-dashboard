@@ -42,7 +42,8 @@ function Alerts() {
             </tr>
           </thead>
           <tbody>
-            {alerts.map((alert) => (
+            {[...alerts].reverse().map((alert) => (
+
               <tr key={alert._id}>
                 <td>{new Date(alert.timestamp).toLocaleString()}</td>
                 <td>{alert.device?.name || "Unknown Device"}</td>

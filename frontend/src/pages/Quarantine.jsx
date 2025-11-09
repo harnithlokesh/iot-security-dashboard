@@ -36,7 +36,8 @@ function Quarantine() {
       {devices.length === 0 ? (
         <p>No quarantined devices</p>
       ) : (
-        devices.map((device) => (
+        [...devices].reverse().map((device) => (
+
           <div className="device-card quarantined" key={device._id}>
             <div className="device-info">
               <h2>{device.name}</h2>

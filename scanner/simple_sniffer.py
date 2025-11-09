@@ -8,7 +8,7 @@ import requests
 # -----------------------
 # Config (or load from .env)
 # -----------------------
-SCAN_INTERFACE = r"\\Device\\NPF_{6E38B8AA-E554-4B42-B331-688D699BFDBF}"
+SCAN_INTERFACE = r"\Device\NPF_{FB00E5D6-E77F-4277-90E7-769AB3DC5844}"
 BACKEND_URL = "http://localhost:5000/api"
 WHITELIST_FILE = "whitelist.txt"
 QUARANTINE_ENABLED = True

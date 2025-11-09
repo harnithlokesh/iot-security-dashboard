@@ -12,3 +12,49 @@
   margin: 0 auto;
 }
 
+.devices-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.device-card {
+  background: #111827;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 250px;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.device-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.5);
+}
+
+.device-actions button {
+  margin-right: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.quarantine-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.release-btn {
+  background: #16a34a;
+  color: white;
+}
+
+.status.trusted { color: #22c55e; }
+.status.rogue { color: #f59e0b; }
+.status.quarantined { color: #ef4444; }
+
+
