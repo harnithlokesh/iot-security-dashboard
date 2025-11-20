@@ -1,20 +1,19 @@
-//whitelistRoutes.js
-const express = require("express");
-const router = express.Router();
+  const express = require("express");
+  const router = express.Router();
 
-const {
-  getWhitelist,
-  addWhitelistDevice,
-  removeWhitelistDevice
-} = require("../controllers/whitelistController");
+  const {
+    getWhitelist,
+    addWhitelistDevice,
+    removeWhitelistDevice
+  } = require("../controllers/whitelistController");
 
-// GET all whitelisted devices
-router.get("/", getWhitelist);
+  // GET all whitelisted devices
+  router.get("/", getWhitelist);
 
-// POST add a new device
-router.post("/", addWhitelistDevice);
+  // POST add new whitelisted device
+  router.post("/add", addWhitelistDevice);  // ⭐ better semantic route
 
-// DELETE a device by ID
-router.delete("/:id", removeWhitelistDevice);
+  // DELETE a device by ID
+  router.delete("/:id", removeWhitelistDevice);
 
-module.exports = router;
+  module.exports = router;

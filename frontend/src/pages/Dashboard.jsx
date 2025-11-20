@@ -1,4 +1,3 @@
-// frontend/src/pages/Dashboard.jsx
 import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 import { API_URL } from "../config";
@@ -6,7 +5,7 @@ import { API_URL } from "../config";
 function Dashboard() {
   const initialStats = {
     totalDevices: 0,
-    trustedDevices: 0,
+    trustedDevices: 0,   // comes from whitelist now
     rogueDevices: 0,
     quarantinedDevices: 0,
     alertsLast24h: 0,
@@ -17,51 +16,56 @@ function Dashboard() {
 
   const fetchStats = async () => {
     try {
-      // Fetch devices
-      const res = await fetch(`${API_URL}/devices`);
-      const devices = await res.json();
+      setLoading(true);
 
-      const trusted = devices.filter((d) => d.status === "trusted").length;
+      // Fetch devices + alerts + whitelist in parallel
+      const [deviceRes, alertRes, whitelistRes] = await Promise.all([
+        fetch(`${API_URL}/devices`),
+        fetch(`${API_URL}/alerts`),
+        fetch(`${API_URL}/whitelist`)
+      ]);
+
+      const devices = await deviceRes.json();
+      const alerts = await alertRes.json();
+      const whitelist = await whitelistRes.json();   // <-- NEW!
+
       const rogue = devices.filter((d) => d.status === "rogue").length;
       const quarantined = devices.filter((d) => d.status === "quarantined").length;
       const total = devices.length;
 
-      // Fetch alerts
-      const alertRes = await fetch(`${API_URL}/alerts`);
-      const alerts = await alertRes.json();
       const last24h = alerts.filter(
-        (a) => new Date(a.timestamp) > Date.now() - 24 * 60 * 60 * 1000
+        (a) =>
+          new Date(a.timestamp).getTime() >
+          Date.now() - 24 * 60 * 60 * 1000
       ).length;
 
+      // trustedDevices = whitelist count
       setStats({
         totalDevices: total,
-        trustedDevices: trusted,
+        trustedDevices: whitelist.length,    // <-- FIXED!
         rogueDevices: rogue,
         quarantinedDevices: quarantined,
         alertsLast24h: last24h,
       });
+
+      setLoading(false);
     } catch (err) {
       console.error("Error fetching dashboard stats:", err);
+      setLoading(false);
     }
   };
 
-  // ---- FORCE REFRESH BUTTON ----
   const forceRefresh = async () => {
     setLoading(true);
-
-    // Reset UI display to 0 instantly
     setStats(initialStats);
 
     try {
-      // Call backend to re-scan
       await fetch(`${API_URL}/refresh-scan`, { method: "POST" });
     } catch (err) {
       console.error("Error triggering refresh scan:", err);
     }
 
-    // Fetch updated results
     await fetchStats();
-    setLoading(false);
   };
 
   useEffect(() => {
@@ -74,7 +78,6 @@ function Dashboard() {
     <div className="dashboard-page">
       <h1>Network Overview</h1>
 
-      {/* FORCE REFRESH BUTTON */}
       <button
         onClick={forceRefresh}
         className="refresh-btn"
@@ -88,18 +91,22 @@ function Dashboard() {
           <h2>{stats.totalDevices}</h2>
           <p>Total Devices</p>
         </div>
+
         <div className="stat-card trustedDevices">
           <h2>{stats.trustedDevices}</h2>
           <p>Trusted Devices</p>
         </div>
+
         <div className="stat-card rogueDevices">
           <h2>{stats.rogueDevices}</h2>
           <p>Rogue Devices</p>
         </div>
+
         <div className="stat-card quarantinedDevices">
           <h2>{stats.quarantinedDevices}</h2>
           <p>Quarantined Devices</p>
         </div>
+
         <div className="stat-card alertsLast24h">
           <h2>{stats.alertsLast24h}</h2>
           <p>Alerts (Last 24h)</p>

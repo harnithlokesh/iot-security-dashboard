@@ -11,32 +11,46 @@ exports.getWhitelist = async (req, res) => {
   }
 };
 
-// Add device to whitelist
+// Add device to whitelist (NEW frontend-compatible version)
 exports.addWhitelistDevice = async (req, res) => {
   try {
-    const { deviceName, macAddress } = req.body;
+    // Support BOTH old & new formats
+    const name = req.body.name || req.body.deviceName;
+    const mac = req.body.mac || req.body.macAddress;
+    const ip = req.body.ip || null;
 
-    if (!deviceName || !macAddress) {
-      return res.status(400).json({ error: "Device name and MAC address are required" });
+    if (!name || !mac) {
+      return res.status(400).json({
+        error: "Device name and MAC address are required",
+      });
     }
 
     // Prevent duplicates
-    const existing = await Whitelist.findOne({ macAddress });
+    const existing = await Whitelist.findOne({ macAddress: mac });
     if (existing) {
       return res.status(400).json({ error: "Device already whitelisted" });
     }
 
-    const device = new Whitelist({ deviceName, macAddress });
+    const device = new Whitelist({
+      deviceName: name,
+      macAddress: mac,
+      ipAddress: ip,
+      addedAt: new Date(),
+    });
+
     await device.save();
 
-    res.status(201).json(device);
+    res.status(201).json({
+      message: "Device successfully added to whitelist",
+      device,
+    });
   } catch (err) {
     console.error("Error adding device to whitelist:", err);
     res.status(500).json({ error: "Failed to add device to whitelist" });
   }
 };
 
-// Remove device from whitelist
+// Remove device
 exports.removeWhitelistDevice = async (req, res) => {
   try {
     const device = await Whitelist.findByIdAndDelete(req.params.id);

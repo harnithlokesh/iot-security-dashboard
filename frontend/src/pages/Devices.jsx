@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { API_URL } from "../config";
-import "./Devices.css"; // optional, for button styling
+import "./Devices.css";
 
 function Devices() {
   const [devices, setDevices] = useState([]);
@@ -18,15 +18,17 @@ function Devices() {
     }
   };
 
-  // Quarantine a device
+  // Quarantine device
   const quarantineDevice = async (id) => {
-    if (!window.confirm("Are you sure you want to quarantine this device?")) return;
+    if (!window.confirm("Quarantine this device?")) return;
     setLoading(true);
     try {
-      const res = await fetch(`${API_URL}/devices/quarantine/${id}`, { method: "PUT" });
+      const res = await fetch(`${API_URL}/devices/quarantine/${id}`, {
+        method: "PUT",
+      });
       const data = await res.json();
-      alert(data.message || "✅ Device quarantined successfully!");
-      fetchDevices(); // Refresh the list
+      alert(data.message || "🚫 Device quarantined!");
+      fetchDevices();
     } catch (err) {
       console.error("Error quarantining device:", err);
       alert("❌ Failed to quarantine device");
@@ -35,18 +37,28 @@ function Devices() {
     }
   };
 
-  // Release a device
-  const releaseDevice = async (id) => {
-    if (!window.confirm("Release this quarantined device?")) return;
+  // NEW: Whitelist device directly
+  const whitelistDevice = async (device) => {
+    if (!window.confirm("Add this device to whitelist?")) return;
     setLoading(true);
+
     try {
-      const res = await fetch(`${API_URL}/devices/release/${id}`, { method: "PUT" });
+      const res = await fetch(`${API_URL}/whitelist/add`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: device.name,
+          mac: device.mac,
+          ip: device.ip,
+        }),
+      });
+
       const data = await res.json();
-      alert(data.message || "✅ Device released successfully!");
-      fetchDevices(); // Refresh the list
+      alert(data.message || "✅ Device added to whitelist!");
+      fetchDevices();
     } catch (err) {
-      console.error("Error releasing device:", err);
-      alert("❌ Failed to release device");
+      console.error("Whitelist error:", err);
+      alert("❌ Failed to whitelist device");
     } finally {
       setLoading(false);
     }
@@ -54,13 +66,13 @@ function Devices() {
 
   useEffect(() => {
     fetchDevices();
-    const interval = setInterval(fetchDevices, 5000); // auto-refresh every 5 sec
+    const interval = setInterval(fetchDevices, 5000);
 
     const clearLogsHandler = () => {
       setDevices([]);
-      // refetch quickly so UI updates to new network
       setTimeout(fetchDevices, 1000);
     };
+
     window.addEventListener("clear-logs", clearLogsHandler);
 
     return () => {
@@ -78,11 +90,7 @@ function Devices() {
       ) : (
         <div className="devices-grid">
           {[...devices].reverse().map((device) => (
-
-            <div
-              className={`device-card ${device.status}`}
-              key={device._id}
-            >
+            <div className={`device-card ${device.status}`} key={device._id}>
               <div className="device-info">
                 <h2>{device.name || "Unknown Device"}</h2>
                 <p><strong>MAC:</strong> {device.mac}</p>
@@ -96,23 +104,27 @@ function Devices() {
               </div>
 
               <div className="device-actions">
-                {device.status !== "quarantined" ? (
+
+                {/* NEW: Whitelist Button */}
+                <button
+                  className="whitelist-btn"
+                  onClick={() => whitelistDevice(device)}
+                  disabled={loading}
+                >
+                   Whitelist
+                </button>
+
+                {/* Existing Quarantine Button */}
+                {device.status !== "quarantined" && (
                   <button
                     className="quarantine-btn"
                     onClick={() => quarantineDevice(device._id)}
                     disabled={loading}
                   >
-                    🚫 Quarantine
-                  </button>
-                ) : (
-                  <button
-                    className="release-btn"
-                    onClick={() => releaseDevice(device._1d)}
-                    disabled={loading}
-                  >
-                    ✅ Release
+                     Quarantine
                   </button>
                 )}
+
               </div>
             </div>
           ))}

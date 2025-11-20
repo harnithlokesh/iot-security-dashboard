@@ -57,4 +57,19 @@
 .status.rogue { color: #f59e0b; }
 .status.quarantined { color: #ef4444; }
 
+.whitelist-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.whitelist-btn:hover {
+  background-color: #45a049;
+}
+
+
 

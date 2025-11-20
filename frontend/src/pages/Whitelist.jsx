@@ -3,44 +3,46 @@ import React, { useEffect, useState } from "react";
 import { API_URL } from "../config";
 
 function Whitelist() {
-  const [trustedDevices, setTrustedDevices] = useState([]);
+  const [whitelist, setWhitelist] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchTrusted = async () => {
+  const fetchWhitelist = async () => {
     try {
-      const res = await fetch(`${API_URL}/devices`);
+      const res = await fetch(`${API_URL}/whitelist`);
       const data = await res.json();
-      const trusted = data.filter((d) => d.status === "trusted");
-      setTrustedDevices(trusted);
+      setWhitelist(data);  // actual whitelist collection
       setLoading(false);
     } catch (err) {
-      console.error("Error fetching trusted devices:", err);
+      console.error("Error fetching whitelist:", err);
       setLoading(false);
     }
   };
 
+  // Remove device from whitelist
   const removeFromWhitelist = async (id) => {
+    if (!window.confirm("Remove this device from whitelist?")) return;
     try {
-      await fetch(`${API_URL}/devices/quarantine/${id}`, { method: "PUT" });
-      fetchTrusted();
+      await fetch(`${API_URL}/whitelist/${id}`, { method: "DELETE" });
+      fetchWhitelist();
     } catch (err) {
       console.error("Error removing from whitelist:", err);
     }
   };
 
   useEffect(() => {
-    fetchTrusted();
-    const interval = setInterval(fetchTrusted, 5000);
+    fetchWhitelist();
+    const interval = setInterval(fetchWhitelist, 5000);
     return () => clearInterval(interval);
   }, []);
 
-  if (loading) return <p>Loading trusted devices...</p>;
+  if (loading) return <p>Loading whitelist...</p>;
 
   return (
     <div className="page-container">
-      <h1>Whitelist (Trusted Devices)</h1>
-      {trustedDevices.length === 0 ? (
-        <p>No trusted devices</p>
+      <h1>Whitelist</h1>
+
+      {whitelist.length === 0 ? (
+        <p>No whitelisted devices found.</p>
       ) : (
         <table className="whitelist-table">
           <thead>
@@ -48,26 +50,25 @@ function Whitelist() {
               <th>Device Name</th>
               <th>MAC</th>
               <th>IP</th>
-              <th>Router IP</th>
-              <th>Signature</th>
+              <th>Added</th>
               <th>Actions</th>
-              
             </tr>
           </thead>
+
           <tbody>
-            {[...trustedDevices].reverse().map((device) => (
+            {[...whitelist].reverse().map((device) => (
               <tr key={device._id}>
-                <td>{device.name || "Unnamed Device"}</td>
-                <td>{device.mac}</td>
-                <td>{device.ip}</td>
-                <td>{device.router_ip || "Unknown"}</td>
-                <td>{device.unique_signature || "Unknown"}</td>
+                <td>{device.deviceName}</td>
+                <td>{device.macAddress}</td>
+                <td>{device.ipAddress || "N/A"}</td>
+                <td>{new Date(device.addedAt).toLocaleString()}</td>
+
                 <td>
                   <button
                     className="remove-btn"
                     onClick={() => removeFromWhitelist(device._id)}
                   >
-                    Remove / Quarantine
+                    Remove
                   </button>
                 </td>
               </tr>
