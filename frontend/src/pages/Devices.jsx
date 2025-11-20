@@ -10,6 +10,7 @@ function Devices() {
   const fetchDevices = async () => {
     try {
       const res = await fetch(`${API_URL}/devices`);
+      if (!res.ok) throw new Error("Fetch failed");
       const data = await res.json();
       setDevices(data);
     } catch (err) {
@@ -54,7 +55,18 @@ function Devices() {
   useEffect(() => {
     fetchDevices();
     const interval = setInterval(fetchDevices, 5000); // auto-refresh every 5 sec
-    return () => clearInterval(interval);
+
+    const clearLogsHandler = () => {
+      setDevices([]);
+      // refetch quickly so UI updates to new network
+      setTimeout(fetchDevices, 1000);
+    };
+    window.addEventListener("clear-logs", clearLogsHandler);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("clear-logs", clearLogsHandler);
+    };
   }, []);
 
   return (
@@ -95,7 +107,7 @@ function Devices() {
                 ) : (
                   <button
                     className="release-btn"
-                    onClick={() => releaseDevice(device._id)}
+                    onClick={() => releaseDevice(device._1d)}
                     disabled={loading}
                   >
                     ✅ Release

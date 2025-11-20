@@ -1,3 +1,4 @@
+// frontend/src/pages/Quarantine.jsx
 import React, { useEffect, useState } from "react";
 import { API_URL } from "../config";
 
@@ -44,6 +45,8 @@ function Quarantine() {
               <p>MAC: {device.mac}</p>
               <p>IP: {device.ip}</p>
               <p>Status: {device.status}</p>
+              <p>Router IP: {device.router_ip || "Unknown"}</p>
+              <p>Signature: {device.unique_signature || "Unknown"}</p>
             </div>
             <div className="device-actions">
               <button

@@ -1,15 +1,19 @@
+// frontend/src/pages/Dashboard.jsx
 import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 import { API_URL } from "../config";
 
 function Dashboard() {
-  const [stats, setStats] = useState({
+  const initialStats = {
     totalDevices: 0,
     trustedDevices: 0,
     rogueDevices: 0,
     quarantinedDevices: 0,
     alertsLast24h: 0,
-  });
+  };
+
+  const [stats, setStats] = useState(initialStats);
+  const [loading, setLoading] = useState(false);
 
   const fetchStats = async () => {
     try {
@@ -41,15 +45,44 @@ function Dashboard() {
     }
   };
 
+  // ---- FORCE REFRESH BUTTON ----
+  const forceRefresh = async () => {
+    setLoading(true);
+
+    // Reset UI display to 0 instantly
+    setStats(initialStats);
+
+    try {
+      // Call backend to re-scan
+      await fetch(`${API_URL}/refresh-scan`, { method: "POST" });
+    } catch (err) {
+      console.error("Error triggering refresh scan:", err);
+    }
+
+    // Fetch updated results
+    await fetchStats();
+    setLoading(false);
+  };
+
   useEffect(() => {
     fetchStats();
-    const interval = setInterval(fetchStats, 5000); // auto-refresh every 5s
+    const interval = setInterval(fetchStats, 5000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="dashboard-page">
       <h1>Network Overview</h1>
+
+      {/* FORCE REFRESH BUTTON */}
+      <button
+        onClick={forceRefresh}
+        className="refresh-btn"
+        disabled={loading}
+      >
+        {loading ? "Scanning..." : "Force Refresh Scan"}
+      </button>
+
       <div className="stats-grid">
         <div className="stat-card totalDevices">
           <h2>{stats.totalDevices}</h2>
