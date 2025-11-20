@@ -43424,3 +43424,2252 @@ rogue)
 2025-11-09 13:06:56,358 INFO Created alert on backend for e4:0d:36:a8:db:12
 2025-11-09 13:06:58,882 INFO Received shutdown signal, stopping scanner
 2025-11-09 13:06:59,000 INFO Sniffer thread exiting
+2025-11-17 11:23:02,194 INFO Local whitelist loaded (11 entries)
+2025-11-17 11:23:02,199 INFO Sniffer thread started (iface=\Device\NPF_{FB00E5D6-E77F-4277-90E7-769AB3DC5844})
+2025-11-17 11:23:02,200 INFO Auto-start scanner: True scanner started
+2025-11-17 11:23:02,201 INFO Launching scanner service API on port 9000
+2025-11-17 11:23:02,224 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.16.80.53:9000
+2025-11-17 11:23:02,225 INFO [33mPress CTRL+C to quit[0m
+2025-11-17 11:23:02,913 INFO Reported device to backend: ec:4c:8c:df:1f:29 172.16.84.118
+2025-11-17 11:23:05,370 INFO Created alert on backend for ec:4c:8c:df:1f:29
+2025-11-17 11:23:05,416 INFO Reported device to backend: b4:ad:a3:f4:ca:46 172.16.254.40
+2025-11-17 11:23:05,442 INFO Created alert on backend for b4:ad:a3:f4:ca:46
+2025-11-17 11:23:05,492 INFO Reported device to backend: 7c:4d:8f:6f:26:cf 172.16.11.121
+2025-11-17 11:23:05,521 INFO Created alert on backend for 7c:4d:8f:6f:26:cf
+2025-11-17 11:23:05,545 INFO Reported device to backend: e4:a8:df:9e:16:c1 172.16.66.120
+2025-11-17 11:23:05,584 INFO Created alert on backend for e4:a8:df:9e:16:c1
+2025-11-17 11:23:05,637 INFO Reported device to backend: 42:a4:d9:8e:cb:d6 172.16.74.191
+2025-11-17 11:23:05,656 INFO Created alert on backend for 42:a4:d9:8e:cb:d6
+2025-11-17 11:23:05,708 INFO Reported device to backend: d0:39:57:e1:c8:bb 172.16.68.187
+2025-11-17 11:23:05,738 INFO Created alert on backend for d0:39:57:e1:c8:bb
+2025-11-17 11:23:05,770 INFO Reported device to backend: 70:cd:0d:b4:06:90 172.16.84.103
+2025-11-17 11:23:05,839 INFO Created alert on backend for 70:cd:0d:b4:06:90
+2025-11-17 11:23:06,598 INFO Reported device to backend: 7c:4d:8f:6f:99:65 172.16.11.116
+2025-11-17 11:23:06,616 INFO Created alert on backend for 7c:4d:8f:6f:99:65
+2025-11-17 11:23:06,641 INFO Reported device to backend: d0:39:57:a9:ad:7f 172.16.84.7
+2025-11-17 11:23:06,705 INFO Created alert on backend for d0:39:57:a9:ad:7f
+2025-11-17 11:23:06,773 INFO Reported device to backend: c0:bf:be:67:ae:28 172.16.84.3
+2025-11-17 11:23:06,847 INFO Created alert on backend for c0:bf:be:67:ae:28
+2025-11-17 11:23:06,906 INFO Reported device to backend: e2:9d:bc:48:64:a2 172.16.69.31
+2025-11-17 11:23:06,987 INFO Created alert on backend for e2:9d:bc:48:64:a2
+2025-11-17 11:23:07,843 INFO Reported device to backend: 80:a9:97:48:ab:38 172.16.82.2
+2025-11-17 11:23:07,907 INFO Created alert on backend for 80:a9:97:48:ab:38
+2025-11-17 11:23:10,038 INFO Reported device to backend: 28:cd:c4:32:c6:77 172.16.68.203
+2025-11-17 11:23:10,077 INFO Created alert on backend for 28:cd:c4:32:c6:77
+2025-11-17 11:23:10,121 INFO Reported device to backend: ec:4c:8c:ff:e1:c8 172.16.83.69
+2025-11-17 11:23:10,146 INFO Created alert on backend for ec:4c:8c:ff:e1:c8
+2025-11-17 11:23:10,177 INFO Reported device to backend: 40:c2:ba:be:57:b2 172.16.68.110
+2025-11-17 11:23:10,208 INFO Created alert on backend for 40:c2:ba:be:57:b2
+2025-11-17 11:23:10,242 INFO Reported device to backend: dc:1b:a1:c4:c8:86 172.16.77.28
+2025-11-17 11:23:10,259 INFO Created alert on backend for dc:1b:a1:c4:c8:86
+2025-11-17 11:23:10,286 INFO Reported device to backend: bc:fa:b8:d4:2c:e9 172.16.82.155
+2025-11-17 11:23:10,317 INFO Created alert on backend for bc:fa:b8:d4:2c:e9
+2025-11-17 11:23:10,366 INFO Reported device to backend: e8:fb:1c:78:1b:d3 0.0.0.0
+2025-11-17 11:23:10,395 INFO Created alert on backend for e8:fb:1c:78:1b:d3
+2025-11-17 11:23:10,427 INFO Reported device to backend: 5a:ea:6e:b9:bd:a9 172.16.68.241
+2025-11-17 11:23:10,456 INFO Created alert on backend for 5a:ea:6e:b9:bd:a9
+2025-11-17 11:23:10,489 INFO Reported device to backend: f4:4e:7f:2c:e7:6d 172.16.77.40
+2025-11-17 11:23:10,520 INFO Created alert on backend for f4:4e:7f:2c:e7:6d
+2025-11-17 11:23:10,551 INFO Reported device to backend: 00:72:ee:de:48:24 172.16.82.145
+2025-11-17 11:23:10,582 INFO Created alert on backend for 00:72:ee:de:48:24
+2025-11-17 11:23:10,613 INFO Reported device to backend: 50:5a:65:c8:24:0d 172.16.74.53
+2025-11-17 11:23:10,642 INFO Created alert on backend for 50:5a:65:c8:24:0d
+2025-11-17 11:23:10,674 INFO Reported device to backend: 0c:9a:3c:4d:13:68 172.16.73.194
+2025-11-17 11:23:10,691 INFO Created alert on backend for 0c:9a:3c:4d:13:68
+2025-11-17 11:23:10,725 INFO Reported device to backend: a0:b3:39:61:98:a1 172.16.74.112
+2025-11-17 11:23:10,753 INFO Created alert on backend for a0:b3:39:61:98:a1
+2025-11-17 11:23:10,787 INFO Reported device to backend: 7c:4d:8f:6f:26:cf 172.16.11.121
+2025-11-17 11:23:10,864 INFO Created alert on backend for 7c:4d:8f:6f:26:cf
+2025-11-17 11:23:11,476 INFO Reported device to backend: f8:3d:c6:ad:70:46 172.16.69.67
+2025-11-17 11:23:11,506 INFO Created alert on backend for f8:3d:c6:ad:70:46
+2025-11-17 11:23:11,582 INFO Reported device to backend: ce:a5:bf:95:dd:9d 172.16.78.1
+2025-11-17 11:23:11,648 INFO Created alert on backend for ce:a5:bf:95:dd:9d
+2025-11-17 11:23:11,700 INFO Reported device to backend: 78:46:5c:9a:79:79 172.16.75.141
+2025-11-17 11:23:11,774 INFO Created alert on backend for 78:46:5c:9a:79:79
+2025-11-17 11:23:11,860 INFO Reported device to backend: 78:0c:b8:71:1e:57 172.16.67.10
+2025-11-17 11:23:12,685 INFO Created alert on backend for 78:0c:b8:71:1e:57
+2025-11-17 11:23:12,760 INFO Reported device to backend: 1c:ce:51:80:54:a2 172.16.73.223
+2025-11-17 11:23:14,877 INFO Created alert on backend for 1c:ce:51:80:54:a2
+2025-11-17 11:23:14,934 INFO Reported device to backend: e8:bf:b8:63:49:30 172.16.76.227
+2025-11-17 11:23:14,966 INFO Created alert on backend for e8:bf:b8:63:49:30
+2025-11-17 11:23:14,985 INFO Reported device to backend: 24:b1:05:88:68:73 172.16.18.71
+2025-11-17 11:23:15,014 INFO Created alert on backend for 24:b1:05:88:68:73
+2025-11-17 11:23:15,045 INFO Reported device to backend: aa:20:95:38:58:e6 172.16.67.108
+2025-11-17 11:23:15,059 INFO Created alert on backend for aa:20:95:38:58:e6
+2025-11-17 11:23:15,094 INFO Reported device to backend: a6:bd:7e:3f:37:99 172.16.66.173
+2025-11-17 11:23:15,115 INFO Created alert on backend for a6:bd:7e:3f:37:99
+2025-11-17 11:23:15,157 INFO Reported device to backend: 92:84:5c:d0:da:1b 172.16.83.100
+2025-11-17 11:23:15,188 INFO Created alert on backend for 92:84:5c:d0:da:1b
+2025-11-17 11:23:15,234 INFO Reported device to backend: 58:02:05:9e:d6:1a 172.16.83.235
+2025-11-17 11:23:15,263 INFO Created alert on backend for 58:02:05:9e:d6:1a
+2025-11-17 11:23:15,339 INFO Reported device to backend: ac:12:03:b5:53:38 172.16.71.201
+2025-11-17 11:23:15,371 INFO Created alert on backend for ac:12:03:b5:53:38
+2025-11-17 11:23:15,419 INFO Reported device to backend: 06:db:40:ae:86:3d 172.16.69.114
+2025-11-17 11:23:15,449 INFO Created alert on backend for 06:db:40:ae:86:3d
+2025-11-17 11:23:15,482 INFO Reported device to backend: 7c:4d:8f:6f:99:65 172.16.11.116
+2025-11-17 11:23:15,509 INFO Created alert on backend for 7c:4d:8f:6f:99:65
+2025-11-17 11:23:15,541 INFO Reported device to backend: 50:5a:65:c3:ea:ff 172.16.71.97
+2025-11-17 11:23:15,571 INFO Created alert on backend for 50:5a:65:c3:ea:ff
+2025-11-17 11:23:15,605 INFO Reported device to backend: 18:84:c1:f7:8f:80 172.16.78.191
+2025-11-17 11:23:15,631 INFO Created alert on backend for 18:84:c1:f7:8f:80
+2025-11-17 11:23:15,661 INFO Reported device to backend: 78:0c:b8:71:1e:57 0.0.0.0
+2025-11-17 11:23:15,676 INFO Created alert on backend for 78:0c:b8:71:1e:57
+2025-11-17 11:23:15,707 INFO Reported device to backend: 4c:d7:17:82:72:bf 172.16.63.46
+2025-11-17 11:23:15,739 INFO Created alert on backend for 4c:d7:17:82:72:bf
+2025-11-17 11:23:15,771 INFO Reported device to backend: e4:aa:ea:bb:81:b7 172.16.81.201
+2025-11-17 11:23:15,785 INFO Created alert on backend for e4:aa:ea:bb:81:b7
+2025-11-17 11:23:15,805 INFO Reported device to backend: 4c:d7:17:82:6d:17 172.16.83.206
+2025-11-17 11:23:15,868 INFO Created alert on backend for 4c:d7:17:82:6d:17
+2025-11-17 11:23:16,282 INFO Reported device to backend: 30:e3:a4:0b:04:32 172.16.76.2
+2025-11-17 11:23:16,300 INFO Created alert on backend for 30:e3:a4:0b:04:32
+2025-11-17 11:23:16,329 INFO Reported device to backend: c0:e5:da:ae:4c:bc 172.16.104.184
+2025-11-17 11:23:16,372 INFO Created alert on backend for c0:e5:da:ae:4c:bc
+2025-11-17 11:23:16,446 INFO Reported device to backend: fe:7f:27:6c:f3:88 172.16.76.34
+2025-11-17 11:23:16,526 INFO Created alert on backend for fe:7f:27:6c:f3:88
+2025-11-17 11:23:16,586 INFO Reported device to backend: d4:9e:3b:2c:f2:1f 172.16.81.13
+2025-11-17 11:23:16,646 INFO Created alert on backend for d4:9e:3b:2c:f2:1f
+2025-11-17 11:23:16,710 INFO Reported device to backend: c0:18:03:a9:c4:6e 172.16.11.117
+2025-11-17 11:23:17,532 INFO Created alert on backend for c0:18:03:a9:c4:6e
+2025-11-17 11:23:17,606 INFO Reported device to backend: 4c:d7:17:82:6b:90 172.16.83.172
+2025-11-17 11:23:19,792 INFO Created alert on backend for 4c:d7:17:82:6b:90
+2025-11-17 11:23:19,841 INFO Reported device to backend: 38:8d:3d:7f:31:d8 0.0.0.0
+2025-11-17 11:23:19,864 INFO Created alert on backend for 38:8d:3d:7f:31:d8
+2025-11-17 11:23:19,895 INFO Reported device to backend: c0:18:03:af:e9:90 172.16.11.115
+2025-11-17 11:23:19,910 INFO Created alert on backend for c0:18:03:af:e9:90
+2025-11-17 11:23:19,942 INFO Reported device to backend: 78:0c:b8:71:1e:57 172.16.67.10
+2025-11-17 11:23:19,957 INFO Created alert on backend for 78:0c:b8:71:1e:57
+2025-11-17 11:23:19,993 INFO Reported device to backend: 24:fb:e3:16:6c:49 172.16.71.71
+2025-11-17 11:23:20,022 INFO Created alert on backend for 24:fb:e3:16:6c:49
+2025-11-17 11:23:20,067 INFO Reported device to backend: 7c:5a:1c:d1:41:09 172.16.0.1
+2025-11-17 11:23:20,098 INFO Created alert on backend for 7c:5a:1c:d1:41:09
+2025-11-17 11:23:20,130 INFO Reported device to backend: da:d9:f9:af:2d:1f 172.16.71.35
+2025-11-17 11:23:20,160 INFO Created alert on backend for da:d9:f9:af:2d:1f
+2025-11-17 11:23:20,179 INFO Reported device to backend: ac:19:8e:22:d2:4c 172.16.76.14
+2025-11-17 11:23:20,206 INFO Created alert on backend for ac:19:8e:22:d2:4c
+2025-11-17 11:23:20,363 INFO Reported device to backend: d0:f4:05:f1:6d:d6 172.16.59.244
+2025-11-17 11:23:20,380 INFO Created alert on backend for d0:f4:05:f1:6d:d6
+2025-11-17 11:23:20,441 INFO Reported device to backend: f8:fe:5e:d0:32:fc 172.16.68.251
+2025-11-17 11:23:20,473 INFO Created alert on backend for f8:fe:5e:d0:32:fc
+2025-11-17 11:23:20,491 INFO Reported device to backend: 4c:d7:17:84:35:8d 172.16.84.162
+2025-11-17 11:23:20,521 INFO Created alert on backend for 4c:d7:17:84:35:8d
+2025-11-17 11:23:20,568 INFO Reported device to backend: 94:bb:43:d5:e9:82 172.16.78.94
+2025-11-17 11:23:20,602 INFO Created alert on backend for 94:bb:43:d5:e9:82
+2025-11-17 11:23:20,643 INFO Reported device to backend: 4a:07:c5:c3:59:f7 172.16.66.28
+2025-11-17 11:23:20,676 INFO Created alert on backend for 4a:07:c5:c3:59:f7
+2025-11-17 11:23:20,725 INFO Reported device to backend: 3c:1b:f8:67:67:65 172.16.9.153
+2025-11-17 11:23:20,754 INFO Created alert on backend for 3c:1b:f8:67:67:65
+2025-11-17 11:23:20,806 INFO Reported device to backend: 5a:ea:6e:b9:bd:a9 172.16.68.241
+2025-11-17 11:23:20,887 INFO Created alert on backend for 5a:ea:6e:b9:bd:a9
+2025-11-17 11:23:21,501 INFO Reported device to backend: 7c:4d:8f:6f:99:65 172.16.11.116
+2025-11-17 11:23:21,518 INFO Created alert on backend for 7c:4d:8f:6f:99:65
+2025-11-17 11:23:21,549 INFO Reported device to backend: 8c:c6:81:ba:f5:36 172.16.80.77
+2025-11-17 11:23:21,597 INFO Created alert on backend for 8c:c6:81:ba:f5:36
+2025-11-17 11:23:21,660 INFO Reported device to backend: b0:37:95:37:6a:bf 172.16.129.128
+2025-11-17 11:23:21,735 INFO Created alert on backend for b0:37:95:37:6a:bf
+2025-11-17 11:23:21,791 INFO Reported device to backend: c4:3d:1a:56:e2:b7 172.16.82.158
+2025-11-17 11:23:21,872 INFO Created alert on backend for c4:3d:1a:56:e2:b7
+2025-11-17 11:23:22,775 INFO Reported device to backend: ea:5f:3c:26:3d:58 0.0.0.0
+2025-11-17 11:23:22,838 INFO Created alert on backend for ea:5f:3c:26:3d:58
+2025-11-17 11:23:25,031 INFO Reported device to backend: c8:cb:9e:0a:df:57 172.16.75.247
+2025-11-17 11:23:25,083 INFO Created alert on backend for c8:cb:9e:0a:df:57
+2025-11-17 11:23:25,115 INFO Reported device to backend: 54:8c:81:ca:2e:22 172.16.23.30
+2025-11-17 11:23:25,141 INFO Created alert on backend for 54:8c:81:ca:2e:22
+2025-11-17 11:23:25,169 INFO Reported device to backend: 24:b1:05:3e:fc:f3 172.16.8.6
+2025-11-17 11:23:25,202 INFO Created alert on backend for 24:b1:05:3e:fc:f3
+2025-11-17 11:23:25,238 INFO Reported device to backend: 4c:d7:17:82:6b:90 172.16.83.172
+2025-11-17 11:23:25,265 INFO Created alert on backend for 4c:d7:17:82:6b:90
+2025-11-17 11:23:25,313 INFO Reported device to backend: dc:45:46:08:db:9e 172.16.81.79
+2025-11-17 11:23:25,342 INFO Created alert on backend for dc:45:46:08:db:9e
+2025-11-17 11:23:25,389 INFO Reported device to backend: e4:a8:df:9e:78:e3 172.16.43.65
+2025-11-17 11:23:25,405 INFO Created alert on backend for e4:a8:df:9e:78:e3
+2025-11-17 11:23:25,437 INFO Reported device to backend: 7c:b5:66:fe:e6:dd 172.16.71.92
+2025-11-17 11:23:25,455 INFO Created alert on backend for 7c:b5:66:fe:e6:dd
+2025-11-17 11:23:25,497 INFO Reported device to backend: 14:ac:60:3e:ac:27 172.16.70.209
+2025-11-17 11:23:25,513 INFO Created alert on backend for 14:ac:60:3e:ac:27
+2025-11-17 11:23:25,559 INFO Reported device to backend: 7c:4d:8f:6f:99:65 172.16.11.116
+2025-11-17 11:23:25,590 INFO Created alert on backend for 7c:4d:8f:6f:99:65
+2025-11-17 11:23:25,623 INFO Reported device to backend: 9c:67:d6:64:34:d5 172.16.80.163
+2025-11-17 11:23:25,640 INFO Created alert on backend for 9c:67:d6:64:34:d5
+2025-11-17 11:23:25,685 INFO Reported device to backend: 50:5a:65:4e:af:a7 172.16.74.50
+2025-11-17 11:23:25,712 INFO Created alert on backend for 50:5a:65:4e:af:a7
+2025-11-17 11:23:25,745 INFO Reported device to backend: 7c:5a:1c:d1:41:09 172.16.0.1
+2025-11-17 11:23:25,775 INFO Created alert on backend for 7c:5a:1c:d1:41:09
+2025-11-17 11:23:25,844 INFO Reported device to backend: 1c:ce:51:47:e4:f2 172.16.84.19
+2025-11-17 11:23:26,456 INFO Created alert on backend for 1c:ce:51:47:e4:f2
+2025-11-17 11:23:26,498 INFO Reported device to backend: ae:00:8a:29:2c:27 172.16.80.44
+2025-11-17 11:23:26,540 INFO Created alert on backend for ae:00:8a:29:2c:27
+2025-11-17 11:23:26,613 INFO Reported device to backend: e4:a8:df:9e:13:45 172.16.75.65
+2025-11-17 11:23:26,694 INFO Created alert on backend for e4:a8:df:9e:13:45
+2025-11-17 11:23:26,773 INFO Reported device to backend: bc:fa:b8:d4:2c:e9 172.16.82.155
+2025-11-17 11:23:26,844 INFO Created alert on backend for bc:fa:b8:d4:2c:e9
+2025-11-17 11:23:27,707 INFO Reported device to backend: 60:ff:9e:ee:da:0c 172.16.84.167
+2025-11-17 11:23:27,777 INFO Created alert on backend for 60:ff:9e:ee:da:0c
+2025-11-17 11:23:29,954 INFO Reported device to backend: f8:fe:5e:40:50:15 172.16.83.204
+2025-11-17 11:23:29,988 INFO Created alert on backend for f8:fe:5e:40:50:15
+2025-11-17 11:23:30,029 INFO Reported device to backend: cc:47:40:2e:28:a2 172.16.79.175
+2025-11-17 11:23:30,056 INFO Created alert on backend for cc:47:40:2e:28:a2
+2025-11-17 11:23:30,088 INFO Reported device to backend: 30:e3:a4:0c:46:7b 172.16.76.65
+2025-11-17 11:23:30,103 INFO Created alert on backend for 30:e3:a4:0c:46:7b
+2025-11-17 11:23:30,133 INFO Reported device to backend: 1c:ce:51:47:e4:f2 0.0.0.0
+2025-11-17 11:23:30,168 INFO Created alert on backend for 1c:ce:51:47:e4:f2
+2025-11-17 11:23:30,195 INFO Reported device to backend: 28:d0:43:e1:7f:42 172.16.72.189
+2025-11-17 11:23:30,227 INFO Created alert on backend for 28:d0:43:e1:7f:42
+2025-11-17 11:23:30,276 INFO Reported device to backend: 58:cd:c9:49:62:8d 172.16.73.201
+2025-11-17 11:23:30,308 INFO Created alert on backend for 58:cd:c9:49:62:8d
+2025-11-17 11:23:30,370 INFO Reported device to backend: c0:18:03:af:e9:90 172.16.11.115
+2025-11-17 11:23:30,400 INFO Created alert on backend for c0:18:03:af:e9:90
+2025-11-17 11:23:30,445 INFO Reported device to backend: e8:65:38:c7:24:dd 172.16.83.214
+2025-11-17 11:23:30,476 INFO Created alert on backend for e8:65:38:c7:24:dd
+2025-11-17 11:23:30,507 INFO Reported device to backend: 28:cd:c4:c2:0f:01 172.16.75.66
+2025-11-17 11:23:30,539 INFO Created alert on backend for 28:cd:c4:c2:0f:01
+2025-11-17 11:23:30,556 INFO Reported device to backend: 42:39:fa:63:91:6d 172.16.72.57
+2025-11-17 11:23:30,571 INFO Created alert on backend for 42:39:fa:63:91:6d
+2025-11-17 11:23:30,616 INFO Reported device to backend: 7c:4d:8f:6f:99:65 172.16.11.116
+2025-11-17 11:23:30,647 INFO Created alert on backend for 7c:4d:8f:6f:99:65
+2025-11-17 11:23:30,679 INFO Reported device to backend: 54:8c:81:ca:2e:3b 172.16.23.50
+2025-11-17 11:23:30,710 INFO Created alert on backend for 54:8c:81:ca:2e:3b
+2025-11-17 11:23:30,755 INFO Reported device to backend: 1e:15:da:48:b4:8d 172.16.74.64
+2025-11-17 11:23:30,787 INFO Created alert on backend for 1e:15:da:48:b4:8d
+2025-11-17 11:23:30,856 INFO Reported device to backend: 7c:5a:1c:d1:41:09 172.16.0.1
+2025-11-17 11:23:31,295 INFO Created alert on backend for 7c:5a:1c:d1:41:09
+2025-11-17 11:23:31,336 INFO Reported device to backend: 3a:ec:b6:7d:27:bf 172.16.76.150
+2025-11-17 11:23:31,391 INFO Created alert on backend for 3a:ec:b6:7d:27:bf
+2025-11-17 11:23:31,457 INFO Reported device to backend: 5c:ba:ef:ac:2b:2f 172.16.84.155
+2025-11-17 11:23:31,531 INFO Created alert on backend for 5c:ba:ef:ac:2b:2f
+2025-11-17 11:23:31,608 INFO Reported device to backend: 80:38:fb:45:1e:b0 172.16.66.177
+2025-11-17 11:23:31,666 INFO Created alert on backend for 80:38:fb:45:1e:b0
+2025-11-17 11:23:32,537 INFO Reported device to backend: 04:7c:16:5d:b3:38 172.16.75.233
+2025-11-17 11:23:32,584 INFO Created alert on backend for 04:7c:16:5d:b3:38
+2025-11-17 11:23:32,631 INFO Reported device to backend: 3c:28:a6:00:98:cb 0.0.0.0
+2025-11-17 11:23:34,569 INFO Created alert on backend for 3c:28:a6:00:98:cb
+2025-11-17 11:23:34,587 INFO Reported device to backend: 70:cd:0d:b4:06:90 172.16.84.103
+2025-11-17 11:23:34,598 INFO Created alert on backend for 70:cd:0d:b4:06:90
+2025-11-17 11:23:34,623 INFO Reported device to backend: 4a:79:dd:d9:15:c0 172.16.79.253
+2025-11-17 11:23:34,654 INFO Created alert on backend for 4a:79:dd:d9:15:c0
+2025-11-17 11:23:34,697 INFO Reported device to backend: 4c:d7:17:82:72:bf 172.16.63.46
+2025-11-17 11:23:34,730 INFO Created alert on backend for 4c:d7:17:82:72:bf
+2025-11-17 11:23:34,748 INFO Reported device to backend: 78:0c:b8:71:1e:57 172.16.67.10
+2025-11-17 11:23:34,777 INFO Created alert on backend for 78:0c:b8:71:1e:57
+2025-11-17 11:23:34,793 INFO Reported device to backend: 24:b1:05:88:68:7f 172.16.18.70
+2025-11-17 11:23:34,805 INFO Created alert on backend for 24:b1:05:88:68:7f
+2025-11-17 11:23:34,840 INFO Reported device to backend: 82:35:c5:76:e6:ae 172.16.76.134
+2025-11-17 11:23:34,854 INFO Created alert on backend for 82:35:c5:76:e6:ae
+2025-11-17 11:23:34,887 INFO Reported device to backend: e4:a8:df:9e:13:16 172.16.73.94
+2025-11-17 11:23:34,917 INFO Created alert on backend for e4:a8:df:9e:13:16
+2025-11-17 11:23:34,933 INFO Reported device to backend: 58:cd:c9:48:c5:eb 172.16.70.75
+2025-11-17 11:23:34,963 INFO Created alert on backend for 58:cd:c9:48:c5:eb
+2025-11-17 11:23:34,994 INFO Reported device to backend: b4:8c:9d:20:f8:73 172.16.80.92
+2025-11-17 11:23:35,026 INFO Created alert on backend for b4:8c:9d:20:f8:73
+2025-11-17 11:23:35,073 INFO Reported device to backend: cc:47:40:15:b6:c5 172.16.80.84
+2025-11-17 11:23:35,105 INFO Created alert on backend for cc:47:40:15:b6:c5
+2025-11-17 11:23:35,135 INFO Reported device to backend: 7c:5a:1c:d1:41:09 172.16.0.1
+2025-11-17 11:23:35,150 INFO Created alert on backend for 7c:5a:1c:d1:41:09
+2025-11-17 11:23:35,181 INFO Reported device to backend: a0:b3:39:61:98:a1 172.16.74.112
+2025-11-17 11:23:35,197 INFO Created alert on backend for a0:b3:39:61:98:a1
+2025-11-17 11:23:35,242 INFO Reported device to backend: 4c:eb:bd:34:25:a9 172.16.77.51
+2025-11-17 11:23:35,258 INFO Created alert on backend for 4c:eb:bd:34:25:a9
+2025-11-17 11:23:35,277 INFO Reported device to backend: c0:18:03:af:e9:90 172.16.11.115
+2025-11-17 11:23:35,307 INFO Created alert on backend for c0:18:03:af:e9:90
+2025-11-17 11:23:35,324 INFO Reported device to backend: 30:03:c8:97:ca:19 172.16.68.193
+2025-11-17 11:23:35,354 INFO Created alert on backend for 30:03:c8:97:ca:19
+2025-11-17 11:23:35,375 INFO Reported device to backend: ec:4c:8c:df:1f:29 172.16.84.118
+2025-11-17 11:23:35,414 INFO Created alert on backend for ec:4c:8c:df:1f:29
+2025-11-17 11:23:35,463 INFO Reported device to backend: 7c:2a:31:cd:f3:a7 172.16.77.154
+2025-11-17 11:23:35,494 INFO Created alert on backend for 7c:2a:31:cd:f3:a7
+2025-11-17 11:23:35,512 INFO Reported device to backend: 36:b9:6b:75:1e:91 172.16.74.227
+2025-11-17 11:23:35,540 INFO Created alert on backend for 36:b9:6b:75:1e:91
+2025-11-17 11:23:35,556 INFO Reported device to backend: 9c:67:d6:64:43:8f 172.16.67.177
+2025-11-17 11:23:35,571 INFO Created alert on backend for 9c:67:d6:64:43:8f
+2025-11-17 11:23:35,603 INFO Reported device to backend: e8:65:38:9a:60:ed 172.16.62.226
+2025-11-17 11:23:35,633 INFO Created alert on backend for e8:65:38:9a:60:ed
+2025-11-17 11:23:35,648 INFO Reported device to backend: 28:ee:52:2b:aa:50 172.16.12.2
+2025-11-17 11:23:35,677 INFO Created alert on backend for 28:ee:52:2b:aa:50
+2025-11-17 11:23:35,709 INFO Reported device to backend: 28:cd:c4:32:c6:77 172.16.68.203
+2025-11-17 11:23:35,741 INFO Created alert on backend for 28:cd:c4:32:c6:77
+2025-11-17 11:23:35,770 INFO Reported device to backend: c0:e5:da:ae:48:e2 172.16.87.250
+2025-11-17 11:23:35,813 INFO Created alert on backend for c0:e5:da:ae:48:e2
+2025-11-17 11:23:36,022 INFO Reported device to backend: fa:13:9f:9b:10:da 172.16.68.199
+2025-11-17 11:23:36,035 INFO Created alert on backend for fa:13:9f:9b:10:da
+2025-11-17 11:23:36,047 INFO Reported device to backend: f6:5d:8a:3a:b9:59 172.16.69.152
+2025-11-17 11:23:36,078 INFO Created alert on backend for f6:5d:8a:3a:b9:59
+2025-11-17 11:23:36,118 INFO Reported device to backend: 70:08:94:b1:95:fb 172.16.84.125
+2025-11-17 11:23:36,141 INFO Created alert on backend for 70:08:94:b1:95:fb
+2025-11-17 11:23:36,182 INFO Reported device to backend: 4c:d5:77:ad:dc:19 172.16.217.70
+2025-11-17 11:23:36,410 INFO Created alert on backend for 4c:d5:77:ad:dc:19
+2025-11-17 11:23:37,097 INFO Reported device to backend: 3c:1b:f8:5f:5c:9c 172.16.9.152
+2025-11-17 11:23:37,113 INFO Created alert on backend for 3c:1b:f8:5f:5c:9c
+2025-11-17 11:23:37,159 INFO Reported device to backend: 42:a4:d9:8e:cb:d6 172.16.74.191
+2025-11-17 11:23:37,187 INFO Created alert on backend for 42:a4:d9:8e:cb:d6
+2025-11-17 11:23:37,218 INFO Reported device to backend: 52:c1:47:ba:8e:7a 172.16.70.230
+2025-11-17 11:23:37,249 INFO Created alert on backend for 52:c1:47:ba:8e:7a
+2025-11-17 11:23:37,281 INFO Reported device to backend: 4c:d7:17:84:34:2c 172.16.84.53
+2025-11-17 11:23:37,295 INFO Created alert on backend for 4c:d7:17:84:34:2c
+2025-11-17 11:23:37,310 INFO Reported device to backend: 46:df:30:71:f5:74 172.16.73.13
+2025-11-17 11:23:37,324 INFO Created alert on backend for 46:df:30:71:f5:74
+2025-11-17 11:23:37,362 INFO Reported device to backend: c0:bf:be:67:ae:28 172.16.84.3
+2025-11-17 11:23:37,392 INFO Created alert on backend for c0:bf:be:67:ae:28
+2025-11-17 11:23:37,423 INFO Reported device to backend: c0:95:6d:43:09:f6 0.0.0.0
+2025-11-17 11:23:37,454 INFO Created alert on backend for c0:95:6d:43:09:f6
+2025-11-17 11:23:37,487 INFO Reported device to backend: f8:3d:c6:ad:70:46 172.16.69.67
+2025-11-17 11:23:37,499 INFO Created alert on backend for f8:3d:c6:ad:70:46
+2025-11-17 11:23:37,531 INFO Reported device to backend: 44:fa:66:77:58:ab 0.0.0.0
+2025-11-17 11:23:37,562 INFO Created alert on backend for 44:fa:66:77:58:ab
+2025-11-17 11:23:37,580 INFO Reported device to backend: 7c:4d:8f:6f:99:65 172.16.11.116
+2025-11-17 11:23:37,594 INFO Created alert on backend for 7c:4d:8f:6f:99:65
+2025-11-17 11:23:37,626 INFO Reported device to backend: e8:fb:1c:78:1b:d3 172.16.84.146
+2025-11-17 11:23:37,656 INFO Created alert on backend for e8:fb:1c:78:1b:d3
+2025-11-17 11:23:37,687 INFO Reported device to backend: ea:5f:3c:26:3d:58 172.16.69.0
+2025-11-17 11:23:37,702 INFO Created alert on backend for ea:5f:3c:26:3d:58
+2025-11-17 11:23:37,734 INFO Reported device to backend: 00:20:6b:3c:b6:1e 172.16.11.100
+2025-11-17 11:23:37,766 INFO Created alert on backend for 00:20:6b:3c:b6:1e
+2025-11-17 11:23:37,799 INFO Reported device to backend: b2:18:06:e5:fc:b2 172.16.80.187
+2025-11-17 11:23:37,815 INFO Created alert on backend for b2:18:06:e5:fc:b2
+2025-11-17 11:23:37,877 INFO Reported device to backend: 82:35:c5:76:e6:ae 172.16.76.134
+2025-11-17 11:23:37,892 INFO Created alert on backend for 82:35:c5:76:e6:ae
+2025-11-17 11:23:37,922 INFO Reported device to backend: f2:35:ea:1d:6f:c8 172.16.71.251
+2025-11-17 11:23:37,953 INFO Created alert on backend for f2:35:ea:1d:6f:c8
+2025-11-17 11:23:37,970 INFO Reported device to backend: f6:44:1e:aa:17:d9 172.16.73.217
+2025-11-17 11:23:37,986 INFO Created alert on backend for f6:44:1e:aa:17:d9
+2025-11-17 11:23:38,015 INFO Reported device to backend: 50:84:92:8e:2d:7b 172.16.70.83
+2025-11-17 11:23:38,030 INFO Created alert on backend for 50:84:92:8e:2d:7b
+2025-11-17 11:23:38,061 INFO Reported device to backend: 0c:9a:3c:4d:13:68 172.16.73.194
+2025-11-17 11:23:38,078 INFO Created alert on backend for 0c:9a:3c:4d:13:68
+2025-11-17 11:23:38,099 INFO Reported device to backend: 92:84:5c:d0:da:1b 172.16.83.100
+2025-11-17 11:23:38,125 INFO Created alert on backend for 92:84:5c:d0:da:1b
+2025-11-17 11:23:38,143 INFO Reported device to backend: 78:0c:b8:71:1e:57 172.16.67.10
+2025-11-17 11:23:38,171 INFO Created alert on backend for 78:0c:b8:71:1e:57
+2025-11-17 11:23:38,201 INFO Reported device to backend: 06:db:40:ae:86:3d 172.16.69.114
+2025-11-17 11:23:38,232 INFO Created alert on backend for 06:db:40:ae:86:3d
+2025-11-17 11:23:38,265 INFO Reported device to backend: 82:d3:1f:49:d2:da 172.16.69.92
+2025-11-17 11:23:38,279 INFO Created alert on backend for 82:d3:1f:49:d2:da
+2025-11-17 11:23:38,313 INFO Reported device to backend: c0:18:03:af:e9:90 172.16.11.115
+2025-11-17 11:23:38,342 INFO Created alert on backend for c0:18:03:af:e9:90
+2025-11-17 11:23:38,373 INFO Reported device to backend: dc:97:ba:f2:cb:f0 172.16.77.47
+2025-11-17 11:23:38,389 INFO Created alert on backend for dc:97:ba:f2:cb:f0
+2025-11-17 11:23:38,407 INFO Reported device to backend: 40:c2:ba:be:57:93 172.16.66.122
+2025-11-17 11:23:38,435 INFO Created alert on backend for 40:c2:ba:be:57:93
+2025-11-17 11:23:38,456 INFO Reported device to backend: 9c:c7:d3:43:14:ca 172.16.72.204
+2025-11-17 11:23:38,480 INFO Created alert on backend for 9c:c7:d3:43:14:ca
+2025-11-17 11:23:38,513 INFO Reported device to backend: d4:9e:3b:2c:f2:1f 172.16.81.13
+2025-11-17 11:23:38,528 INFO Created alert on backend for d4:9e:3b:2c:f2:1f
+2025-11-17 11:23:38,559 INFO Reported device to backend: f8:3d:c6:ad:08:64 172.16.66.45
+2025-11-17 11:23:38,591 INFO Created alert on backend for f8:3d:c6:ad:08:64
+2025-11-17 11:23:38,620 INFO Reported device to backend: 14:ac:60:3e:ac:27 172.16.70.209
+2025-11-17 11:23:38,652 INFO Created alert on backend for 14:ac:60:3e:ac:27
+2025-11-17 11:23:38,684 INFO Reported device to backend: f6:9e:a3:67:55:90 172.16.83.127
+2025-11-17 11:23:38,715 INFO Created alert on backend for f6:9e:a3:67:55:90
+2025-11-17 11:23:38,745 INFO Reported device to backend: 50:5a:65:c8:24:0d 172.16.74.53
+2025-11-17 11:23:38,762 INFO Created alert on backend for 50:5a:65:c8:24:0d
+2025-11-17 11:23:38,779 INFO Reported device to backend: 16:cf:74:37:4e:8f 172.16.69.47
+2025-11-17 11:23:38,795 INFO Created alert on backend for 16:cf:74:37:4e:8f
+2025-11-17 11:23:38,824 INFO Reported device to backend: dc:1b:a1:c4:c8:86 172.16.77.28
+2025-11-17 11:23:38,841 INFO Created alert on backend for dc:1b:a1:c4:c8:86
+2025-11-17 11:23:38,859 INFO Reported device to backend: bc:fa:b8:d4:2c:e9 172.16.82.155
+2025-11-17 11:23:38,884 INFO Created alert on backend for bc:fa:b8:d4:2c:e9
+2025-11-17 11:23:38,918 INFO Reported device to backend: 44:af:28:53:c1:a9 172.16.76.149
+2025-11-17 11:23:38,954 INFO Created alert on backend for 44:af:28:53:c1:a9
+2025-11-17 11:23:38,973 INFO Reported device to backend: ec:63:d7:be:5d:f7 172.16.72.128
+2025-11-17 11:23:39,013 INFO Created alert on backend for ec:63:d7:be:5d:f7
+2025-11-17 11:23:39,075 INFO Reported device to backend: d0:39:57:e1:c8:bb 172.16.68.187
+2025-11-17 11:23:39,106 INFO Created alert on backend for d0:39:57:e1:c8:bb
+2025-11-17 11:23:39,136 INFO Reported device to backend: d0:39:57:a9:ad:7f 172.16.84.7
+2025-11-17 11:23:39,168 INFO Created alert on backend for d0:39:57:a9:ad:7f
+2025-11-17 11:23:39,199 INFO Reported device to backend: ac:19:8e:22:d2:4c 172.16.76.14
+2025-11-17 11:23:39,230 INFO Created alert on backend for ac:19:8e:22:d2:4c
+2025-11-17 11:23:39,259 INFO Reported device to backend: 9c:67:d6:64:43:08 172.16.33.63
+2025-11-17 11:23:39,292 INFO Created alert on backend for 9c:67:d6:64:43:08
+2025-11-17 11:23:39,308 INFO Reported device to backend: 2e:7a:37:62:01:bd 172.16.67.228
+2025-11-17 11:23:39,339 INFO Created alert on backend for 2e:7a:37:62:01:bd
+2025-11-17 11:23:39,356 INFO Reported device to backend: 3c:1b:f8:5f:5c:8c 172.16.9.151
+2025-11-17 11:23:39,371 INFO Created alert on backend for 3c:1b:f8:5f:5c:8c
+2025-11-17 11:23:39,403 INFO Reported device to backend: 74:13:ea:77:f0:ec 172.16.76.103
+2025-11-17 11:23:39,431 INFO Created alert on backend for 74:13:ea:77:f0:ec
+2025-11-17 11:23:39,463 INFO Reported device to backend: dc:45:46:f7:91:1c 172.16.66.24
+2025-11-17 11:23:39,495 INFO Created alert on backend for dc:45:46:f7:91:1c
+2025-11-17 11:23:39,512 INFO Reported device to backend: 02:90:7e:79:d2:64 172.16.68.85
+2025-11-17 11:23:39,527 INFO Created alert on backend for 02:90:7e:79:d2:64
+2025-11-17 11:23:39,544 INFO Reported device to backend: 4c:d7:17:82:6b:90 172.16.83.172
+2025-11-17 11:23:39,574 INFO Created alert on backend for 4c:d7:17:82:6b:90
+2025-11-17 11:23:39,594 INFO Reported device to backend: 7e:e5:69:db:f2:6e 172.16.84.130
+2025-11-17 11:23:39,609 INFO Created alert on backend for 7e:e5:69:db:f2:6e
+2025-11-17 11:23:39,649 INFO Reported device to backend: 9a:55:5d:36:17:bb 172.16.84.182
+2025-11-17 11:23:39,666 INFO Created alert on backend for 9a:55:5d:36:17:bb
+2025-11-17 11:23:39,696 INFO Reported device to backend: fc:6d:77:02:c7:8b 172.16.66.33
+2025-11-17 11:23:39,726 INFO Created alert on backend for fc:6d:77:02:c7:8b
+2025-11-17 11:23:39,740 INFO Reported device to backend: 68:34:21:79:82:d6 172.16.76.210
+2025-11-17 11:23:39,774 INFO Created alert on backend for 68:34:21:79:82:d6
+2025-11-17 11:23:39,836 INFO Reported device to backend: ac:12:03:b5:53:38 172.16.71.201
+2025-11-17 11:23:39,851 INFO Created alert on backend for ac:12:03:b5:53:38
+2025-11-17 11:23:39,947 INFO Reported device to backend: 30:e3:a4:0b:04:32 172.16.76.2
+2025-11-17 11:23:39,973 INFO Created alert on backend for 30:e3:a4:0b:04:32
+2025-11-17 11:23:40,005 INFO Reported device to backend: ee:fb:88:08:1b:99 172.16.70.245
+2025-11-17 11:23:40,022 INFO Created alert on backend for ee:fb:88:08:1b:99
+2025-11-17 11:23:40,038 INFO Reported device to backend: 10:68:38:b1:82:0d 172.16.71.75
+2025-11-17 11:23:40,065 INFO Created alert on backend for 10:68:38:b1:82:0d
+2025-11-17 11:23:40,100 INFO Reported device to backend: 4c:d7:17:84:22:90 172.16.84.48
+2025-11-17 11:23:40,114 INFO Created alert on backend for 4c:d7:17:84:22:90
+2025-11-17 11:23:40,145 INFO Reported device to backend: e4:a8:df:9e:16:c1 172.16.66.120
+2025-11-17 11:23:40,162 INFO Created alert on backend for e4:a8:df:9e:16:c1
+2025-11-17 11:23:40,192 INFO Reported device to backend: a6:bd:7e:3f:37:99 172.16.66.173
+2025-11-17 11:23:40,222 INFO Created alert on backend for a6:bd:7e:3f:37:99
+2025-11-17 11:23:40,269 INFO Reported device to backend: ba:c9:cb:7c:8f:0a 172.16.76.15
+2025-11-17 11:23:40,299 INFO Created alert on backend for ba:c9:cb:7c:8f:0a
+2025-11-17 11:23:40,331 INFO Reported device to backend: 52:57:8e:6a:62:88 172.16.82.78
+2025-11-17 11:23:40,363 INFO Created alert on backend for 52:57:8e:6a:62:88
+2025-11-17 11:23:40,394 INFO Reported device to backend: 5a:ea:6e:b9:bd:a9 172.16.68.241
+2025-11-17 11:23:40,427 INFO Created alert on backend for 5a:ea:6e:b9:bd:a9
+2025-11-17 11:23:40,446 INFO Reported device to backend: 7c:5a:1c:d1:41:09 172.16.0.1
+2025-11-17 11:23:40,461 INFO Created alert on backend for 7c:5a:1c:d1:41:09
+2025-11-17 11:23:40,504 INFO Reported device to backend: 78:46:5c:9a:79:79 172.16.75.141
+2025-11-17 11:23:40,534 INFO Created alert on backend for 78:46:5c:9a:79:79
+2025-11-17 11:23:40,563 INFO Reported device to backend: 8c:c6:81:ba:f5:36 172.16.80.77
+2025-11-17 11:23:40,594 INFO Created alert on backend for 8c:c6:81:ba:f5:36
+2025-11-17 11:23:40,625 INFO Reported device to backend: f8:fe:5e:40:50:15 172.16.83.204
+2025-11-17 11:23:40,656 INFO Created alert on backend for f8:fe:5e:40:50:15
+2025-11-17 11:23:40,675 INFO Reported device to backend: aa:20:95:38:58:e6 172.16.67.108
+2025-11-17 11:23:40,701 INFO Created alert on backend for aa:20:95:38:58:e6
+2025-11-17 11:23:40,718 INFO Reported device to backend: c0:b5:d7:66:9a:31 172.16.129.52
+2025-11-17 11:23:40,733 INFO Created alert on backend for c0:b5:d7:66:9a:31
+2025-11-17 11:23:40,764 INFO Reported device to backend: ee:c0:a0:52:89:05 172.16.73.180
+2025-11-17 11:23:40,781 INFO Created alert on backend for ee:c0:a0:52:89:05
+2025-11-17 11:23:40,835 INFO Reported device to backend: 10:b6:76:4a:37:0d 172.16.45.50
+2025-11-17 11:23:41,087 INFO Created alert on backend for 10:b6:76:4a:37:0d
+2025-11-17 11:23:41,122 INFO Reported device to backend: c0:95:6d:43:09:f6 172.16.69.175
+2025-11-17 11:23:41,138 INFO Created alert on backend for c0:95:6d:43:09:f6
+2025-11-17 11:23:41,153 INFO Reported device to backend: 7c:4d:8f:6f:99:65 172.16.11.116
+2025-11-17 11:23:41,176 INFO Created alert on backend for 7c:4d:8f:6f:99:65
+2025-11-17 11:23:41,204 INFO Reported device to backend: 80:30:49:95:d9:69 172.16.70.242
+2025-11-17 11:23:41,247 INFO Created alert on backend for 80:30:49:95:d9:69
+2025-11-17 11:23:41,287 INFO Reported device to backend: fe:7f:27:6c:f3:88 172.16.76.34
+2025-11-17 11:23:41,540 INFO Created alert on backend for fe:7f:27:6c:f3:88
+2025-11-17 11:23:42,351 INFO Reported device to backend: 80:91:33:19:b8:e9 172.16.32.234
+2025-11-17 11:23:42,386 INFO Created alert on backend for 80:91:33:19:b8:e9
+2025-11-17 11:23:42,414 INFO Reported device to backend: 38:d5:7a:1f:ac:37 172.16.49.17
+2025-11-17 11:23:42,447 INFO Created alert on backend for 38:d5:7a:1f:ac:37
+2025-11-17 11:23:42,461 INFO Reported device to backend: 24:b1:05:7d:77:15 172.16.18.164
+2025-11-17 11:23:42,495 INFO Created alert on backend for 24:b1:05:7d:77:15
+2025-11-17 11:23:42,527 INFO Reported device to backend: 00:72:ee:de:48:24 172.16.82.145
+2025-11-17 11:23:42,560 INFO Created alert on backend for 00:72:ee:de:48:24
+2025-11-17 11:23:42,591 INFO Reported device to backend: 4c:5f:70:8c:a9:0b 172.16.70.129
+2025-11-17 11:23:42,603 INFO Created alert on backend for 4c:5f:70:8c:a9:0b
+2025-11-17 11:23:42,619 INFO Reported device to backend: ac:f2:3c:a3:b2:91 0.0.0.0
+2025-11-17 11:23:42,651 INFO Created alert on backend for ac:f2:3c:a3:b2:91
+2025-11-17 11:23:42,665 INFO Reported device to backend: c0:18:03:af:e9:90 172.16.11.115
+2025-11-17 11:23:42,682 INFO Created alert on backend for c0:18:03:af:e9:90
+2025-11-17 11:23:42,700 INFO Reported device to backend: 4c:d5:77:b0:92:65 172.16.68.54
+2025-11-17 11:23:42,730 INFO Created alert on backend for 4c:d5:77:b0:92:65
+2025-11-17 11:23:42,749 INFO Reported device to backend: 04:7c:16:5d:b3:38 172.16.75.233
+2025-11-17 11:23:42,763 INFO Created alert on backend for 04:7c:16:5d:b3:38
+2025-11-17 11:23:42,779 INFO Reported device to backend: 70:cd:0d:b4:06:90 172.16.84.103
+2025-11-17 11:23:42,796 INFO Created alert on backend for 70:cd:0d:b4:06:90
+2025-11-17 11:23:42,870 INFO Reported device to backend: 7c:4d:8f:6e:ea:ee 172.16.11.119
+2025-11-17 11:23:42,882 INFO Created alert on backend for 7c:4d:8f:6e:ea:ee
+2025-11-17 11:23:42,916 INFO Reported device to backend: e8:65:38:c7:1e:6f 172.16.84.188
+2025-11-17 11:23:42,933 INFO Created alert on backend for e8:65:38:c7:1e:6f
+2025-11-17 11:23:42,965 INFO Reported device to backend: da:d9:f9:af:2d:1f 172.16.71.35
+2025-11-17 11:23:42,982 INFO Created alert on backend for da:d9:f9:af:2d:1f
+2025-11-17 11:23:43,010 ERROR Error reporting device to backend: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-11-17 11:23:47,114 ERROR Error creating alert on backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002105865F2B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-17 11:23:51,217 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002105865E9E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-17 11:23:52,685 INFO Received shutdown signal, stopping scanner
+2025-11-19 22:20:31,550 INFO Local whitelist loaded (11 entries)
+2025-11-19 22:20:31,553 INFO Sniffer thread started (iface=\Device\NPF_{FB00E5D6-E77F-4277-90E7-769AB3DC5844})
+2025-11-19 22:20:31,553 INFO Auto-start scanner: True scanner started
+2025-11-19 22:20:31,553 INFO Launching scanner service API on port 9000
+2025-11-19 22:20:31,580 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.5:9000
+2025-11-19 22:20:31,581 INFO [33mPress CTRL+C to quit[0m
+2025-11-19 22:20:42,157 INFO Reported device to backend: c0:a5:e8:3f:f7:82 192.168.0.6
+2025-11-19 22:20:51,274 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:20:51,287 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:20:51,322 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:20:54,690 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:20:57,983 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:02,590 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:05,182 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:08,337 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:11,587 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:14,662 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:15,140 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:21:15,179 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:21:15,262 INFO 127.0.0.1 - - [19/Nov/2025 22:21:15] "GET /interfaces HTTP/1.1" 200 -
+2025-11-19 22:21:17,938 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:21,020 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:24,311 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:27,368 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:27,583 INFO 127.0.0.1 - - [19/Nov/2025 22:21:27] "POST /start HTTP/1.1" 200 -
+2025-11-19 22:21:30,944 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:21:30,960 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:21:30,975 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:34,345 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:37,421 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:38,683 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:21:38,725 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:21:41,386 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:45,402 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:49,393 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:53,395 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:21:56,450 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:00,453 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:01,912 INFO 127.0.0.1 - - [19/Nov/2025 22:22:01] "GET /interfaces HTTP/1.1" 200 -
+2025-11-19 22:22:02,480 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:22:02,511 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:22:04,427 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:08,442 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:10,932 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:22:10,945 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:22:12,539 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:16,416 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:20,405 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:24,407 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:25,779 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:22:25,811 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:22:27,465 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:31,465 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:34,720 INFO 127.0.0.1 - - [19/Nov/2025 22:22:34] "POST /start HTTP/1.1" 200 -
+2025-11-19 22:22:35,475 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:38,527 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:42,415 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:45,502 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:48,935 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:22:48,967 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:22:48,995 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:54,129 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:22:54,159 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:22:54,190 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:23:18,451 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:23:18,916 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:23:18,982 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:23:28,934 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:23:28,961 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:23:28,990 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:23:42,902 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:23:42,923 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:23:42,949 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:23:46,419 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:23:49,485 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:23:52,557 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:23:56,555 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:00,066 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:03,613 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:06,707 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:09,132 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:24:09,144 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:24:09,993 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:13,875 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:16,931 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:21,957 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:25,027 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:28,110 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:32,095 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:36,098 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:40,072 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:43,171 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:43,772 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:24:43,791 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:24:48,174 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:52,177 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:55,234 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:24:59,120 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:02,191 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:06,188 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:09,274 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:13,152 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:16,222 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:20,212 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:23,297 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:24,661 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:25:24,705 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:25:27,290 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:27,955 INFO Reported device to backend: e4:0d:36:a8:db:12 0.0.0.0
+2025-11-19 22:25:27,995 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:25:31,207 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:32,858 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:25:32,869 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:25:34,240 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:38,251 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:41,283 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:44,295 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:50,277 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:53,291 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:56,301 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:25:59,349 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:26:04,305 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:26:06,320 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:26:06,331 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:26:09,335 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:26:09,432 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:26:09,465 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:26:12,347 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:26:16,359 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:26:20,333 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:26:24,321 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:26:27,355 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:26:33,326 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:26:39,329 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:26:41,107 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:26:41,116 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:26:42,351 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:26:48,319 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:26:51,329 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:26:55,337 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:26:59,352 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:27:03,334 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:27:08,353 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:27:13,347 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:27:16,372 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:27:17,949 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:27:17,982 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:27:21,477 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:27:25,373 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:27:28,448 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:27:34,469 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:27:38,465 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:27:45,395 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:27:50,561 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:27:51,713 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:27:51,754 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:27:54,610 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:27:58,624 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:28:02,724 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:28:06,774 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:28:11,854 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:28:14,898 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:28:17,710 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:28:17,728 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:28:17,769 INFO Reported device to backend: 98:ba:5f:f1:72:f3 192.168.0.4
+2025-11-19 22:28:20,964 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:28:24,042 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:28:26,046 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:28:26,061 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:28:28,032 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:28:34,168 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:28:39,233 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:28:42,259 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:28:45,339 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:28:50,282 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:28:54,231 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:28:57,312 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:29:01,312 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:29:02,358 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:29:02,391 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:29:05,298 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:29:06,433 INFO Reported device to backend: d8:0f:99:4a:79:ff 192.168.0.10
+2025-11-19 22:29:10,422 INFO Reported device to backend: d8:0f:99:4a:79:ff 192.168.0.10
+2025-11-19 22:29:10,532 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:29:14,428 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:29:17,482 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:29:18,409 INFO Reported device to backend: d8:0f:99:4a:79:ff 192.168.0.10
+2025-11-19 22:29:21,583 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:29:26,987 INFO Reported device to backend: e4:0d:36:a8:db:12 0.0.0.0
+2025-11-19 22:29:27,025 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:29:27,454 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:29:30,476 INFO Reported device to backend: e4:0d:36:a8:db:12 0.0.0.0
+2025-11-19 22:29:30,513 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:29:30,542 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:29:33,783 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:29:34,426 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:29:34,448 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:29:37,760 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:29:37,918 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-19 22:29:37,953 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-19 22:29:40,842 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:29:44,821 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-19 22:29:47,912 ERROR Error reporting device to backend: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-11-19 22:29:55,049 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF978BF820>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:29:59,125 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF9795FB80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:30:03,208 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF979F80A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:30:07,295 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF979F9030>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:30:11,415 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF978BE380>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:30:15,580 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF9795FA90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:30:19,665 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF979F92A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:30:23,769 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF978BFEE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:30:27,833 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF978BEC50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:30:31,870 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF979F85B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:30:35,940 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF978BE1A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:30:40,000 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF978BFB50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:30:44,065 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF9795FB80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:30:48,173 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF979F9150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:30:52,235 ERROR Error creating alert on backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF979FA140>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:30:56,332 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF9795EE30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:31:00,422 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF978BFA60>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:31:04,507 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF978BEC50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:31:08,587 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF979F8BB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:31:12,705 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF979F9540>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:31:16,774 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF978BDED0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:31:20,881 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF9795FA60>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:31:24,982 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF979FA080>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:31:29,101 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF978BE8C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:31:33,207 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF978BFE20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:31:37,317 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF978BF0A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:31:41,410 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF9795DD20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:31:45,542 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF979F8C70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:31:49,634 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF978BE8C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:31:53,692 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF978BE5F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:31:57,801 ERROR Error reporting device to backend: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AF9795FE80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-19 22:32:00,003 INFO Received shutdown signal, stopping scanner
+2025-11-20 00:19:41,328 INFO Local whitelist loaded (11 entries)
+2025-11-20 00:19:41,331 INFO Sniffer thread started (iface=Wi-Fi)
+2025-11-20 00:19:41,331 INFO Auto-start scanner: True scanner started
+2025-11-20 00:19:41,332 INFO Launching scanner service API on port 9000
+2025-11-20 00:19:41,353 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.5:9000
+2025-11-20 00:19:41,353 INFO [33mPress CTRL+C to quit[0m
+2025-11-20 00:19:41,772 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:19:42,090 INFO 127.0.0.1 - - [20/Nov/2025 00:19:42] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:19:46,784 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:19:47,084 INFO 127.0.0.1 - - [20/Nov/2025 00:19:47] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:19:51,411 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:19:51,911 INFO 127.0.0.1 - - [20/Nov/2025 00:19:51] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:19:57,693 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:19:58,043 INFO 127.0.0.1 - - [20/Nov/2025 00:19:58] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:20:01,849 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:20:02,198 INFO 127.0.0.1 - - [20/Nov/2025 00:20:02] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:20:06,790 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:20:07,204 INFO 127.0.0.1 - - [20/Nov/2025 00:20:07] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:20:09,377 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:20:09,704 INFO 127.0.0.1 - - [20/Nov/2025 00:20:09] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:20:10,061 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:20:10,389 INFO 127.0.0.1 - - [20/Nov/2025 00:20:10] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:20:14,370 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:20:14,510 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:20:14,534 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:20:14,719 INFO 127.0.0.1 - - [20/Nov/2025 00:20:14] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:20:20,203 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:20:20,538 INFO 127.0.0.1 - - [20/Nov/2025 00:20:20] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:20:24,243 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:20:24,569 INFO 127.0.0.1 - - [20/Nov/2025 00:20:24] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:20:29,286 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:20:29,608 INFO 127.0.0.1 - - [20/Nov/2025 00:20:29] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:20:33,832 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:20:34,202 INFO 127.0.0.1 - - [20/Nov/2025 00:20:34] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:20:39,305 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:20:39,618 INFO 127.0.0.1 - - [20/Nov/2025 00:20:39] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:20:44,305 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:20:44,639 INFO 127.0.0.1 - - [20/Nov/2025 00:20:44] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:20:49,298 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:20:49,616 INFO 127.0.0.1 - - [20/Nov/2025 00:20:49] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:20:54,303 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:20:54,626 INFO 127.0.0.1 - - [20/Nov/2025 00:20:54] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:20:59,284 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:20:59,800 INFO 127.0.0.1 - - [20/Nov/2025 00:20:59] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:21:02,499 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:21:02,524 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:21:04,294 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:21:04,626 INFO 127.0.0.1 - - [20/Nov/2025 00:21:04] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:21:09,297 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:21:09,645 INFO 127.0.0.1 - - [20/Nov/2025 00:21:09] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:21:14,302 ERROR detect_active_interface error: name 'get_if_list' is not defined
+2025-11-20 00:21:14,643 INFO 127.0.0.1 - - [20/Nov/2025 00:21:14] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:21:25,536 INFO Received shutdown signal, stopping scanner
+2025-11-20 00:21:25,552 INFO Sniffer thread exiting
+2025-11-20 00:26:24,023 INFO Local whitelist loaded (11 entries)
+2025-11-20 00:26:24,025 INFO Sniffer thread started (iface=Wi-Fi)
+2025-11-20 00:26:24,026 INFO Auto-start scanner: True scanner started
+2025-11-20 00:26:24,028 INFO Launching scanner service API on port 9000
+2025-11-20 00:26:24,044 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.5:9000
+2025-11-20 00:26:24,044 INFO [33mPress CTRL+C to quit[0m
+2025-11-20 00:26:24,704 INFO 127.0.0.1 - - [20/Nov/2025 00:26:24] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:26:36,705 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:26:36,734 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:27:01,639 INFO Received shutdown signal, stopping scanner
+2025-11-20 00:27:01,649 INFO Sniffer thread exiting
+2025-11-20 00:28:11,540 INFO Local whitelist loaded (11 entries)
+2025-11-20 00:28:11,543 INFO Sniffer thread started (iface=Wi-Fi)
+2025-11-20 00:28:11,544 INFO Auto-start scanner: True scanner started
+2025-11-20 00:28:11,544 INFO Launching scanner service API on port 9000
+2025-11-20 00:28:11,557 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.5:9000
+2025-11-20 00:28:11,558 INFO [33mPress CTRL+C to quit[0m
+2025-11-20 00:28:30,971 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F4E4992590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 00:28:33,028 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F4E4991ED0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 00:28:35,078 ERROR Error creating alert on backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F4E4A38400>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 00:28:37,193 INFO Received shutdown signal, stopping scanner
+2025-11-20 00:28:37,209 INFO Sniffer thread exiting
+2025-11-20 00:29:16,023 INFO Local whitelist loaded (11 entries)
+2025-11-20 00:29:16,025 INFO Sniffer thread started (iface=Wi-Fi)
+2025-11-20 00:29:16,026 INFO Auto-start scanner: True scanner started
+2025-11-20 00:29:16,027 INFO Launching scanner service API on port 9000
+2025-11-20 00:29:16,041 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.5:9000
+2025-11-20 00:29:16,041 INFO [33mPress CTRL+C to quit[0m
+2025-11-20 00:29:23,176 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:29:23,184 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:29:50,416 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:29:53,422 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:29:57,417 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:30:05,506 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:30:08,972 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:30:08,983 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:30:32,126 INFO 127.0.0.1 - - [20/Nov/2025 00:30:32] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:30:33,162 INFO 127.0.0.1 - - [20/Nov/2025 00:30:33] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:30:37,953 INFO 127.0.0.1 - - [20/Nov/2025 00:30:37] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:30:42,302 INFO 127.0.0.1 - - [20/Nov/2025 00:30:42] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:30:47,263 INFO 127.0.0.1 - - [20/Nov/2025 00:30:47] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:30:52,370 INFO 127.0.0.1 - - [20/Nov/2025 00:30:52] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:30:57,072 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:30:57,092 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:30:57,358 INFO 127.0.0.1 - - [20/Nov/2025 00:30:57] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:31:02,316 INFO 127.0.0.1 - - [20/Nov/2025 00:31:02] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:31:07,354 INFO 127.0.0.1 - - [20/Nov/2025 00:31:07] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:31:12,893 INFO 127.0.0.1 - - [20/Nov/2025 00:31:12] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:31:17,764 INFO 127.0.0.1 - - [20/Nov/2025 00:31:17] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:31:23,334 INFO 127.0.0.1 - - [20/Nov/2025 00:31:23] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:31:27,752 INFO 127.0.0.1 - - [20/Nov/2025 00:31:27] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:31:32,784 INFO 127.0.0.1 - - [20/Nov/2025 00:31:32] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:31:37,873 INFO 127.0.0.1 - - [20/Nov/2025 00:31:37] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:31:42,823 INFO 127.0.0.1 - - [20/Nov/2025 00:31:42] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:31:42,864 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:31:42,903 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:31:46,911 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:31:47,087 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:31:48,172 INFO 127.0.0.1 - - [20/Nov/2025 00:31:48] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:31:50,089 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:31:50,690 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:31:52,997 INFO 127.0.0.1 - - [20/Nov/2025 00:31:52] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:31:57,950 INFO 127.0.0.1 - - [20/Nov/2025 00:31:57] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:32:03,097 INFO 127.0.0.1 - - [20/Nov/2025 00:32:03] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:32:07,844 INFO 127.0.0.1 - - [20/Nov/2025 00:32:07] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:32:24,820 INFO 127.0.0.1 - - [20/Nov/2025 00:32:24] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:32:58,256 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:32:58,283 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:33:24,766 INFO 127.0.0.1 - - [20/Nov/2025 00:33:24] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:33:44,321 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:33:44,352 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:34:24,783 INFO 127.0.0.1 - - [20/Nov/2025 00:34:24] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:34:30,541 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:34:30,571 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:35:16,248 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:35:16,276 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:35:24,795 INFO 127.0.0.1 - - [20/Nov/2025 00:35:24] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:35:50,969 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:35:51,451 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:35:54,470 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:36:04,383 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:36:04,435 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:36:13,766 INFO 127.0.0.1 - - [20/Nov/2025 00:36:13] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:36:16,107 INFO 127.0.0.1 - - [20/Nov/2025 00:36:16] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:36:16,684 INFO 127.0.0.1 - - [20/Nov/2025 00:36:16] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:36:21,208 INFO 127.0.0.1 - - [20/Nov/2025 00:36:21] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:36:26,108 INFO 127.0.0.1 - - [20/Nov/2025 00:36:26] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:36:31,321 INFO 127.0.0.1 - - [20/Nov/2025 00:36:31] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:36:36,165 INFO 127.0.0.1 - - [20/Nov/2025 00:36:36] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:36:41,272 INFO 127.0.0.1 - - [20/Nov/2025 00:36:41] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:36:46,039 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:36:46,044 INFO 127.0.0.1 - - [20/Nov/2025 00:36:46] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:36:46,064 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:36:51,131 INFO 127.0.0.1 - - [20/Nov/2025 00:36:51] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:36:56,020 INFO 127.0.0.1 - - [20/Nov/2025 00:36:56] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:37:01,038 INFO 127.0.0.1 - - [20/Nov/2025 00:37:01] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:37:47,006 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FE547838E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 00:37:49,059 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FE589595D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 00:37:51,093 ERROR Error creating alert on backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FE58959900>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 00:38:27,160 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FE58958700>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 00:38:29,213 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FE588727D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 00:38:31,259 ERROR Error creating alert on backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FE589583D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 00:39:10,979 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FE589594E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 00:39:13,026 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FE589597E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 00:39:15,066 ERROR Error creating alert on backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FE5895A080>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 00:39:23,442 INFO Received shutdown signal, stopping scanner
+2025-11-20 00:39:36,210 INFO Local whitelist loaded (11 entries)
+2025-11-20 00:39:36,213 INFO Sniffer thread started (iface=Wi-Fi)
+2025-11-20 00:39:36,214 INFO Auto-start scanner: True scanner started
+2025-11-20 00:39:36,215 INFO Launching scanner service API on port 9000
+2025-11-20 00:39:36,232 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.5:9000
+2025-11-20 00:39:36,233 INFO [33mPress CTRL+C to quit[0m
+2025-11-20 00:39:58,190 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:39:58,208 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:40:26,493 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:40:26,525 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:40:56,281 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:40:56,285 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:41:25,629 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:41:25,660 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:41:46,024 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:41:49,072 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:41:52,557 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:41:54,329 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:41:54,375 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:41:57,875 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:42:06,628 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:42:08,050 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:42:18,954 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:42:19,002 WARNING Backend devices POST returned 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /devices</pre>
+</body>
+</html>
+
+2025-11-20 00:42:21,866 INFO Received shutdown signal, stopping scanner
+2025-11-20 00:42:21,978 INFO Sniffer thread exiting
+2025-11-20 00:42:27,567 INFO Local whitelist loaded (11 entries)
+2025-11-20 00:42:27,568 INFO Sniffer thread started (iface=Wi-Fi)
+2025-11-20 00:42:27,568 INFO Auto-start scanner: True scanner started
+2025-11-20 00:42:27,569 INFO Launching scanner service API on port 9000
+2025-11-20 00:42:27,577 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.5:9000
+2025-11-20 00:42:27,578 INFO [33mPress CTRL+C to quit[0m
+2025-11-20 00:42:35,025 INFO 127.0.0.1 - - [20/Nov/2025 00:42:35] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:42:35,557 INFO 127.0.0.1 - - [20/Nov/2025 00:42:35] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:42:39,748 INFO 127.0.0.1 - - [20/Nov/2025 00:42:39] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:42:44,851 INFO 127.0.0.1 - - [20/Nov/2025 00:42:44] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:42:49,622 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:42:49,705 INFO 127.0.0.1 - - [20/Nov/2025 00:42:49] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:42:50,161 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-20 00:42:50,192 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 00:42:54,806 INFO 127.0.0.1 - - [20/Nov/2025 00:42:54] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:42:59,897 INFO 127.0.0.1 - - [20/Nov/2025 00:42:59] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:43:04,909 INFO 127.0.0.1 - - [20/Nov/2025 00:43:04] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:43:09,758 INFO 127.0.0.1 - - [20/Nov/2025 00:43:09] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:43:14,835 INFO 127.0.0.1 - - [20/Nov/2025 00:43:14] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:43:18,130 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:43:18,165 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-20 00:43:18,175 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 00:43:19,850 INFO 127.0.0.1 - - [20/Nov/2025 00:43:19] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:43:24,825 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:43:25,965 INFO 127.0.0.1 - - [20/Nov/2025 00:43:25] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:43:30,362 INFO 127.0.0.1 - - [20/Nov/2025 00:43:30] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:43:35,419 INFO 127.0.0.1 - - [20/Nov/2025 00:43:35] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:43:36,165 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:43:38,743 INFO 127.0.0.1 - - [20/Nov/2025 00:43:38] "GET /interfaces HTTP/1.1" 200 -
+2025-11-20 00:43:39,164 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:43:39,182 INFO 127.0.0.1 - - [20/Nov/2025 00:43:39] "GET /interfaces HTTP/1.1" 200 -
+2025-11-20 00:43:39,758 INFO 127.0.0.1 - - [20/Nov/2025 00:43:39] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:43:42,174 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:43:44,770 INFO 127.0.0.1 - - [20/Nov/2025 00:43:44] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:43:45,180 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:43:48,192 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:43:49,516 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-20 00:43:49,529 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 00:43:49,786 INFO 127.0.0.1 - - [20/Nov/2025 00:43:49] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:43:51,209 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:43:54,217 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:43:54,711 INFO 127.0.0.1 - - [20/Nov/2025 00:43:54] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:43:57,244 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:43:59,886 INFO 127.0.0.1 - - [20/Nov/2025 00:43:59] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:44:00,236 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:03,237 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:04,745 INFO 127.0.0.1 - - [20/Nov/2025 00:44:04] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:44:06,267 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:09,278 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:09,809 INFO 127.0.0.1 - - [20/Nov/2025 00:44:09] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:44:12,298 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:14,615 INFO 127.0.0.1 - - [20/Nov/2025 00:44:14] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:44:15,300 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:18,145 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-20 00:44:18,158 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 00:44:18,315 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:19,653 INFO 127.0.0.1 - - [20/Nov/2025 00:44:19] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:44:21,310 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:24,716 INFO 127.0.0.1 - - [20/Nov/2025 00:44:24] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:44:25,227 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:28,309 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:29,686 INFO 127.0.0.1 - - [20/Nov/2025 00:44:29] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:44:31,354 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:34,349 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:34,675 INFO 127.0.0.1 - - [20/Nov/2025 00:44:34] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:44:37,353 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:38,733 INFO 127.0.0.1 - - [20/Nov/2025 00:44:38] "GET /interfaces HTTP/1.1" 200 -
+2025-11-20 00:44:39,723 INFO 127.0.0.1 - - [20/Nov/2025 00:44:39] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:44:40,354 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:43,746 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:44,988 INFO 127.0.0.1 - - [20/Nov/2025 00:44:44] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:44:46,804 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:49,004 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-20 00:44:49,026 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 00:44:49,831 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:50,285 INFO 127.0.0.1 - - [20/Nov/2025 00:44:50] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:44:52,885 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:54,764 INFO 127.0.0.1 - - [20/Nov/2025 00:44:54] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:44:55,986 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:59,430 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:44:59,778 INFO 127.0.0.1 - - [20/Nov/2025 00:44:59] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:45:02,994 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:45:04,783 INFO 127.0.0.1 - - [20/Nov/2025 00:45:04] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:45:06,481 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:45:10,491 INFO 127.0.0.1 - - [20/Nov/2025 00:45:10] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:45:10,513 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:45:13,119 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:45:15,482 INFO 127.0.0.1 - - [20/Nov/2025 00:45:15] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:45:16,167 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:45:18,059 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-20 00:45:18,074 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 00:45:19,198 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:45:19,806 INFO 127.0.0.1 - - [20/Nov/2025 00:45:19] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:45:22,247 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:45:24,768 INFO 127.0.0.1 - - [20/Nov/2025 00:45:24] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:45:26,311 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:45:29,347 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:45:29,783 INFO 127.0.0.1 - - [20/Nov/2025 00:45:29] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:45:32,389 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:45:34,630 INFO 127.0.0.1 - - [20/Nov/2025 00:45:34] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:45:39,638 INFO 127.0.0.1 - - [20/Nov/2025 00:45:39] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:45:44,632 INFO 127.0.0.1 - - [20/Nov/2025 00:45:44] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:45:47,446 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:45:47,475 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-20 00:45:47,484 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 00:45:49,645 INFO 127.0.0.1 - - [20/Nov/2025 00:45:49] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:45:55,375 INFO 127.0.0.1 - - [20/Nov/2025 00:45:55] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:45:59,849 INFO 127.0.0.1 - - [20/Nov/2025 00:45:59] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:46:06,012 INFO 127.0.0.1 - - [20/Nov/2025 00:46:06] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:46:06,237 INFO Created alert on backend for 22:b9:bb:f2:6b:cf
+2025-11-20 00:46:06,238 INFO 127.0.0.1 - - [20/Nov/2025 00:46:06] "POST /quarantine HTTP/1.1" 200 -
+2025-11-20 00:46:11,279 INFO 127.0.0.1 - - [20/Nov/2025 00:46:11] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:46:14,667 INFO 127.0.0.1 - - [20/Nov/2025 00:46:14] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:46:16,015 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:46:16,042 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-20 00:46:16,076 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 00:46:19,661 INFO 127.0.0.1 - - [20/Nov/2025 00:46:19] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:46:26,132 INFO 127.0.0.1 - - [20/Nov/2025 00:46:26] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:46:30,408 INFO 127.0.0.1 - - [20/Nov/2025 00:46:30] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:46:34,980 INFO 127.0.0.1 - - [20/Nov/2025 00:46:34] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:46:39,780 INFO 127.0.0.1 - - [20/Nov/2025 00:46:39] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:46:44,513 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:46:44,529 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.5
+2025-11-20 00:46:44,546 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 00:46:44,858 INFO Created alert on backend for None
+2025-11-20 00:46:44,861 INFO 127.0.0.1 - - [20/Nov/2025 00:46:44] "POST /release HTTP/1.1" 200 -
+2025-11-20 00:46:44,945 INFO 127.0.0.1 - - [20/Nov/2025 00:46:44] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:46:49,631 INFO 127.0.0.1 - - [20/Nov/2025 00:46:49] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:46:54,667 INFO 127.0.0.1 - - [20/Nov/2025 00:46:54] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:46:59,666 INFO 127.0.0.1 - - [20/Nov/2025 00:46:59] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:47:02,156 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:47:04,702 INFO 127.0.0.1 - - [20/Nov/2025 00:47:04] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:47:05,466 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:47:09,462 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 00:47:09,636 INFO 127.0.0.1 - - [20/Nov/2025 00:47:09] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 00:47:12,320 INFO Received shutdown signal, stopping scanner
+2025-11-20 00:47:12,394 INFO Sniffer thread exiting
+2025-11-20 12:06:05,825 INFO Local whitelist loaded (11 entries)
+2025-11-20 12:06:05,826 INFO Sniffer thread started (iface=Wi-Fi)
+2025-11-20 12:06:05,826 INFO Auto-start scanner: True scanner started
+2025-11-20 12:06:05,827 INFO Launching scanner service API on port 9000
+2025-11-20 12:06:05,835 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.2:9000
+2025-11-20 12:06:05,835 INFO [33mPress CTRL+C to quit[0m
+2025-11-20 12:06:13,458 INFO 127.0.0.1 - - [20/Nov/2025 12:06:13] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:06:14,835 INFO 127.0.0.1 - - [20/Nov/2025 12:06:14] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:06:15,356 INFO 127.0.0.1 - - [20/Nov/2025 12:06:15] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:06:20,218 INFO 127.0.0.1 - - [20/Nov/2025 12:06:20] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:06:24,735 INFO 127.0.0.1 - - [20/Nov/2025 12:06:24] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:06:25,188 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 12:06:25,199 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 12:06:25,227 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 12:06:29,786 INFO 127.0.0.1 - - [20/Nov/2025 12:06:29] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:06:32,756 INFO 127.0.0.1 - - [20/Nov/2025 12:06:32] "GET /interfaces HTTP/1.1" 200 -
+2025-11-20 12:06:33,138 INFO 127.0.0.1 - - [20/Nov/2025 12:06:33] "GET /interfaces HTTP/1.1" 200 -
+2025-11-20 12:06:34,770 INFO 127.0.0.1 - - [20/Nov/2025 12:06:34] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:06:39,752 INFO 127.0.0.1 - - [20/Nov/2025 12:06:39] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:06:44,784 INFO 127.0.0.1 - - [20/Nov/2025 12:06:44] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:06:46,229 INFO 127.0.0.1 - - [20/Nov/2025 12:06:46] "GET /interfaces HTTP/1.1" 200 -
+2025-11-20 12:06:49,942 INFO 127.0.0.1 - - [20/Nov/2025 12:06:49] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:06:54,641 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 12:06:54,657 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 12:06:54,670 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 12:06:54,883 INFO 127.0.0.1 - - [20/Nov/2025 12:06:54] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:06:59,900 INFO 127.0.0.1 - - [20/Nov/2025 12:06:59] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:07:00,025 INFO 127.0.0.1 - - [20/Nov/2025 12:07:00] "POST /start HTTP/1.1" 200 -
+2025-11-20 12:07:04,943 INFO 127.0.0.1 - - [20/Nov/2025 12:07:04] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:07:07,302 INFO 127.0.0.1 - - [20/Nov/2025 12:07:07] "POST /start HTTP/1.1" 200 -
+2025-11-20 12:07:11,587 INFO 127.0.0.1 - - [20/Nov/2025 12:07:11] "GET /interfaces HTTP/1.1" 200 -
+2025-11-20 12:07:11,592 INFO 127.0.0.1 - - [20/Nov/2025 12:07:11] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:07:14,922 INFO 127.0.0.1 - - [20/Nov/2025 12:07:14] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:07:20,994 INFO 127.0.0.1 - - [20/Nov/2025 12:07:20] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:07:25,199 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 12:07:25,208 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 12:07:25,218 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 12:07:25,933 INFO 127.0.0.1 - - [20/Nov/2025 12:07:25] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:07:29,983 INFO 127.0.0.1 - - [20/Nov/2025 12:07:29] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:07:34,997 INFO 127.0.0.1 - - [20/Nov/2025 12:07:34] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:07:40,041 INFO 127.0.0.1 - - [20/Nov/2025 12:07:40] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:07:44,891 INFO 127.0.0.1 - - [20/Nov/2025 12:07:44] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:07:49,940 INFO 127.0.0.1 - - [20/Nov/2025 12:07:49] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:07:54,679 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 12:07:54,702 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 12:07:54,748 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 12:07:54,998 INFO 127.0.0.1 - - [20/Nov/2025 12:07:54] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:07:59,965 INFO 127.0.0.1 - - [20/Nov/2025 12:07:59] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:08:04,935 INFO 127.0.0.1 - - [20/Nov/2025 12:08:04] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:08:10,922 INFO 127.0.0.1 - - [20/Nov/2025 12:08:10] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:08:15,140 INFO 127.0.0.1 - - [20/Nov/2025 12:08:15] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:08:20,156 INFO 127.0.0.1 - - [20/Nov/2025 12:08:20] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:08:24,914 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 12:08:24,928 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 12:08:24,940 INFO 127.0.0.1 - - [20/Nov/2025 12:08:24] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:08:24,966 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 12:08:29,928 INFO 127.0.0.1 - - [20/Nov/2025 12:08:29] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:08:35,006 INFO 127.0.0.1 - - [20/Nov/2025 12:08:35] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:08:39,881 INFO 127.0.0.1 - - [20/Nov/2025 12:08:39] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:08:45,062 INFO 127.0.0.1 - - [20/Nov/2025 12:08:45] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:08:49,818 INFO 127.0.0.1 - - [20/Nov/2025 12:08:49] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:08:54,533 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 12:08:54,565 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 12:08:54,596 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 12:08:55,035 INFO 127.0.0.1 - - [20/Nov/2025 12:08:55] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:08:59,847 INFO 127.0.0.1 - - [20/Nov/2025 12:08:59] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:09:05,226 INFO 127.0.0.1 - - [20/Nov/2025 12:09:05] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:09:16,244 INFO Received shutdown signal, stopping scanner
+2025-11-20 12:38:36,114 INFO Local whitelist loaded (11 entries)
+2025-11-20 12:38:36,117 INFO Sniffer thread started (iface=Wi-Fi)
+2025-11-20 12:38:36,117 INFO Auto-start scanner: True scanner started
+2025-11-20 12:38:36,118 INFO Launching scanner service API on port 9000
+2025-11-20 12:38:36,127 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.2:9000
+2025-11-20 12:38:36,127 INFO [33mPress CTRL+C to quit[0m
+2025-11-20 12:38:46,552 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 12:38:46,579 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 12:38:46,604 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 12:38:50,148 INFO 127.0.0.1 - - [20/Nov/2025 12:38:50] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:38:50,851 INFO 127.0.0.1 - - [20/Nov/2025 12:38:50] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:38:55,016 INFO 127.0.0.1 - - [20/Nov/2025 12:38:55] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:39:00,036 INFO 127.0.0.1 - - [20/Nov/2025 12:39:00] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:39:04,960 INFO 127.0.0.1 - - [20/Nov/2025 12:39:04] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:39:10,122 INFO 127.0.0.1 - - [20/Nov/2025 12:39:10] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:39:14,941 INFO 127.0.0.1 - - [20/Nov/2025 12:39:14] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:39:19,778 INFO 127.0.0.1 - - [20/Nov/2025 12:39:19] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:39:24,794 INFO 127.0.0.1 - - [20/Nov/2025 12:39:24] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:39:29,955 INFO 127.0.0.1 - - [20/Nov/2025 12:39:29] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:39:35,127 INFO 127.0.0.1 - - [20/Nov/2025 12:39:35] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:39:45,154 INFO Received shutdown signal, stopping scanner
+2025-11-20 12:42:01,709 INFO Local whitelist loaded (11 entries)
+2025-11-20 12:42:01,710 INFO Sniffer thread started (iface=Wi-Fi)
+2025-11-20 12:42:01,710 INFO Auto-start scanner: True scanner started
+2025-11-20 12:42:01,711 INFO Launching scanner service API on port 9000
+2025-11-20 12:42:01,722 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.2:9000
+2025-11-20 12:42:01,722 INFO [33mPress CTRL+C to quit[0m
+2025-11-20 12:42:10,240 INFO 127.0.0.1 - - [20/Nov/2025 12:42:10] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:42:11,268 INFO 127.0.0.1 - - [20/Nov/2025 12:42:11] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:42:11,721 INFO 127.0.0.1 - - [20/Nov/2025 12:42:11] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:42:23,091 INFO Reported device to backend: de:cc:a4:ff:e7:93 192.168.0.3
+2025-11-20 12:42:24,610 INFO 127.0.0.1 - - [20/Nov/2025 12:42:24] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:42:25,212 INFO 127.0.0.1 - - [20/Nov/2025 12:42:25] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:42:31,758 INFO 127.0.0.1 - - [20/Nov/2025 12:42:31] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:42:32,730 INFO 127.0.0.1 - - [20/Nov/2025 12:42:32] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:42:33,206 INFO Reported device to backend: de:cc:a4:ff:e7:93 192.168.0.3
+2025-11-20 12:42:36,939 INFO 127.0.0.1 - - [20/Nov/2025 12:42:36] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:42:42,009 INFO 127.0.0.1 - - [20/Nov/2025 12:42:42] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:42:47,221 INFO 127.0.0.1 - - [20/Nov/2025 12:42:47] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:42:52,045 INFO 127.0.0.1 - - [20/Nov/2025 12:42:52] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:42:56,944 INFO 127.0.0.1 - - [20/Nov/2025 12:42:56] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:43:02,115 INFO 127.0.0.1 - - [20/Nov/2025 12:43:02] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:43:07,044 INFO 127.0.0.1 - - [20/Nov/2025 12:43:07] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:43:12,103 INFO 127.0.0.1 - - [20/Nov/2025 12:43:12] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:43:17,037 INFO 127.0.0.1 - - [20/Nov/2025 12:43:17] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:43:22,146 INFO 127.0.0.1 - - [20/Nov/2025 12:43:22] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:43:27,097 INFO 127.0.0.1 - - [20/Nov/2025 12:43:27] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:43:32,348 INFO 127.0.0.1 - - [20/Nov/2025 12:43:32] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:43:37,084 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 12:43:37,104 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 12:43:37,134 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 12:43:37,514 INFO 127.0.0.1 - - [20/Nov/2025 12:43:37] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:43:43,211 INFO 127.0.0.1 - - [20/Nov/2025 12:43:43] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:43:46,839 INFO 127.0.0.1 - - [20/Nov/2025 12:43:46] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:43:58,521 INFO 127.0.0.1 - - [20/Nov/2025 12:43:58] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:43:58,959 INFO 127.0.0.1 - - [20/Nov/2025 12:43:58] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:44:03,698 INFO 127.0.0.1 - - [20/Nov/2025 12:44:03] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:44:15,560 INFO 127.0.0.1 - - [20/Nov/2025 12:44:15] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:44:16,129 INFO 127.0.0.1 - - [20/Nov/2025 12:44:16] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:44:21,063 INFO 127.0.0.1 - - [20/Nov/2025 12:44:21] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:44:26,070 INFO 127.0.0.1 - - [20/Nov/2025 12:44:26] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:44:31,104 INFO 127.0.0.1 - - [20/Nov/2025 12:44:31] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:44:36,019 INFO 127.0.0.1 - - [20/Nov/2025 12:44:36] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:44:41,011 INFO 127.0.0.1 - - [20/Nov/2025 12:44:41] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:44:46,033 INFO 127.0.0.1 - - [20/Nov/2025 12:44:46] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:44:51,087 INFO 127.0.0.1 - - [20/Nov/2025 12:44:51] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:44:56,014 INFO 127.0.0.1 - - [20/Nov/2025 12:44:56] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:45:01,107 INFO 127.0.0.1 - - [20/Nov/2025 12:45:01] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:45:06,015 INFO 127.0.0.1 - - [20/Nov/2025 12:45:06] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:45:11,034 INFO 127.0.0.1 - - [20/Nov/2025 12:45:11] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:45:16,172 INFO 127.0.0.1 - - [20/Nov/2025 12:45:16] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:45:37,665 INFO 127.0.0.1 - - [20/Nov/2025 12:45:37] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:45:40,424 INFO 127.0.0.1 - - [20/Nov/2025 12:45:40] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:45:45,467 INFO 127.0.0.1 - - [20/Nov/2025 12:45:45] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:45:50,348 INFO 127.0.0.1 - - [20/Nov/2025 12:45:50] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:45:55,467 INFO 127.0.0.1 - - [20/Nov/2025 12:45:55] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:46:01,146 INFO 127.0.0.1 - - [20/Nov/2025 12:46:01] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:46:06,123 INFO 127.0.0.1 - - [20/Nov/2025 12:46:06] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:46:11,140 INFO 127.0.0.1 - - [20/Nov/2025 12:46:11] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:46:16,112 INFO 127.0.0.1 - - [20/Nov/2025 12:46:16] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:46:19,793 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 12:46:19,826 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 12:46:19,861 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 12:46:21,064 INFO 127.0.0.1 - - [20/Nov/2025 12:46:21] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:46:26,174 INFO 127.0.0.1 - - [20/Nov/2025 12:46:26] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:46:31,122 INFO 127.0.0.1 - - [20/Nov/2025 12:46:31] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:46:36,420 INFO 127.0.0.1 - - [20/Nov/2025 12:46:36] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:46:41,101 INFO 127.0.0.1 - - [20/Nov/2025 12:46:41] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:46:46,254 INFO 127.0.0.1 - - [20/Nov/2025 12:46:46] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:46:51,263 INFO 127.0.0.1 - - [20/Nov/2025 12:46:51] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:46:56,044 INFO 127.0.0.1 - - [20/Nov/2025 12:46:56] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:47:18,451 INFO Received shutdown signal, stopping scanner
+2025-11-20 12:47:18,602 INFO Sniffer thread exiting
+2025-11-20 12:57:41,317 INFO Local whitelist loaded (11 entries)
+2025-11-20 12:57:41,320 INFO Sniffer thread started (iface=Wi-Fi)
+2025-11-20 12:57:41,320 INFO Auto-start scanner: True scanner started
+2025-11-20 12:57:41,321 INFO Launching scanner service API on port 9000
+2025-11-20 12:57:41,333 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.2:9000
+2025-11-20 12:57:41,334 INFO [33mPress CTRL+C to quit[0m
+2025-11-20 12:57:44,925 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 12:57:44,945 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 12:57:44,983 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 12:57:51,970 INFO 127.0.0.1 - - [20/Nov/2025 12:57:51] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:57:52,537 INFO 127.0.0.1 - - [20/Nov/2025 12:57:52] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:57:57,078 INFO 127.0.0.1 - - [20/Nov/2025 12:57:57] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:58:02,050 INFO 127.0.0.1 - - [20/Nov/2025 12:58:02] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:58:07,063 INFO 127.0.0.1 - - [20/Nov/2025 12:58:07] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:58:08,682 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 12:58:08,691 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 12:58:08,700 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 12:58:11,181 INFO 127.0.0.1 - - [20/Nov/2025 12:58:11] "GET /interfaces HTTP/1.1" 200 -
+2025-11-20 12:58:11,650 INFO 127.0.0.1 - - [20/Nov/2025 12:58:11] "GET /interfaces HTTP/1.1" 200 -
+2025-11-20 12:58:11,929 INFO 127.0.0.1 - - [20/Nov/2025 12:58:11] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:58:14,611 INFO 127.0.0.1 - - [20/Nov/2025 12:58:14] "GET /interfaces HTTP/1.1" 200 -
+2025-11-20 12:58:16,877 INFO 127.0.0.1 - - [20/Nov/2025 12:58:16] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:58:21,955 INFO 127.0.0.1 - - [20/Nov/2025 12:58:21] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:58:31,200 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 12:58:31,218 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 12:58:31,249 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 12:58:39,923 INFO 127.0.0.1 - - [20/Nov/2025 12:58:39] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:58:42,291 INFO 127.0.0.1 - - [20/Nov/2025 12:58:42] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 12:58:57,565 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 12:58:57,574 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 12:58:57,609 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 12:59:15,687 INFO Reported device to backend: 98:ba:5f:f1:72:f3 0.0.0.0
+2025-11-20 12:59:15,925 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 12:59:15,958 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 12:59:15,973 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 12:59:24,793 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 12:59:24,824 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 12:59:24,854 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 12:59:55,440 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000017FCB482110>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 12:59:57,456 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000017FCB483400>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 12:59:59,506 ERROR Error creating alert on backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000017FCB482950>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:00:01,557 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000017FCB481D20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:00:02,561 INFO Received shutdown signal, stopping scanner
+2025-11-20 13:18:02,835 INFO Local whitelist loaded (11 entries)
+2025-11-20 13:18:02,837 INFO Sniffer thread started (iface=Wi-Fi)
+2025-11-20 13:18:02,837 INFO Auto-start scanner: True scanner started
+2025-11-20 13:18:02,837 INFO Launching scanner service API on port 9000
+2025-11-20 13:18:02,852 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.2:9000
+2025-11-20 13:18:02,853 INFO [33mPress CTRL+C to quit[0m
+2025-11-20 13:18:13,419 INFO 127.0.0.1 - - [20/Nov/2025 13:18:13] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:18:13,993 INFO 127.0.0.1 - - [20/Nov/2025 13:18:13] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:18:18,382 INFO 127.0.0.1 - - [20/Nov/2025 13:18:18] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:18:23,653 INFO 127.0.0.1 - - [20/Nov/2025 13:18:23] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:18:28,498 INFO 127.0.0.1 - - [20/Nov/2025 13:18:28] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:18:33,343 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 13:18:33,504 INFO 127.0.0.1 - - [20/Nov/2025 13:18:33] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:18:34,187 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 13:18:34,202 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 13:18:35,656 INFO Reported device to backend: 98:ba:5f:f1:72:f3 192.168.0.4
+2025-11-20 13:18:38,470 INFO 127.0.0.1 - - [20/Nov/2025 13:18:38] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:18:43,448 INFO 127.0.0.1 - - [20/Nov/2025 13:18:43] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:18:49,224 INFO 127.0.0.1 - - [20/Nov/2025 13:18:49] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:18:53,357 INFO 127.0.0.1 - - [20/Nov/2025 13:18:53] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:18:59,104 INFO 127.0.0.1 - - [20/Nov/2025 13:18:59] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:19:04,385 INFO 127.0.0.1 - - [20/Nov/2025 13:19:04] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:19:09,555 INFO 127.0.0.1 - - [20/Nov/2025 13:19:09] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:19:14,627 INFO 127.0.0.1 - - [20/Nov/2025 13:19:14] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:19:19,572 INFO 127.0.0.1 - - [20/Nov/2025 13:19:19] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:19:24,350 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 13:19:24,364 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 13:19:24,376 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 13:19:24,728 INFO 127.0.0.1 - - [20/Nov/2025 13:19:24] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:19:30,051 INFO 127.0.0.1 - - [20/Nov/2025 13:19:30] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:19:35,009 INFO 127.0.0.1 - - [20/Nov/2025 13:19:35] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:19:39,841 INFO 127.0.0.1 - - [20/Nov/2025 13:19:39] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:19:44,653 INFO 127.0.0.1 - - [20/Nov/2025 13:19:44] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:19:49,362 INFO 127.0.0.1 - - [20/Nov/2025 13:19:49] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:19:55,105 INFO 127.0.0.1 - - [20/Nov/2025 13:19:55] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:20:11,957 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022491432680>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:20:14,016 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022491433850>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:20:16,068 ERROR Error creating alert on backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022490F7EB90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:20:55,579 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022491433280>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:20:57,639 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022491433760>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:20:59,680 ERROR Error creating alert on backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022491433940>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:21:39,803 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022491431E10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:21:42,146 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022491517D60>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:21:44,188 ERROR Error creating alert on backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000224915CCF10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:22:01,467 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022491432F80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:22:03,511 ERROR Error creating alert on backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022491432200>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:22:05,554 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000224915CD5D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:22:29,049 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022491432FB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:22:31,097 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000224915CD7B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:22:33,133 ERROR Error creating alert on backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000224915CCA60>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:22:41,457 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000224915CCA90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:22:43,502 ERROR Error creating alert on backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000224915CCEB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:22:45,547 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000224914328C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:23:21,719 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022491431E10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:23:23,766 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022491517430>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:23:25,811 ERROR Error creating alert on backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000224915CD8D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:24:01,965 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022491431F30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:24:04,005 ERROR Error creating alert on backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000224915CDC90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:24:06,054 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000224915CDA20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:24:12,266 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022491431FC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:24:14,323 ERROR Error reporting device to backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/devices (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000224915CDF90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:24:16,388 ERROR Error creating alert on backend: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/alerts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000224915CDBA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-20 13:24:58,435 INFO Received shutdown signal, stopping scanner
+2025-11-20 13:25:01,654 INFO Local whitelist loaded (11 entries)
+2025-11-20 13:25:01,656 INFO Sniffer thread started (iface=Wi-Fi)
+2025-11-20 13:25:01,656 INFO Auto-start scanner: True scanner started
+2025-11-20 13:25:01,656 INFO Launching scanner service API on port 9000
+2025-11-20 13:25:01,673 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.2:9000
+2025-11-20 13:25:01,673 INFO [33mPress CTRL+C to quit[0m
+2025-11-20 13:25:12,309 INFO 127.0.0.1 - - [20/Nov/2025 13:25:12] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:25:12,924 INFO 127.0.0.1 - - [20/Nov/2025 13:25:12] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:25:17,212 INFO 127.0.0.1 - - [20/Nov/2025 13:25:17] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:25:22,198 INFO 127.0.0.1 - - [20/Nov/2025 13:25:22] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:25:27,256 INFO 127.0.0.1 - - [20/Nov/2025 13:25:27] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:25:32,051 INFO 127.0.0.1 - - [20/Nov/2025 13:25:32] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:25:42,821 INFO Received shutdown signal, stopping scanner
+2025-11-20 13:52:05,003 INFO Local whitelist loaded (11 entries)
+2025-11-20 13:52:05,005 INFO Sniffer thread started (iface=Wi-Fi)
+2025-11-20 13:52:05,005 INFO Auto-start scanner: True scanner started
+2025-11-20 13:52:05,005 INFO Launching scanner service API on port 9000
+2025-11-20 13:52:05,016 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.2:9000
+2025-11-20 13:52:05,017 INFO [33mPress CTRL+C to quit[0m
+2025-11-20 13:52:21,957 INFO 127.0.0.1 - - [20/Nov/2025 13:52:21] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:52:22,583 INFO 127.0.0.1 - - [20/Nov/2025 13:52:22] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:52:26,938 INFO 127.0.0.1 - - [20/Nov/2025 13:52:26] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:52:28,026 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:52:28,340 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:52:28,360 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 13:52:31,927 INFO 127.0.0.1 - - [20/Nov/2025 13:52:31] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:52:36,998 INFO 127.0.0.1 - - [20/Nov/2025 13:52:36] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:52:41,937 INFO 127.0.0.1 - - [20/Nov/2025 13:52:41] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:52:46,901 INFO 127.0.0.1 - - [20/Nov/2025 13:52:46] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:52:51,900 INFO 127.0.0.1 - - [20/Nov/2025 13:52:51] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:52:56,942 INFO 127.0.0.1 - - [20/Nov/2025 13:52:56] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:53:02,354 INFO 127.0.0.1 - - [20/Nov/2025 13:53:02] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:53:07,009 INFO 127.0.0.1 - - [20/Nov/2025 13:53:07] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:53:11,967 INFO 127.0.0.1 - - [20/Nov/2025 13:53:11] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:53:16,829 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:53:17,230 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:53:17,269 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 13:53:17,332 INFO 127.0.0.1 - - [20/Nov/2025 13:53:17] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:53:22,083 INFO 127.0.0.1 - - [20/Nov/2025 13:53:22] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:53:26,997 INFO 127.0.0.1 - - [20/Nov/2025 13:53:26] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:53:32,057 INFO 127.0.0.1 - - [20/Nov/2025 13:53:32] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:53:37,023 INFO 127.0.0.1 - - [20/Nov/2025 13:53:37] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:53:42,050 INFO 127.0.0.1 - - [20/Nov/2025 13:53:42] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:53:47,222 INFO 127.0.0.1 - - [20/Nov/2025 13:53:47] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:53:52,047 INFO 127.0.0.1 - - [20/Nov/2025 13:53:52] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:53:57,064 INFO 127.0.0.1 - - [20/Nov/2025 13:53:57] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:54:04,333 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:54:04,542 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:54:04,574 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 13:54:17,139 INFO 127.0.0.1 - - [20/Nov/2025 13:54:17] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:54:51,706 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:54:51,913 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:54:51,957 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 13:55:17,066 INFO 127.0.0.1 - - [20/Nov/2025 13:55:17] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:55:41,004 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:55:41,170 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:55:41,209 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 13:56:02,063 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:56:02,078 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 13:56:02,269 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:56:17,105 INFO 127.0.0.1 - - [20/Nov/2025 13:56:17] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:56:33,156 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:56:33,336 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:56:33,348 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 13:57:17,095 INFO 127.0.0.1 - - [20/Nov/2025 13:57:17] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:57:21,985 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:57:22,143 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:57:22,160 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 13:57:59,593 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:58:00,358 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:58:00,558 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:58:00,570 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 13:58:17,118 INFO 127.0.0.1 - - [20/Nov/2025 13:58:17] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:58:22,510 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:58:36,867 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:58:37,060 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:58:37,072 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 13:58:39,212 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:58:54,063 INFO 127.0.0.1 - - [20/Nov/2025 13:58:54] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:58:56,800 INFO 127.0.0.1 - - [20/Nov/2025 13:58:56] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:59:02,079 INFO 127.0.0.1 - - [20/Nov/2025 13:59:02] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:59:06,880 INFO 127.0.0.1 - - [20/Nov/2025 13:59:06] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:59:10,952 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:59:11,120 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:59:11,141 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 13:59:12,111 INFO 127.0.0.1 - - [20/Nov/2025 13:59:12] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:59:16,791 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:59:17,214 INFO 127.0.0.1 - - [20/Nov/2025 13:59:17] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:59:22,103 INFO 127.0.0.1 - - [20/Nov/2025 13:59:22] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:59:27,050 INFO 127.0.0.1 - - [20/Nov/2025 13:59:27] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:59:27,799 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:59:31,111 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:59:31,465 WARNING Backend devices POST returned 500: {"error":"Failed to add device"}
+2025-11-20 13:59:31,478 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 13:59:32,106 INFO 127.0.0.1 - - [20/Nov/2025 13:59:32] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:59:33,961 INFO 127.0.0.1 - - [20/Nov/2025 13:59:33] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:59:34,143 WARNING Backend devices POST returned 500: {"error":"Failed to add/update device"}
+2025-11-20 13:59:37,052 INFO 127.0.0.1 - - [20/Nov/2025 13:59:37] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:59:37,549 WARNING Backend devices POST returned 500: {"error":"Failed to add/update device"}
+2025-11-20 13:59:40,276 WARNING Backend devices POST returned 500: {"error":"Failed to add/update device"}
+2025-11-20 13:59:41,987 INFO 127.0.0.1 - - [20/Nov/2025 13:59:41] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:59:43,305 WARNING Backend devices POST returned 500: {"error":"Failed to add/update device"}
+2025-11-20 13:59:46,313 WARNING Backend devices POST returned 500: {"error":"Failed to add/update device"}
+2025-11-20 13:59:46,998 INFO 127.0.0.1 - - [20/Nov/2025 13:59:46] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:59:49,352 WARNING Backend devices POST returned 500: {"error":"Failed to add/update device"}
+2025-11-20 13:59:51,347 WARNING Backend devices POST returned 500: {"error":"Failed to add/update device"}
+2025-11-20 13:59:51,948 INFO 127.0.0.1 - - [20/Nov/2025 13:59:51] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 13:59:56,956 INFO 127.0.0.1 - - [20/Nov/2025 13:59:56] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:00:01,414 WARNING Backend devices POST returned 500: {"error":"Failed to add/update device"}
+2025-11-20 14:00:01,961 INFO 127.0.0.1 - - [20/Nov/2025 14:00:01] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:00:04,742 WARNING Backend devices POST returned 500: {"error":"Failed to add/update device"}
+2025-11-20 14:00:06,939 INFO 127.0.0.1 - - [20/Nov/2025 14:00:06] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:00:07,777 WARNING Backend devices POST returned 500: {"error":"Failed to add/update device"}
+2025-11-20 14:00:10,792 WARNING Backend devices POST returned 500: {"error":"Failed to add/update device"}
+2025-11-20 14:00:13,244 WARNING Backend devices POST returned 500: {"error":"Failed to add/update device"}
+2025-11-20 14:00:13,262 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:00:13,823 WARNING Backend devices POST returned 500: {"error":"Failed to add/update device"}
+2025-11-20 14:00:17,012 INFO 127.0.0.1 - - [20/Nov/2025 14:00:17] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:00:22,723 INFO Received shutdown signal, stopping scanner
+2025-11-20 14:10:31,016 INFO Local whitelist loaded (11 entries)
+2025-11-20 14:10:31,018 INFO Sniffer thread started (iface=Wi-Fi)
+2025-11-20 14:10:31,018 INFO Auto-start scanner: True scanner started
+2025-11-20 14:10:31,019 INFO Launching scanner service API on port 9000
+2025-11-20 14:10:31,028 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.2:9000
+2025-11-20 14:10:31,028 INFO [33mPress CTRL+C to quit[0m
+2025-11-20 14:10:41,734 INFO 127.0.0.1 - - [20/Nov/2025 14:10:41] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:10:42,479 INFO 127.0.0.1 - - [20/Nov/2025 14:10:42] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:10:46,584 INFO 127.0.0.1 - - [20/Nov/2025 14:10:46] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:10:51,730 INFO 127.0.0.1 - - [20/Nov/2025 14:10:51] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:10:52,992 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:10:53,170 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:10:53,189 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:10:56,655 INFO 127.0.0.1 - - [20/Nov/2025 14:10:56] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:11:01,598 INFO 127.0.0.1 - - [20/Nov/2025 14:11:01] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:11:07,308 INFO 127.0.0.1 - - [20/Nov/2025 14:11:07] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:11:12,150 INFO 127.0.0.1 - - [20/Nov/2025 14:11:12] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:11:16,832 INFO 127.0.0.1 - - [20/Nov/2025 14:11:16] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:11:22,100 INFO 127.0.0.1 - - [20/Nov/2025 14:11:22] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:11:26,610 INFO 127.0.0.1 - - [20/Nov/2025 14:11:26] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:11:32,081 INFO 127.0.0.1 - - [20/Nov/2025 14:11:32] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:11:34,899 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:11:35,124 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:11:35,155 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:11:38,006 INFO 127.0.0.1 - - [20/Nov/2025 14:11:38] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:11:41,529 INFO 127.0.0.1 - - [20/Nov/2025 14:11:41] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:11:46,635 INFO 127.0.0.1 - - [20/Nov/2025 14:11:46] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:11:51,739 INFO 127.0.0.1 - - [20/Nov/2025 14:11:51] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:11:59,404 INFO 127.0.0.1 - - [20/Nov/2025 14:11:59] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:12:01,624 INFO 127.0.0.1 - - [20/Nov/2025 14:12:01] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:12:06,714 INFO 127.0.0.1 - - [20/Nov/2025 14:12:06] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:12:11,512 INFO 127.0.0.1 - - [20/Nov/2025 14:12:11] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:12:16,312 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:12:16,392 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:12:16,423 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:12:16,435 INFO 127.0.0.1 - - [20/Nov/2025 14:12:16] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:12:21,724 INFO 127.0.0.1 - - [20/Nov/2025 14:12:21] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:12:26,987 INFO 127.0.0.1 - - [20/Nov/2025 14:12:26] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:12:31,683 INFO 127.0.0.1 - - [20/Nov/2025 14:12:31] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:12:36,776 INFO 127.0.0.1 - - [20/Nov/2025 14:12:36] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:12:41,393 INFO Reported device to backend: 66:1b:8d:37:1a:74 0.0.0.0
+2025-11-20 14:12:41,410 INFO Created alert on backend for 66:1b:8d:37:1a:74
+2025-11-20 14:12:41,607 INFO 127.0.0.1 - - [20/Nov/2025 14:12:41] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:12:41,629 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:12:43,980 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:12:44,012 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:12:44,703 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:12:46,592 INFO 127.0.0.1 - - [20/Nov/2025 14:12:46] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:12:47,870 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:12:48,650 INFO Reported device to backend: 66:1b:8d:37:1a:74 0.0.0.0
+2025-11-20 14:12:48,662 INFO Created alert on backend for 66:1b:8d:37:1a:74
+2025-11-20 14:12:50,868 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:12:51,560 INFO 127.0.0.1 - - [20/Nov/2025 14:12:51] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:12:53,937 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:12:56,997 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:12:57,620 INFO 127.0.0.1 - - [20/Nov/2025 14:12:57] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:13:00,069 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:01,581 INFO 127.0.0.1 - - [20/Nov/2025 14:13:01] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:13:03,184 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:06,220 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:06,503 INFO 127.0.0.1 - - [20/Nov/2025 14:13:06] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:13:09,393 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:11,999 INFO 127.0.0.1 - - [20/Nov/2025 14:13:11] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:13:12,573 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:15,706 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:16,582 INFO 127.0.0.1 - - [20/Nov/2025 14:13:16] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:13:18,130 INFO Reported device to backend: 66:1b:8d:37:1a:74 192.168.0.5
+2025-11-20 14:13:18,142 INFO Created alert on backend for 66:1b:8d:37:1a:74
+2025-11-20 14:13:18,718 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:21,797 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:21,930 INFO 127.0.0.1 - - [20/Nov/2025 14:13:21] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:13:24,923 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:26,599 INFO 127.0.0.1 - - [20/Nov/2025 14:13:26] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:13:28,024 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:31,080 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:31,541 INFO 127.0.0.1 - - [20/Nov/2025 14:13:31] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:13:34,221 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:36,508 INFO 127.0.0.1 - - [20/Nov/2025 14:13:36] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:13:37,272 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:40,418 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:41,660 INFO 127.0.0.1 - - [20/Nov/2025 14:13:41] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:13:41,740 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:41,937 INFO 127.0.0.1 - - [20/Nov/2025 14:13:41] "POST /reset HTTP/1.1" 200 -
+2025-11-20 14:13:44,932 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:46,527 INFO 127.0.0.1 - - [20/Nov/2025 14:13:46] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:13:46,700 INFO 127.0.0.1 - - [20/Nov/2025 14:13:46] "POST /reset HTTP/1.1" 200 -
+2025-11-20 14:13:46,708 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:49,909 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:13:50,099 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:13:50,130 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:13:51,354 INFO Reported device to backend: de:cc:a4:ff:e7:93 192.168.0.3
+2025-11-20 14:13:51,678 INFO 127.0.0.1 - - [20/Nov/2025 14:13:51] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:13:56,502 INFO 127.0.0.1 - - [20/Nov/2025 14:13:56] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:14:01,317 INFO Reported device to backend: de:cc:a4:ff:e7:93 192.168.0.3
+2025-11-20 14:14:01,609 INFO 127.0.0.1 - - [20/Nov/2025 14:14:01] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:14:06,554 INFO 127.0.0.1 - - [20/Nov/2025 14:14:06] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:14:11,440 INFO 127.0.0.1 - - [20/Nov/2025 14:14:11] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:14:16,573 INFO 127.0.0.1 - - [20/Nov/2025 14:14:16] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:14:21,578 INFO 127.0.0.1 - - [20/Nov/2025 14:14:21] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:14:26,626 INFO 127.0.0.1 - - [20/Nov/2025 14:14:26] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:14:32,592 INFO 127.0.0.1 - - [20/Nov/2025 14:14:32] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:14:36,717 INFO 127.0.0.1 - - [20/Nov/2025 14:14:36] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:14:41,606 INFO 127.0.0.1 - - [20/Nov/2025 14:14:41] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:14:44,145 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:14:44,406 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:14:44,440 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:14:48,166 INFO 127.0.0.1 - - [20/Nov/2025 14:14:48] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:14:52,610 INFO 127.0.0.1 - - [20/Nov/2025 14:14:52] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:14:56,706 INFO 127.0.0.1 - - [20/Nov/2025 14:14:56] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:15:02,791 INFO 127.0.0.1 - - [20/Nov/2025 14:15:02] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:15:07,025 INFO 127.0.0.1 - - [20/Nov/2025 14:15:07] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:15:12,737 INFO 127.0.0.1 - - [20/Nov/2025 14:15:12] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:15:16,776 INFO 127.0.0.1 - - [20/Nov/2025 14:15:16] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:15:21,888 INFO 127.0.0.1 - - [20/Nov/2025 14:15:21] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:15:26,570 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:15:26,599 INFO 127.0.0.1 - - [20/Nov/2025 14:15:26] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:15:26,799 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:15:26,818 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:15:33,496 INFO 127.0.0.1 - - [20/Nov/2025 14:15:33] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:15:33,548 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:15:33,556 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:15:33,761 INFO Reported device to backend: 66:1b:8d:37:1a:74 192.168.0.5
+2025-11-20 14:15:33,773 INFO Created alert on backend for 66:1b:8d:37:1a:74
+2025-11-20 14:15:36,735 INFO 127.0.0.1 - - [20/Nov/2025 14:15:36] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:15:41,591 INFO 127.0.0.1 - - [20/Nov/2025 14:15:41] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:15:47,019 INFO 127.0.0.1 - - [20/Nov/2025 14:15:47] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:15:51,850 INFO 127.0.0.1 - - [20/Nov/2025 14:15:51] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:15:56,602 INFO 127.0.0.1 - - [20/Nov/2025 14:15:56] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:16:02,250 INFO 127.0.0.1 - - [20/Nov/2025 14:16:02] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:16:06,663 INFO 127.0.0.1 - - [20/Nov/2025 14:16:06] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:16:09,725 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:16:09,948 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:16:09,963 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:16:11,568 INFO 127.0.0.1 - - [20/Nov/2025 14:16:11] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:16:16,695 INFO 127.0.0.1 - - [20/Nov/2025 14:16:16] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:16:23,266 INFO 127.0.0.1 - - [20/Nov/2025 14:16:23] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:16:27,263 INFO 127.0.0.1 - - [20/Nov/2025 14:16:27] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:16:31,673 INFO 127.0.0.1 - - [20/Nov/2025 14:16:31] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:16:36,966 INFO 127.0.0.1 - - [20/Nov/2025 14:16:36] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:16:40,744 INFO Created alert on backend for 66:1b:8d:37:1a:74
+2025-11-20 14:16:40,745 INFO 127.0.0.1 - - [20/Nov/2025 14:16:40] "POST /quarantine HTTP/1.1" 200 -
+2025-11-20 14:16:53,405 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:16:53,490 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:16:53,523 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:17:01,106 INFO 127.0.0.1 - - [20/Nov/2025 14:17:01] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:17:01,643 INFO 127.0.0.1 - - [20/Nov/2025 14:17:01] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:17:06,618 INFO 127.0.0.1 - - [20/Nov/2025 14:17:06] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:17:12,228 INFO 127.0.0.1 - - [20/Nov/2025 14:17:12] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:17:17,362 INFO 127.0.0.1 - - [20/Nov/2025 14:17:17] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:17:21,694 INFO 127.0.0.1 - - [20/Nov/2025 14:17:21] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:17:26,627 INFO 127.0.0.1 - - [20/Nov/2025 14:17:26] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:17:26,969 INFO Created alert on backend for None
+2025-11-20 14:17:26,971 INFO 127.0.0.1 - - [20/Nov/2025 14:17:26] "POST /release HTTP/1.1" 200 -
+2025-11-20 14:17:32,183 INFO 127.0.0.1 - - [20/Nov/2025 14:17:32] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:17:33,919 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:17:33,928 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:17:34,099 INFO Reported device to backend: 66:1b:8d:37:1a:74 192.168.0.5
+2025-11-20 14:17:34,111 INFO Created alert on backend for 66:1b:8d:37:1a:74
+2025-11-20 14:17:37,176 INFO 127.0.0.1 - - [20/Nov/2025 14:17:37] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:17:39,045 INFO Reported device to backend: 66:1b:8d:37:1a:74 192.168.0.5
+2025-11-20 14:17:39,062 INFO Created alert on backend for 66:1b:8d:37:1a:74
+2025-11-20 14:17:39,141 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:17:39,175 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:17:40,220 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:17:42,184 INFO 127.0.0.1 - - [20/Nov/2025 14:17:42] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:17:47,140 INFO 127.0.0.1 - - [20/Nov/2025 14:17:47] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:17:52,105 INFO 127.0.0.1 - - [20/Nov/2025 14:17:52] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:17:56,565 INFO Received shutdown signal, stopping scanner
+2025-11-20 14:17:56,622 INFO Sniffer thread exiting
+2025-11-20 14:22:58,829 INFO Local whitelist loaded (11 entries)
+2025-11-20 14:22:58,831 INFO Sniffer thread started (iface=Wi-Fi)
+2025-11-20 14:22:58,831 INFO Auto-start scanner: True scanner started
+2025-11-20 14:22:58,831 INFO Launching scanner service API on port 9000
+2025-11-20 14:22:58,841 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://192.168.0.2:9000
+2025-11-20 14:22:58,841 INFO [33mPress CTRL+C to quit[0m
+2025-11-20 14:23:06,180 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:23:06,330 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:23:06,349 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:23:11,462 INFO 127.0.0.1 - - [20/Nov/2025 14:23:11] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:23:12,105 INFO 127.0.0.1 - - [20/Nov/2025 14:23:12] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:23:16,585 INFO 127.0.0.1 - - [20/Nov/2025 14:23:16] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:23:21,631 INFO 127.0.0.1 - - [20/Nov/2025 14:23:21] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:23:26,560 INFO 127.0.0.1 - - [20/Nov/2025 14:23:26] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:23:31,512 INFO 127.0.0.1 - - [20/Nov/2025 14:23:31] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:23:36,529 INFO 127.0.0.1 - - [20/Nov/2025 14:23:36] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:23:38,129 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:23:38,158 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:23:38,371 INFO Reported device to backend: 66:1b:8d:37:1a:74 192.168.0.5
+2025-11-20 14:23:38,408 INFO Created alert on backend for 66:1b:8d:37:1a:74
+2025-11-20 14:23:41,433 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:23:41,691 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:23:41,707 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:23:41,852 INFO 127.0.0.1 - - [20/Nov/2025 14:23:41] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:23:43,292 INFO Created alert on backend for 66:1b:8d:37:1a:74
+2025-11-20 14:23:43,293 INFO 127.0.0.1 - - [20/Nov/2025 14:23:43] "POST /quarantine HTTP/1.1" 200 -
+2025-11-20 14:23:46,625 INFO 127.0.0.1 - - [20/Nov/2025 14:23:46] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:23:46,672 INFO Reported device to backend: 66:1b:8d:37:1a:74 192.168.0.5
+2025-11-20 14:23:46,694 INFO Created alert on backend for 66:1b:8d:37:1a:74
+2025-11-20 14:23:46,835 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:23:46,853 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:23:51,625 INFO 127.0.0.1 - - [20/Nov/2025 14:23:51] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:23:56,515 INFO 127.0.0.1 - - [20/Nov/2025 14:23:56] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:23:59,152 INFO Reported device to backend: 66:1b:8d:37:1a:74 192.168.0.5
+2025-11-20 14:23:59,186 INFO Created alert on backend for 66:1b:8d:37:1a:74
+2025-11-20 14:24:01,547 INFO 127.0.0.1 - - [20/Nov/2025 14:24:01] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:24:02,607 INFO Reported device to backend: 66:1b:8d:37:1a:74 192.168.0.5
+2025-11-20 14:24:02,619 INFO Created alert on backend for 66:1b:8d:37:1a:74
+2025-11-20 14:24:05,130 INFO Reported device to backend: 98:ba:5f:f1:72:f3 192.168.0.4
+2025-11-20 14:24:05,836 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:24:05,845 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:24:06,530 INFO 127.0.0.1 - - [20/Nov/2025 14:24:06] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:24:06,664 INFO Reported device to backend: 98:ba:5f:f1:72:f3 192.168.0.4
+2025-11-20 14:24:06,705 INFO 127.0.0.1 - - [20/Nov/2025 14:24:06] "POST /reset HTTP/1.1" 200 -
+2025-11-20 14:24:07,562 INFO Created alert on backend for 66:1b:8d:37:1a:74
+2025-11-20 14:24:07,563 INFO 127.0.0.1 - - [20/Nov/2025 14:24:07] "POST /quarantine HTTP/1.1" 200 -
+2025-11-20 14:24:09,689 INFO Reported device to backend: 98:ba:5f:f1:72:f3 192.168.0.4
+2025-11-20 14:24:11,540 INFO 127.0.0.1 - - [20/Nov/2025 14:24:11] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:24:11,646 INFO Reported device to backend: 98:ba:5f:f1:72:f3 192.168.0.4
+2025-11-20 14:24:11,868 INFO 127.0.0.1 - - [20/Nov/2025 14:24:11] "POST /reset HTTP/1.1" 200 -
+2025-11-20 14:24:14,690 INFO Reported device to backend: 98:ba:5f:f1:72:f3 192.168.0.4
+2025-11-20 14:24:16,536 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:24:16,664 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:24:16,674 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:24:16,860 INFO 127.0.0.1 - - [20/Nov/2025 14:24:16] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:24:21,531 INFO 127.0.0.1 - - [20/Nov/2025 14:24:21] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:24:28,282 INFO 127.0.0.1 - - [20/Nov/2025 14:24:28] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:24:31,989 INFO 127.0.0.1 - - [20/Nov/2025 14:24:31] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:24:36,699 INFO 127.0.0.1 - - [20/Nov/2025 14:24:36] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:24:41,482 INFO 127.0.0.1 - - [20/Nov/2025 14:24:41] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:24:44,463 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:24:44,615 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:24:44,652 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:24:46,679 INFO 127.0.0.1 - - [20/Nov/2025 14:24:46] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:24:49,178 INFO Created alert on backend for None
+2025-11-20 14:24:49,181 INFO 127.0.0.1 - - [20/Nov/2025 14:24:49] "POST /release HTTP/1.1" 200 -
+2025-11-20 14:24:51,432 INFO 127.0.0.1 - - [20/Nov/2025 14:24:51] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:24:52,529 INFO Reported device to backend: 66:1b:8d:37:1a:74 192.168.0.5
+2025-11-20 14:24:52,537 INFO Created alert on backend for 66:1b:8d:37:1a:74
+2025-11-20 14:24:54,152 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:24:54,164 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:24:56,486 INFO 127.0.0.1 - - [20/Nov/2025 14:24:56] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:24:59,286 INFO Reported device to backend: 66:1b:8d:37:1a:74 192.168.0.5
+2025-11-20 14:24:59,295 INFO Created alert on backend for 66:1b:8d:37:1a:74
+2025-11-20 14:24:59,446 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:24:59,453 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:25:02,120 INFO 127.0.0.1 - - [20/Nov/2025 14:25:02] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:25:07,064 INFO 127.0.0.1 - - [20/Nov/2025 14:25:07] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:25:12,280 INFO 127.0.0.1 - - [20/Nov/2025 14:25:12] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:25:17,173 INFO Reported device to backend: 98:ba:5f:f1:74:2e 192.168.0.1
+2025-11-20 14:25:17,283 INFO 127.0.0.1 - - [20/Nov/2025 14:25:17] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:25:17,368 INFO Reported device to backend: e4:0d:36:a8:db:12 192.168.0.2
+2025-11-20 14:25:17,377 INFO Created alert on backend for e4:0d:36:a8:db:12
+2025-11-20 14:25:22,034 INFO 127.0.0.1 - - [20/Nov/2025 14:25:22] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:25:26,986 INFO 127.0.0.1 - - [20/Nov/2025 14:25:26] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:25:32,102 INFO 127.0.0.1 - - [20/Nov/2025 14:25:32] "GET /network-signature HTTP/1.1" 200 -
+2025-11-20 14:25:41,266 INFO Received shutdown signal, stopping scanner

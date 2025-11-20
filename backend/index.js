@@ -1,3 +1,4 @@
+//backend/index.js
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -12,6 +13,10 @@ const alertRoutes = require('./routes/alertRoutes');
 const whitelistRoutes = require('./routes/whitelistRoutes');
 const quarantineRoutes = require('./routes/quarantineRoutes');
 const scannerRoutes = require('./routes/scannerRoutes');
+const scannerInterfaceRoutes = require('./routes/scannerInterfaceRoutes');
+const Device = require('./models/Device');
+const Alert = require('./models/Alert');
+
 
 
 const app = express(); // <-- app must be defined BEFORE using app.use()
@@ -27,7 +32,8 @@ app.use('/api/alerts', alertRoutes);
 app.use('/api/whitelist', whitelistRoutes);
 app.use('/api/quarantine', quarantineRoutes);
 app.use('/api/scanner', scannerRoutes);
-
+app.use("/api/scanner2", scannerInterfaceRoutes);
+app.use("/api/events", require("./routes/eventsRoutes"));
 
 // Test route
 app.get('/', (req, res) => {
@@ -44,7 +50,6 @@ mongoose.connect(process.env.MONGO_URI, {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-app.use("/api/alerts", require("./routes/alertRoutes"));
-app.use("/api/whitelist", require("./routes/whitelistRoutes"));
+
 
 

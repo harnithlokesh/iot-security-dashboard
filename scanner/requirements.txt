@@ -2,3 +2,4 @@ scapy
 requests
 python-dotenv
 netaddr
+netifaces

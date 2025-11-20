@@ -12,7 +12,10 @@ const DeviceSchema = new mongoose.Schema({
   firstSeen: { type: Date, default: Date.now },
   lastSeen: { type: Date, default: Date.now },
   vendor: { type: String, default: '' },
-  meta: { type: Object, default: {} }
+  meta: { type: Object, default: {} },
+  router_ip: String, 
+  network_signature: String,
+  unique_signature: String
 }, { timestamps: true });
 
 module.exports = mongoose.model('Device', DeviceSchema);

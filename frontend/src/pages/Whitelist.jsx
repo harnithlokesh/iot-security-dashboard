@@ -1,3 +1,4 @@
+// frontend/src/pages/Whitelist.jsx
 import React, { useEffect, useState } from "react";
 import { API_URL } from "../config";
 
@@ -47,15 +48,20 @@ function Whitelist() {
               <th>Device Name</th>
               <th>MAC</th>
               <th>IP</th>
+              <th>Router IP</th>
+              <th>Signature</th>
               <th>Actions</th>
+              
             </tr>
           </thead>
           <tbody>
-            {trustedDevices.map((device) => (
+            {[...trustedDevices].reverse().map((device) => (
               <tr key={device._id}>
                 <td>{device.name || "Unnamed Device"}</td>
                 <td>{device.mac}</td>
                 <td>{device.ip}</td>
+                <td>{device.router_ip || "Unknown"}</td>
+                <td>{device.unique_signature || "Unknown"}</td>
                 <td>
                   <button
                     className="remove-btn"
